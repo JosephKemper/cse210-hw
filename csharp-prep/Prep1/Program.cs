@@ -15,7 +15,7 @@ class Program
 
         // Display name back to user in the following format
         // "Your name is (last name), (First name) (last name).
-        Console.WriteLine ($"Your name is {lastName}, {firstName} {lastName}.")
+        Console.WriteLine ($"Your name is {lastName}, {firstName} {lastName}.");
     }
 }
 // Following git tutorial

@@ -9,8 +9,9 @@ class Program
 
         // Get grade from user.
         Console.Write("Enter your percentage grade (leave off the % symbol): ");
-        // TODO: #1 Convert input to number format
-        int userScore = Console.ReadLine();
+        string userInput = Console.ReadLine();
+        // Convert input to number format
+        int userScore = int.Parse(userInput);
         Console.WriteLine(userScore);
     }
 }

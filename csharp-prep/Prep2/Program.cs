@@ -12,36 +12,36 @@ class Program
         string userInput = Console.ReadLine();
         // Convert input to number format
         int userScore = int.Parse(userInput);
-        string letterGrade;
+        string letter;
         string preposition;
         string punctuation;
         if (userScore >= 90)
         {
-            letterGrade = "A";
+            letter = "A";
             preposition = "an";
             punctuation = "!";
         }
         else if (userScore >= 80)
         {
-            letterGrade = "B";
+            letter = "B";
             preposition = "a";
             punctuation = "!";
         }
         else if (userScore >= 70)
         {
-            letterGrade = "C";
+            letter = "C";
             preposition = "a";
             punctuation = "!";
         }
         else if (userScore >= 60)
         {
-            letterGrade = "D";
+            letter = "D";
             preposition = "a";
             punctuation = ".";
         }
         else
         {
-            letterGrade = "F";
+            letter = "F";
             preposition = "an";
             punctuation = ".";
         }
@@ -56,7 +56,7 @@ class Program
             displayMessage = "We're sorry, you didn't pass, but you'll do great next time.";
         }
 
-        Console.WriteLine($"You got {preposition} {letterGrade}{punctuation}");
+        Console.WriteLine($"You got {preposition} {letter}{punctuation}");
         Console.WriteLine(displayMessage);
 
 

@@ -60,7 +60,7 @@ class Program
         if (userScore%10 >= 7)
         {
             symbol = "+";
-            if (letter == "A")
+            if (letter == "A" || letter == "F")
             {
                 symbol = "";
             }
@@ -68,6 +68,10 @@ class Program
         else if (userScore%10 < 3)
         {
             symbol = "-";
+            if (letter == "F")
+            {
+                symbol = "";
+            }
         }
         else
         {

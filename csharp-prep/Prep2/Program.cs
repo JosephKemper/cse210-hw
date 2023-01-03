@@ -61,7 +61,7 @@ class Program
         {
             symbol = "+";
         }
-        if (userScore%10 < 3)
+        else if (userScore%10 < 3)
         {
             symbol = "-";
         }

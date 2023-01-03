@@ -46,7 +46,19 @@ class Program
             punctuation = ".";
         }
 
+        string displayMessage;
+        if (userScore >= 70)
+        {
+            displayMessage = "You Passed!";
+        }
+        else
+        {
+            displayMessage = "We're sorry, you didn't pass, but you'll do great next time.";
+        }
+
         Console.WriteLine($"You got {preposition} {letterGrade}{punctuation}");
+        Console.WriteLine(displayMessage);
+
 
     }
 }

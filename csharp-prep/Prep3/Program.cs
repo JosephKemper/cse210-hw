@@ -8,12 +8,23 @@ class Program
         Console.Write("What is the magic number? ");
         string numberInput = Console.ReadLine();
         int magicNumber = int.Parse(numberInput);
-        Console.WriteLine(magicNumber);
-
 
         Console.Write("What is your guess? ");
         string guessInput = Console.ReadLine();
         int numberGuess = int.Parse(guessInput);
-        Console.WriteLine(numberGuess);
+        
+        if (numberGuess > magicNumber)
+        {
+            Console.WriteLine ("Lower");
+        }
+        else if (numberGuess < magicNumber)
+        {
+            Console.WriteLine ("Higher");
+        }
+        else
+        {
+            Console.WriteLine ("You Guessed it!");
+        }
+
     }
 }

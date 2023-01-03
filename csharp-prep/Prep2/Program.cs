@@ -13,28 +13,40 @@ class Program
         // Convert input to number format
         int userScore = int.Parse(userInput);
         string letterGrade;
+        string preposition;
+        string punctuation;
         if (userScore >= 90)
         {
             letterGrade = "A";
+            preposition = "an";
+            punctuation = "!";
         }
         else if (userScore >= 80)
         {
             letterGrade = "B";
+            preposition = "a";
+            punctuation = "!";
         }
         else if (userScore >= 70)
         {
             letterGrade = "C";
+            preposition = "a";
+            punctuation = "!";
         }
         else if (userScore >= 60)
         {
             letterGrade = "D";
+            preposition = "a";
+            punctuation = ".";
         }
         else
         {
             letterGrade = "F";
+            preposition = "an";
+            punctuation = ".";
         }
 
-        Console.WriteLine($"You got a/an {letterGrade}");
+        Console.WriteLine($"You got {preposition} {letterGrade}{punctuation}");
 
     }
 }

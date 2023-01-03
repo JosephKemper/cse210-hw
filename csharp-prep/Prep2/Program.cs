@@ -56,7 +56,21 @@ class Program
             displayMessage = "We're sorry, you didn't pass, but you'll do great next time.";
         }
 
-        Console.WriteLine($"You got {preposition} {letter}{punctuation}");
+        string symbol;
+        if (userScore%10 >= 7)
+        {
+            symbol = "+";
+        }
+        if (userScore%10 < 3)
+        {
+            symbol = "-";
+        }
+        else
+        {
+            symbol = "";
+        }
+
+        Console.WriteLine($"You got {preposition} {letter}{symbol}{punctuation}");
         Console.WriteLine(displayMessage);
 
 

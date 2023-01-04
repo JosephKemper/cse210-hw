@@ -5,6 +5,9 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Prep3 World!");
+        string playAgain;
+        do
+        {
         // Get number from user
         Console.Write("What is the magic number? ");
         string numberInput = Console.ReadLine();
@@ -39,6 +42,10 @@ class Program
         }
 
         } while (numberGuess != magicNumber);
+        Console.Write ("Do you want to play again (y/n)");
+        playAgain = Console.ReadLine();
+        } while (playAgain != "y" || playAgain != "Y");
+        Console.WriteLine ("Thanks for playing!");
 
     }
 }

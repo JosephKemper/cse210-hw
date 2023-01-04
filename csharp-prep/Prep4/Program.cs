@@ -19,15 +19,27 @@ class Program
         // Convert user input to number
         userNumber = int.Parse(userInput);
 
+        // Check if number is 0
+        if (userNumber == 0)
+        {
+            Console.WriteLine("Here is your Highlights");
+        }
+        else
+        {
         // Add numbers to list
         userNumberList.Add(userNumber);
+        }
+        // Loop should continue until user enters 0
         }while (userNumber != 0);
 
-        // Loop should continue until user enters 0
-
         // Sum numbers in list
+        foreach (int number in userNumberList)
+        {
+        // write code to add numbers together
+        }
 
         // Count the number of items in the list
+        int listLength = userNumberList.Count;
 
         // Calculate average of numbers in list
 

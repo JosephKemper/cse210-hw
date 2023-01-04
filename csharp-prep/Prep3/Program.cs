@@ -5,8 +5,8 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Prep3 World!");
-        string playAgain;
-        do
+        string playAgain = "y";
+        while (playAgain == "y")
         {
         // Get number from user
         Console.Write("What is the magic number? ");
@@ -44,8 +44,8 @@ class Program
         } while (numberGuess != magicNumber);
         Console.Write ("Do you want to play again (y/n)");
         playAgain = Console.ReadLine();
-        } while (playAgain != "y" || playAgain != "Y");
+        }
         Console.WriteLine ("Thanks for playing!");
-
+        // TODO: #3 Bug Do While loop does not stop when you enter n
     }
 }

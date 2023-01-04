@@ -8,10 +8,11 @@ class Program
         string playAgain = "y";
         while (playAgain == "y")
         {
-        // Get number from user
-        Console.Write("What is the magic number? ");
-        string numberInput = Console.ReadLine();
-        int magicNumber = int.Parse(numberInput);
+        Random randomGenerator = Random();
+        int magicNumber = randomGenerator.Next(1,100);
+        Console.Write("I'm choosing a number between 1 and 100 inclusive.");
+        //string numberInput = Console.ReadLine();
+        //int magicNumber = int.Parse(numberInput);
         int numberGuess;
         int guessTracker = 0;
 

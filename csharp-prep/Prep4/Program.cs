@@ -5,20 +5,23 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Prep4 World!");
-        List<int> userNumbers = new List<int>();
+        List<int> userNumberList = new List<int>();
+        int userNumber;
 
         Console.WriteLine ("Enter a list of numbers, type 0 when finished.");
 
         // Create a loop to collect numbers from user
-
+        do
+        {
         Console.Write ("Enter number: ");
         string userInput = Console.ReadLine();
 
         // Convert user input to number
-        int userNumber = int.Parse(userInput);
+        userNumber = int.Parse(userInput);
 
         // Add numbers to list
-        Console.WriteLine (userNumber);
+        userNumberList.Add(userNumber);
+        }while (userNumber != 0);
 
         // Loop should continue until user enters 0
 

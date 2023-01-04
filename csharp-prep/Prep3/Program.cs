@@ -9,7 +9,7 @@ class Program
         Console.Write("What is the magic number? ");
         string numberInput = Console.ReadLine();
         int magicNumber = int.Parse(numberInput);
-        int numberGuess
+        int numberGuess;
 
         do
         {

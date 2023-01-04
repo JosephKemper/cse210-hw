@@ -5,16 +5,16 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Prep3 World!");
+        // playAgain variable set to "y" to get while loop to run first time
         string playAgain = "y";
         while (playAgain == "y")
-        {
-        // TODO #4 Random number generator created error. 
+        { 
         Random randomGenerator = new Random();
         int magicNumber = randomGenerator.Next(1,100);
         Console.WriteLine("I'm choosing a number between 1 and 100 inclusive.");
-        //string numberInput = Console.ReadLine();
-        //int magicNumber = int.Parse(numberInput);
+        
         int numberGuess;
+        // Initiate user guess tracking
         int guessTracker = 0;
 
         do
@@ -24,6 +24,7 @@ class Program
         string guessInput = Console.ReadLine();
         numberGuess = int.Parse(guessInput);
         
+        // Increase number of user guesses.
         guessTracker ++;
 
         // Check if guess is greater than number and return message
@@ -39,6 +40,7 @@ class Program
         // Return Equals message
         else
         {
+            // Display end of game text.
             Console.WriteLine ("You Guessed it!");
             Console.WriteLine ($"It took you {guessTracker} guesses.");
         }

@@ -41,7 +41,7 @@ class Program
         }
         // Count the number of items in the list
         int listLength = userNumberList.Count;
-        Console.WriteLine ($"You entered {listLength} separate numbers.");
+        Console.WriteLine ($"You entered {listLength} numbers.");
 
         Console.WriteLine ($"The sum is: {sumList}");
 
@@ -50,6 +50,8 @@ class Program
         Console.WriteLine ($"The average is: {listAverage}");
 
         // Find largest number in list
+        int largestNumber = userNumberList.Max();
+        Console.WriteLine ($"The largest number is: {largestNumber}");
 
     }
 }

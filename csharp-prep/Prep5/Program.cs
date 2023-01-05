@@ -52,7 +52,11 @@ class Program
         // DisplayResult - 
         // Accepts the user's name 
         // and the squared number and displays them.
-        
+        static void DisplayResult (int numberSquared, string userName)
+        {
+        Console.WriteLine ($"{userName}, the square of your number is {numberSquared}");
+        }
+        DisplayResult (numberSquared, userName);
 
     }
 }

@@ -39,13 +39,17 @@ class Program
         {
             sumList += number;
         }
-        
-
         // Count the number of items in the list
         int listLength = userNumberList.Count;
+        Console.WriteLine ($"You entered {listLength} separate numbers.");
+
+        Console.WriteLine ($"The sum is: {sumList}");
 
         // Calculate average of numbers in list
+        float listAverage = sumList/listLength;
+        Console.WriteLine ($"The average is: {listAverage}");
 
         // Find largest number in list
+
     }
 }

@@ -73,5 +73,23 @@ class Program
         // Display smallest number to user
         Console.WriteLine ($"The smallest positive number is: {findSmallestPositive}");
 
+        // Sort userNumberList
+        // Sorted list method found on https://zetcode.com/csharp/sortlist/
+        var sortList = from number in userNumberList
+                        orderby number descending
+                        select number;
+
+        // Iterate through list
+        Console.WriteLine("The Sorted list is:");
+        foreach (var e in sortList)
+        {
+            // Print individual numbers to console
+            Console.WriteLine(e);
+        }
+
+        
+
+        
+
     }
 }

@@ -34,10 +34,29 @@ class Program
 
         int sumList = 0;
 
+        // Find largest number in list
+        int largestNumber = userNumberList.Max();
+
+        // Set largestNumber to findSmallestNumber
+        int findSmallestPositive = largestNumber;
+
         // Sum numbers in list
         foreach (int number in userNumberList)
         {
             sumList += number;
+        // If positive, check if less than findSmallestNumber
+        if (number >0)
+        {
+            if (number < findSmallestPositive)
+            {
+                findSmallestPositive = number;
+            }
+            // If negative, ignore
+        }
+
+        
+
+
         }
         // Count the number of items in the list
         int listLength = userNumberList.Count;
@@ -49,22 +68,10 @@ class Program
         float listAverage = sumList/listLength;
         Console.WriteLine ($"The average is: {listAverage}");
 
-        // Find largest number in list
-        int largestNumber = userNumberList.Max();
         Console.WriteLine ($"The largest number is: {largestNumber}");
 
-        // Find smallest positive number
-        // Set largestNumber to findSmallestNumber
-        int findSmallestNumber = largestNumber;
-
-        // Iterate through each item in list
-        
-
-        // If positive, check if less than findSmallestNumber
-
-        // If negative, ignore
-
         // Display smallest number to user
+        Console.WriteLine ($"The smallest positive number is: {findSmallestPositive}");
 
     }
 }

@@ -9,6 +9,12 @@ class Program
 
         // DisplayWelcome - Displays the message, 
         // "Welcome to the Program!"
+        static void DisplayWelcome ()
+        {
+            Console.WriteLine ("Welcome to the Program!");
+        }
+
+        DisplayWelcome ();
 
         // PromptUserName - 
         // Asks for and returns the user's name (as a string)

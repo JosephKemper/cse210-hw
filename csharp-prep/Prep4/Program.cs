@@ -53,5 +53,18 @@ class Program
         int largestNumber = userNumberList.Max();
         Console.WriteLine ($"The largest number is: {largestNumber}");
 
+        // Find smallest positive number
+        // Set largestNumber to findSmallestNumber
+        int findSmallestNumber = largestNumber;
+
+        // Iterate through each item in list
+        
+
+        // If positive, check if less than findSmallestNumber
+
+        // If negative, ignore
+
+        // Display smallest number to user
+
     }
 }

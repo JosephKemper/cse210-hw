@@ -32,11 +32,14 @@ class Program
         // Loop should continue until user enters 0
         }while (userNumber != 0);
 
+        int sumList = 0;
+
         // Sum numbers in list
         foreach (int number in userNumberList)
         {
-        // write code to add numbers together
+            sumList += number;
         }
+        
 
         // Count the number of items in the list
         int listLength = userNumberList.Count;

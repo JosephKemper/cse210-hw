@@ -4,29 +4,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
-        var nums = new List<int> { 2, 1, 8, 0, 4, 3, 5, 7, 9 };
+        DisplayWelcomeMessage();
 
-var enum1 = from num in nums
-            orderby num
-            select num;
+        string userName = PromptUserName();
+        int userNumber = PromptUserNumber();
 
-foreach (var e in enum1)
-{
-    Console.Write($"{e} ");
-}
+        int squaredNumber = SquareNumber(userNumber);
 
-Console.WriteLine();
+        DisplayResult(userName, squaredNumber);
+    }
 
-var enum2 = from num in nums
-            orderby num descending
-            select num;
+    static void DisplayWelcomeMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
+    }
 
-foreach (var e in enum2)
-{
-    Console.Write($"{e} ");
-}
+    static string PromptUserName()
+    {
+        Console.Write("Please enter your name: ");
+        string name = Console.ReadLine();
 
-Console.WriteLine();
+        return name;
+    }
+
+    static int PromptUserNumber()
+    {
+        Console.Write("Please enter your favorite number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        return number;
+    }
+
+    static int SquareNumber(int number)
+    {
+        int square = number * number;
+        return square;
+    }
+
+    static void DisplayResult(string name, int square)
+    {
+        Console.WriteLine($"{name}, the square of your number is {square}");
     }
 }

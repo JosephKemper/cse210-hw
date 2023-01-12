@@ -1,5 +1,4 @@
-Step one figure out what the program should do. 
-
+Program Outline and requirements.
 Display menu for user with the following options
 1. Write
 2. Display

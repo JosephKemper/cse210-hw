@@ -18,3 +18,14 @@ Date [show the date the journal entry was written] - Prompt: [Display the prompt
 Save will save the journal to a text file, giving the user a chance to name the file. 
 
 Load will let the user choose the file name that they want to load prior data from, and that will pull up all previously saved data. And that will let them continue the journal as previously entered. 
+
+Quit will end the program. The program should continue to loop until quit is selected from the main menu. 
+
+
+Main menu -- should loop until quit is selected. Should call all other commands as desired. After completion, with the exception of quit, all other commands should take you back to the main menu. 
+
+---Goal----
+Design the whole program into classes
+-----------
+
+

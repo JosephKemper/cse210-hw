@@ -18,8 +18,14 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2022;
 
-        job1.DisplayJob();
-        job2.DisplayJob();
+        Resume myResume = new Resume();
+
+        myResume._name = "Joseph D. Kemper";
+
+        myResume._jobsList.Add(job1);
+        myResume._jobsList.Add(job2);
+
+        myResume.DisplayResume();
 
     }
 }

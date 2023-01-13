@@ -29,3 +29,16 @@ Design the whole program into classes
 -----------
 
 
+---class mainMenu---
+needs to display the menu options
+take input from the user
+launch the option the user selects
+exit the program when the user desires
+
+---Class WriteJournalEntry---
+
+---Class DisplayJournal---
+
+---Class LoadJournal---
+
+---Class SaveJournal---

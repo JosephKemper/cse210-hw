@@ -46,10 +46,12 @@ Store input in variable
 CreateEntryInstanceName
 take in two digit promptIdentifier and CurrentDate
 Convert promptIdentifier and CurrentDate to the following format xxddmmmyyy 
+return xxddmmmyyy to be used in creating unique JournalEntry instance name.
 
-Return CurrentDate, JournalPrompt, and JournalEntry for storage in journal 
+create JournalEntry instance using CurrentDate, JournalPrompt, and JournalEntry 
 
-
+------Needed to do --------
+Figure out when UserJournal is called
 
 ---Class JournalEntry---
 Called by WriteJournalEntry to convert journal entry to a list containing [CurrentDate, JournalPrompt, JournalEntry]

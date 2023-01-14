@@ -35,18 +35,29 @@ take input from the user
 launch the class based on the option the user selects
 exit the program when the user desires
 
----Class JournalEntry---
+---Class WriteJournalEntry---
 Get current date from user computer
 Randomly select journal prompt
 Save journal prompt to variable
 Display journal prompt to user
 Get input from user from user
 Store input in variable
+
+CreateEntryInstanceName
+take in two digit promptIdentifier and CurrentDate
+Convert promptIdentifier and CurrentDate to the following format xxddmmmyyy 
+
 Return CurrentDate, JournalPrompt, and JournalEntry for storage in journal 
 
----Class UserJournal---
-create a list of type JournalEntry for each journal written
+
+
+---Class JournalEntry---
+Called by WriteJournalEntry to convert journal entry to a list containing [CurrentDate, JournalPrompt, JournalEntry]
 naming convention for JournalEntry instances, will be PromptIdentifierDate for example if the user used prompt 7 on 14 Jan 2023 the class instance would be named 714Jan2023
+
+---Class UserJournal---
+create a list of each JournalEntry instance
+
 
 ---Class DisplayJournal---
 
@@ -56,5 +67,5 @@ naming convention for JournalEntry instances, will be PromptIdentifierDate for e
 
 ---JournalPrompts---
 Store a collection of journal prompts
-Give each journal prompt a unique number
+Give each journal prompt a unique promptIdentifier number
 Return journal prompt and number when called

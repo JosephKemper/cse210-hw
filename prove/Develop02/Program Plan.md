@@ -37,37 +37,42 @@ exit the program when the user desires
 
 ---Class WriteJournalEntry---
 Get current date from user computer
-Randomly select journal prompt
+Call GenerateJournalPrompt for to display Journal Prompt for user
 Save journal prompt to variable
 Display journal prompt to user
 Get input from user from user
 Store input in variable
+Return each variable
 
-CreateEntryInstanceName
-take in two digit promptIdentifier and CurrentDate
-Convert promptIdentifier and CurrentDate to the following format xxddmmmyyy 
-return xxddmmmyyy to be used in creating unique JournalEntry instance name.
 
-create JournalEntry instance using CurrentDate, JournalPrompt, and JournalEntry 
+---Class CreateJournalEntry---
+Called by WriteJournalEntry to convert journal entry to a list containing [CurrentDate, JournalPrompt, JournalText]
+The list will be a string based list so CurrentDate will be converted to string.
 
-------Needed to do --------
-Figure out when UserJournal is called
 
----Class JournalEntry---
-Called by WriteJournalEntry to convert journal entry to a list containing [CurrentDate, JournalPrompt, JournalEntry]
-naming convention for JournalEntry instances, will be PromptIdentifierDate for example if the user used prompt 7 on 14 Jan 2023 the class instance would be named 714Jan2023
-
----Class UserJournal---
-create a list of each JournalEntry instance
-
+---Class CreateUserJournal---
+create a list of each JournalEntry list
 
 ---Class DisplayJournal---
+Iterate through the UserJournal to pull out each JournalEntry, then will assign the elements of the journal to a variable and display them to the screen. 
+
+Optional but ideal
+add the option to pause the output to give the user a chance to read the journal entries for longer journals.
 
 ---Class LoadJournal---
+Let user enter file name
+Load the journal from the file
+store text in UserJournal List
 
 ---Class SaveJournal---
+Saves all data to file giving the user option to name file
 
 ---JournalPrompts---
-Store a collection of journal prompts
-Give each journal prompt a unique promptIdentifier number
-Return journal prompt and number when called
+Required
+Randomly select a journal prompt for the user
+Return Journal Prompt
+
+Optional but ideal
+Track which entries have been used and create a way to only display prompts that have been used the least number of times. 
+Possible implementation
+create a second list, containing integers equal in length to number of prompts. Start each integer at 0 and increase it by 1 each time that prompt has been used. And only select prompts based on what has been used the least number of times. 

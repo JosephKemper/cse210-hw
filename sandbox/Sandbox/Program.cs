@@ -1,5 +1,5 @@
 using System;
-string date = DateTime.UtcNow.ToString("MMddyyy");
+string date = DateTime.UtcNow.ToString("MM-dd-yyy");
 
 Console.WriteLine(date);
 

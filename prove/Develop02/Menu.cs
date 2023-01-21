@@ -18,4 +18,6 @@ public class Menu
         string userInput = Console.ReadLine();
         return userInput;
     }
+
+    // Method to take user choice and load appropriate class
 }

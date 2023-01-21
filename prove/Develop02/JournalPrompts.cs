@@ -1,7 +1,17 @@
 using System;
 
-// promptList source https://www.developgoodhabits.com/journal-prompts/
+public class JournalPrompt
+{
+    public int GenerateIndex()
+    {
+        Random randomIndex = new Random();
+        int promptIndex = randomIndex.Next(0,247);
+        return promptIndex;
+    }
 
+    public string GeneratePrompt(int promptIndex)
+    {
+// promptList source https://www.developgoodhabits.com/journal-prompts/
 List<string> promptList = new List<string> {
 "I'm grateful for…", 
 "I remember when…",
@@ -251,3 +261,7 @@ List<string> promptList = new List<string> {
 "Staring at the night sky, I think about…",
 "I'm starting to understand…"
 };
+    return promptList[promptIndex];
+}
+
+}

@@ -7,5 +7,6 @@ class Program
         Console.WriteLine("Hello Develop02 World!");
         Menu mainMenu = new Menu ();
         mainMenu.DisplayMenu();
+        mainMenu.GetUserChoice();
     }
 }

@@ -11,4 +11,11 @@ public class Menu
     Console.WriteLine ("4. Save");
     Console.WriteLine ("5. Quit");
     }
+
+    public string GetUserChoice ()
+    {
+        Console.Write ("What would you like to do? ");
+        string userInput = Console.ReadLine();
+        return userInput;
+    }
 }

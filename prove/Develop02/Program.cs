@@ -7,8 +7,9 @@ class Program
         Console.WriteLine("Hello Develop02 World!");
         Menu mainMenu = new Menu ();
         mainMenu.DisplayMenu();
-        mainMenu.GetUserChoice();
+        string userInput = mainMenu.GetUserChoice();
 
+        mainMenu.LoadUserChoice (userInput);
         // Need a loop to continue running until 5 is selected
         
     }

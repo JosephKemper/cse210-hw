@@ -23,7 +23,7 @@ public class Menu
     {
         if (userInput == "1")
         {
-            
+            WriteJournalEntry write = new WriteJournalEntry ();
         }
     }
     // Method to take user choice and load appropriate class

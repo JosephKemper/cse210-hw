@@ -19,6 +19,7 @@ public class Menu
         return userInput;
     }
 
+// TODO #7 Write Journal Entry not loading
     public void LoadUserChoice (string userInput)
     {
         if (userInput == "1")

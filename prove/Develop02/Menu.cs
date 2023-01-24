@@ -19,5 +19,12 @@ public class Menu
         return userInput;
     }
 
+    public void LoadUserChoice (string userInput)
+    {
+        if (userInput == "1")
+        {
+            
+        }
+    }
     // Method to take user choice and load appropriate class
 }

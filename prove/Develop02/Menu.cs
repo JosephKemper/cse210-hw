@@ -25,6 +25,8 @@ public class Menu
         if (userInput == "1")
         {
             WriteJournalEntry write = new WriteJournalEntry ();
+            string date = write.Date();
+            write.JournalEntry(date);
         }
     }
     // Method to take user choice and load appropriate class

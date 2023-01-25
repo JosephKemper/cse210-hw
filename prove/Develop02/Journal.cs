@@ -1,6 +1,6 @@
 using System;
 
-public class Journal
+public class Journal : JournalPrompt
 {
     public string Date ()
     {

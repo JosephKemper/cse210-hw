@@ -24,7 +24,7 @@ public class Menu
     {
         if (userInput == "1")
         {
-            WriteJournalEntry write = new WriteJournalEntry ();
+            Journal write = new Journal ();
             string date = write.Date();
             write.JournalEntry(date);
         }

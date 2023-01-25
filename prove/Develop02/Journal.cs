@@ -1,6 +1,6 @@
 using System;
 
-public class WriteJournalEntry : JournalPrompt
+public class Journal
 {
     public string Date ()
     {
@@ -22,5 +22,4 @@ public class WriteJournalEntry : JournalPrompt
         };
         return currentEntry;
     }
-
 }

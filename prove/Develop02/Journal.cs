@@ -2,24 +2,20 @@ using System;
 
 public class Journal : JournalPrompt
 {
-    public string Date ()
-    {
-        string currentDate = DateTime.UtcNow.ToString("dd-MMM-yyy");
-        return currentDate;
-    }
     JournalPrompt newPrompt = new JournalPrompt ();
+    List <List<string>> _completeJournal = new List <List<string>>();
     
-    public string JournalEntry (string date)
+    public void JournalEntry (string _date)
     {
-        int promptIndex = newPrompt.GenerateIndex();
-        string prompt = newPrompt.GeneratePrompt(promptIndex);
-        Console.WriteLine(prompt);
-        string currentEntry = Console.ReadLine();
-        List <string> combinedEntry = new List<string>{
-        date,
-        prompt,
-        currentEntry
+        int _promptIndex = newPrompt.GenerateIndex();
+        string _prompt = newPrompt.GeneratePrompt(_promptIndex);
+        Console.WriteLine(_prompt);
+        string _currentEntry = Console.ReadLine();
+        List <string> _combinedEntry = new List<string>{
+        _date,
+        _prompt,
+        _currentEntry
         };
-        return currentEntry;
+        _completeJournal.Add(_combinedEntry);
     }
 }

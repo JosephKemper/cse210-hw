@@ -2,7 +2,8 @@ using System;
 
 class Program
 {
-    Journal journal = new Journal();
+    Journal userJournal = new Journal();
+    userJournal.JournalEntry();
     static void Main(string[] args)
     {
         Console.WriteLine ("Welcome to the Journal Program!");
@@ -18,6 +19,9 @@ class Program
 
         if (userChoice == "1"){
             // Write journal entry
+            string currentDate = DateTime.UtcNow.ToString("dd-MMM-yyy");
+            
+
         }else if (userChoice == "2"){
             // Display journals typed
         }else if (userChoice == "3"){

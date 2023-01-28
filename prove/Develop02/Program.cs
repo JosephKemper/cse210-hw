@@ -19,7 +19,7 @@ class Program
 
         if (userChoice == "1"){
             // Write journal entry
-            string currentDate = DateTime.UtcNow.ToString("dd-MMM-yyy");
+            // TODO #8 ran into error calling write journal function
             
 
         }else if (userChoice == "2"){

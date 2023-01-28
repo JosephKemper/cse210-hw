@@ -3,17 +3,22 @@ using System;
 public class Journal : JournalPrompt
 {
     JournalPrompt newPrompt = new JournalPrompt ();
-    List <List<string>> _completeJournal = new List <List<string>>();
+    List <JournalEntry> _completeJournal = new List<JournalEntry>();
     
-    public void JournalEntry (string _date)
+    public void WriteJournal ()
     {
+        JournalEntry currentEntry = new JournalEntry();
+
+        string _currentDate = DateTime.UtcNow.ToString("dd-MMM-yyy");
+        
         int _promptIndex = newPrompt.GenerateIndex();
-        string _prompt = newPrompt.GeneratePrompt(_promptIndex);
-        Console.WriteLine(_prompt);
+        string _journalPrompt = newPrompt.GeneratePrompt(_promptIndex);
+        
+        Console.WriteLine(_journalPrompt);
         string _currentEntry = Console.ReadLine();
         List <string> _combinedEntry = new List<string>{
-        _date,
-        _prompt,
+        _currentDate,
+        _journalPrompt,
         _currentEntry
         };
         _completeJournal.Add(_combinedEntry);

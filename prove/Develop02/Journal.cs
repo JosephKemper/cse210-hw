@@ -3,13 +3,13 @@ using System.IO;
 
 public class Journal
 {
-    JournalPrompt newPrompt = new JournalPrompt ();
     List <JournalEntry> _completeJournal = new List <JournalEntry>();
     
-
     public void WriteJournal ()
     {
+        JournalPrompt newPrompt = new JournalPrompt ();
         JournalEntry currentEntry = new JournalEntry();
+        
         currentEntry._currentDate = DateTime.UtcNow.ToString("dddd, dd MMMM, yyyy");
         
         currentEntry._journalPrompt = newPrompt.GeneratePrompt();
@@ -18,7 +18,6 @@ public class Journal
         currentEntry._journalText = Console.ReadLine();
 
         _completeJournal.Add (currentEntry);
-
     }
 
     public void DisplayJournal ()
@@ -45,9 +44,6 @@ public class Journal
     public void LoadJournal ()
     // BUG #10 When loading the journal, and then trying to display it, replaces all entries with the first
     {
-        
-        _completeJournal.Clear();
-
         Console.Write ("Enter the file name you wish to load: ");
         string fileName = Console.ReadLine ();
         string[] lines = System.IO.File.ReadAllLines(fileName);

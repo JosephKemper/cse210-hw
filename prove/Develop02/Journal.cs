@@ -3,7 +3,7 @@ using System;
 public class Journal : JournalPrompt
 {
     JournalPrompt newPrompt = new JournalPrompt ();
-    List <JournalEntry> _completeJournal = new List<JournalEntry>();
+    List <List<JournalEntry>> _completeJournal = new <List<JournalEntry>>();
     
     public void WriteJournal ()
     {
@@ -11,8 +11,7 @@ public class Journal : JournalPrompt
 
         string _currentDate = DateTime.UtcNow.ToString("dd-MMM-yyy");
         
-        int _promptIndex = newPrompt.GenerateIndex();
-        string _journalPrompt = newPrompt.GeneratePrompt(_promptIndex);
+        string _journalPrompt = newPrompt.GeneratePrompt();
         
         Console.WriteLine(_journalPrompt);
         string _currentEntry = Console.ReadLine();

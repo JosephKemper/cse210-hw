@@ -1,9 +1,9 @@
 using System;
 
-public class Journal : JournalPrompt
+public class Journal
 {
     JournalPrompt newPrompt = new JournalPrompt ();
-    List <List<JournalEntry>> _completeJournal = new <List<JournalEntry>>();
+    List <JournalEntry> _completeJournal = new List <JournalEntry>();
     
     public void WriteJournal ()
     {
@@ -12,16 +12,20 @@ public class Journal : JournalPrompt
 
         currentEntry._currentDate = DateTime.UtcNow.ToString("dddd, dd MMMM, yyyy");
         
-        string _journalPrompt = newPrompt.GeneratePrompt();
-        
-        
-        Console.WriteLine(_journalPrompt);
-        string _currentEntry = Console.ReadLine();
-        List <string> _combinedEntry = new List<string>{
-        _currentDate,
-        _journalPrompt,
-        _currentEntry
-        };
-        _completeJournal.Add(_combinedEntry);
+        currentEntry._journalPrompt = newPrompt.GeneratePrompt();
+        Console.WriteLine (currentEntry._journalPrompt);
+
+        currentEntry._entryText = Console.ReadLine();
+
+        _completeJournal.Add (currentEntry);
+
+    }
+
+    public void DisplayJournal ()
+    {
+        foreach (JournalEntry entry in _completeJournal)
+        {
+            entry.DisplayEntry();
+        }
     }
 }

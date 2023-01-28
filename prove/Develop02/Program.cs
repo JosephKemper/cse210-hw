@@ -2,10 +2,11 @@ using System;
 
 class Program
 {
-    Journal userJournal = new Journal();
-    userJournal.JournalEntry();
+
+    
     static void Main(string[] args)
     {
+        Journal userJournal = new Journal();
         Console.WriteLine ("Welcome to the Journal Program!");
         Console.WriteLine ("Please select one of the following choices:");
         Console.WriteLine ("1. Write");
@@ -20,10 +21,13 @@ class Program
         if (userChoice == "1"){
             // Write journal entry
             // TODO #8 ran into error calling write journal function
+           userJournal.WriteJournal();
             
 
         }else if (userChoice == "2"){
             // Display journals typed
+            userJournal.DisplayJournal();
+
         }else if (userChoice == "3"){
             // Load journals from file
         }else if (userChoice == "4"){

@@ -11,5 +11,8 @@ public class JournalEntry
         Console.WriteLine ($"Prompt {_journalPrompt}");
         Console.WriteLine (_entryText);
         Console.WriteLine();
+        Console.WriteLine ("Press any key to continue ...");
+        Console.WriteLine();
+        Console.ReadKey();
     }
 }

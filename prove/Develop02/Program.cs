@@ -3,41 +3,46 @@ using System;
 class Program
 {
 
-    // TODO Bug program does not loop. 
+    // TODO #9 Bug program does not loop. 
     static void Main(string[] args)
     {
         Journal userJournal = new Journal();
+        string userChoice = "";
+
         Console.WriteLine ("Welcome to the Journal Program!");
-        Console.WriteLine ("Please select one of the following choices:");
-        Console.WriteLine ("1. Write");
-        Console.WriteLine ("2. Display");
-        Console.WriteLine ("3. Load");
-        Console.WriteLine ("4. Save");
-        Console.WriteLine ("5. Quit");
-        Console.Write ("What would you like to do? ");
+    
+        while (userChoice != "5") {
+            Console.WriteLine ("Please select one of the following choices:");
+            Console.WriteLine ("1. Write");
+            Console.WriteLine ("2. Display");
+            Console.WriteLine ("3. Load");
+            Console.WriteLine ("4. Save");
+            Console.WriteLine ("5. Quit");
+            Console.Write ("What would you like to do? ");
 
-        string userChoice = Console.ReadLine();
+            userChoice = Console.ReadLine();
 
-        if (userChoice == "1"){
-            // Write journal entry
-           userJournal.WriteJournal();
-            
-        }else if (userChoice == "2"){
-            // Display journals typed
-            userJournal.DisplayJournal();
+            if (userChoice == "1"){
+                // Write journal entry
+            userJournal.WriteJournal();
+                
+            }else if (userChoice == "2"){
+                // Display journals typed
+                userJournal.DisplayJournal();
 
-        }else if (userChoice == "3"){
-            // Load journals from file
-        }else if (userChoice == "4"){
-            // Save journals to file
-        }else if (userChoice == "5"){
-            // Exit program
-            Console.WriteLine ("Thank you for using our Journal Program!");
-            Console.WriteLine ("Come back soon.");
-            Environment.Exit(0);
-        }else {
-            // Catch incorrect entries to prevent app crashing
-            Console.WriteLine ("Please enter the number of the option you wish to select.");
+            }else if (userChoice == "3"){
+                // Load journals from file
+            }else if (userChoice == "4"){
+                // Save journals to file
+            }else if (userChoice == "5"){
+                // Exit program
+                Console.WriteLine ("Thank you for using our Journal Program!");
+                Console.WriteLine ("Come back soon.");
+                Environment.Exit(0);
+            }else {
+                // Catch incorrect entries to prevent app crashing
+                Console.WriteLine ("Please enter the number of the option you wish to select.");
+            }
         }
 
     }

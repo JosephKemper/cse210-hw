@@ -9,9 +9,11 @@ public class Journal : JournalPrompt
     {
         JournalEntry currentEntry = new JournalEntry();
 
-        string _currentDate = DateTime.UtcNow.ToString("dd-MMM-yyy");
+
+        currentEntry._currentDate = DateTime.UtcNow.ToString("dddd, dd MMMM, yyyy");
         
         string _journalPrompt = newPrompt.GeneratePrompt();
+        
         
         Console.WriteLine(_journalPrompt);
         string _currentEntry = Console.ReadLine();

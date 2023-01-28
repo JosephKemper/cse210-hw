@@ -3,7 +3,7 @@ using System;
 class Program
 {
 
-    
+    // TODO Bug program does not loop. 
     static void Main(string[] args)
     {
         Journal userJournal = new Journal();
@@ -20,10 +20,8 @@ class Program
 
         if (userChoice == "1"){
             // Write journal entry
-            // TODO #8 ran into error calling write journal function
            userJournal.WriteJournal();
             
-
         }else if (userChoice == "2"){
             // Display journals typed
             userJournal.DisplayJournal();

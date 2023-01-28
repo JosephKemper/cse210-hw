@@ -32,8 +32,12 @@ class Program
 
             }else if (userChoice == "3"){
                 // Load journals from file
+                userJournal.LoadJournal();
+
             }else if (userChoice == "4"){
                 // Save journals to file
+                userJournal.SaveJournal();
+                
             }else if (userChoice == "5"){
                 // Exit program
                 Console.WriteLine ("Thank you for using our Journal Program!");

@@ -8,7 +8,7 @@ public class JournalEntry
     public string _journalText;
     // _currentDate member variable for storing the date each journal was written
     public string _currentDate;
-    // DisplayEntry class method teaches computer how to display the entry to user
+    // DisplayEntry class method teaches computer how to display a single entry to user
     public void DisplayEntry()
     {
         Console.WriteLine ($"{_currentDate}");

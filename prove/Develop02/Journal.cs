@@ -3,27 +3,39 @@ using System.IO;
 
 public class Journal
 {
+    // _completeJournal member variable for storing a list of the complete user journal
     List <JournalEntry> _completeJournal = new List <JournalEntry>();
     
+    // WriteJournal class method teaches computer how to let the user write a journal entry
     public void WriteJournal ()
     {
+        // Call JournalPrompt class to generate prompt for current journal entry
         JournalPrompt newPrompt = new JournalPrompt ();
+        // Call JournalEntry class to enable storage of journal entry parts
         JournalEntry currentEntry = new JournalEntry();
-        
+
+        // Use currentEntry class instance to collect and format _currentDate as string
         currentEntry._currentDate = DateTime.UtcNow.ToString("dddd, dd MMMM, yyyy");
         
+        // Use currentEntry class instance to collect randomly generated _journalPrompt
         currentEntry._journalPrompt = newPrompt.GeneratePrompt();
+        // Display _journalPrompt to user
         Console.WriteLine (currentEntry._journalPrompt);
 
+        // Use currentEntry class method to collect journal text from user
         currentEntry._journalText = Console.ReadLine();
 
+        // add currentEntry data to _completeJournal list
         _completeJournal.Add (currentEntry);
     }
 
+    // DisplayJournal method uses DisplayEntry method to teach computer how to display complete journal
     public void DisplayJournal ()
     {
+        // Loop through each entry in the journal
         foreach (JournalEntry entry in _completeJournal)
         {
+            // use DisplayEntry method from Journal Entry class to display journal entry
             entry.DisplayEntry();
         }
     }

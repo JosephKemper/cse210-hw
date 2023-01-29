@@ -58,24 +58,35 @@ public class Journal
         }
     }
 
+    // LoadJournal class method, teaches the computer how to load a journal from a previously created file
     public void LoadJournal ()
-    // BUG #10 When loading the journal, and then trying to display it, replaces all entries with the first
     {
+        // Get the file name the user wishes to load and store in fileName
         Console.Write ("Enter the file name you wish to load: ");
         string fileName = Console.ReadLine ();
+        // Loop through each line in file to find each journal entry
         string[] lines = System.IO.File.ReadAllLines(fileName);
         foreach (string line in lines)
         {
+            // Use JournalEntry class to teach computer what to do with each part of journal
             JournalEntry loadEntry = new JournalEntry();
-            string[] parts = line.Split (" , ");
-            string entryDate = parts [0];
-            string entryPrompt = parts [1];
-            string entryText = parts [2];
+            // split journal entry into previously designed parts
+            string[] journalParts = line.Split (" , ");
+            // Pull entryDate from index 0 of journalParts
+            string entryDate = journalParts [0];
+            // Pull entryPrompt from index 1 of journalParts
+            string entryPrompt = journalParts [1];
+            // Pull entryText from index 2 of journalParts
+            string entryText = journalParts [2];
 
+            // Use loadEntry class instance to store entryDate in _currentDate member variable
             loadEntry._currentDate = entryDate;
+            // Use loadEntry class instance to store entryPrompt in _journalPrompt member variable
             loadEntry._journalPrompt = entryPrompt;
+            // Use loadEntry class instance to store entryText in _journalText member variable
             loadEntry._journalText = entryText;
 
+            // add journal entry collected through loadEntry to _completeJournal
             _completeJournal.Add(loadEntry);
         }
     }

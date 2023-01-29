@@ -14,8 +14,9 @@ public class Journal
         // Call JournalEntry class to enable storage of journal entry parts
         JournalEntry currentEntry = new JournalEntry();
 
+
         // Use currentEntry class instance to collect and format _currentDate as string
-        currentEntry._currentDate = DateTime.UtcNow.ToString("dddd, dd MMMM, yyyy");
+        currentEntry._currentDate = DateTime.Today.ToString("dddd, dd MMMM, yyyy");
         
         // Use currentEntry class instance to collect randomly generated _journalPrompt
         currentEntry._journalPrompt = newPrompt.GeneratePrompt();

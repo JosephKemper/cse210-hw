@@ -1,10 +1,11 @@
 using System;
 
+// JournalPrompt class generates a random journal prompt to give user something to write about
 public class JournalPrompt
 {
-    
-// promptList source https://www.developgoodhabits.com/journal-prompts/
-List<string> promptList = new List<string> {
+    // _promptList member variable stores a list of journal prompts
+// _promptList source https://www.developgoodhabits.com/journal-prompts/
+List<string> _promptList = new List<string> {
     "I'm grateful for...", 
     "I remember when...",
     "Once, when I was...",
@@ -254,11 +255,15 @@ List<string> promptList = new List<string> {
     "I'm starting to understand..."
     };
 
+    // GeneratePrompt class uses a random number to pull a prompt from the _promptList
     public string GeneratePrompt()
     {
+        // Initialize Random function to get randomIndex
         Random randomIndex = new Random();
+        // Generate a randomIndex between 0 and 245 inclusive
         int promptIndex = randomIndex.Next(0,245);
-        return promptList[promptIndex];
+        // use randomIndex to return random journal prompt from _promptList
+        return _promptList[promptIndex];
     }
 
 }

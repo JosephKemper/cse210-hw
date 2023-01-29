@@ -35,7 +35,6 @@ class Program
             }else if (_userChoice == "2"){
                 // Display journals typed
                 userJournal.DisplayJournal();
-                Console.WriteLine ();
 
             }else if (_userChoice == "3"){
                 // Load journals from file
@@ -56,6 +55,7 @@ class Program
             }else {
                 // Catch incorrect entries to prevent app crashing
                 Console.WriteLine ("Please enter the number of the option you wish to select.");
+                Console.WriteLine ();
             }
         }
 

@@ -71,6 +71,7 @@ public class Journal
         string[] lines = System.IO.File.ReadAllLines(fileName);
         foreach (string line in lines)
         {
+            _completeJournal.Clear();
             // Use JournalEntry class to teach computer what to do with each part of journal
             JournalEntry loadEntry = new JournalEntry();
             // split journal entry into previously designed parts

@@ -13,7 +13,7 @@ public class JournalEntry
     {
         Console.Write ("\b");
         Console.WriteLine ($"{_currentDate}");
-        Console.WriteLine ($"Prompt {_journalPrompt}");
+        Console.WriteLine ($"{_journalPrompt}");
         Console.WriteLine (_journalText);
         Console.WriteLine();
         // Automatically pause after displaying each entry to allow the user a chance to read it

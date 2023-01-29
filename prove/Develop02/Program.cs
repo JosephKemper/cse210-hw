@@ -13,6 +13,7 @@ class Program
     
         // Display menu options to user
         while (_userChoice != "5") {
+            Console.WriteLine ();
             Console.WriteLine ("Please select one of the following choices:");
             Console.WriteLine ("1. Write");
             Console.WriteLine ("2. Display");

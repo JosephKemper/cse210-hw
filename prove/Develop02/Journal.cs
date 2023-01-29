@@ -40,14 +40,19 @@ public class Journal
         }
     }
 
+    // SaveJournal class method teaches computer how to save journal entry to file
     public void SaveJournal()
     {
+        // Get file name from user to save journal to
         Console.Write ("Please enter the file name: ");
         string fileName = Console.ReadLine();
+
+        // use StreamWriter method to loop through journal and write each entry to file
         using (StreamWriter saveEntry = new StreamWriter (fileName))
         {
             foreach (JournalEntry entry in _completeJournal)
             {
+                // use JournalEntry class to teach computer where to put each part of the journal
                 saveEntry.WriteLine ($"{entry._currentDate} , {entry._journalPrompt} , {entry._journalText}");
             }
         }

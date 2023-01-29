@@ -14,7 +14,6 @@ class Program
         // Display menu options to user
         while (_userChoice != "5") {
             Console.Write("\b \b");
-            Console.WriteLine ();
             Console.WriteLine ("Please select one of the following choices:");
             Console.WriteLine ("1. Write");
             Console.WriteLine ("2. Display");
@@ -25,28 +24,34 @@ class Program
 
             // Get _userChoice from user 
             _userChoice = Console.ReadLine();
+            Console.WriteLine ();
 
             // Compare _userChoice to different options and load appropriate userJournal method
             if (_userChoice == "1"){
                 // Write journal entry
-            userJournal.WriteJournal();
-                
+            userJournal.WriteJournal();            
+                Console.WriteLine ();
+
             }else if (_userChoice == "2"){
                 // Display journals typed
                 userJournal.DisplayJournal();
+                Console.WriteLine ();
 
             }else if (_userChoice == "3"){
                 // Load journals from file
                 userJournal.LoadJournal();
+                Console.WriteLine ();
 
             }else if (_userChoice == "4"){
                 // Save journals to file
                 userJournal.SaveJournal();
+                Console.WriteLine ();
 
             }else if (_userChoice == "5"){
                 // Exit program
                 Console.WriteLine ("Thank you for using our Journal Program!");
                 Console.WriteLine ("Come back soon.");
+                Console.WriteLine ();
                 Environment.Exit(0);
             }else {
                 // Catch incorrect entries to prevent app crashing

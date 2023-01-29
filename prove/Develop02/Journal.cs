@@ -20,8 +20,6 @@ public class Journal
         
         // Use currentEntry class instance to collect randomly generated _journalPrompt
         currentEntry._journalPrompt = newPrompt.GeneratePrompt();
-        // Extra space added for aesthetic purposes
-        Console.WriteLine ();
         // Display _journalPrompt to user
         Console.WriteLine (currentEntry._journalPrompt);
 

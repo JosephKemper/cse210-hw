@@ -64,6 +64,7 @@ public class Journal
     // LoadJournal class method, teaches the computer how to load a journal from a previously created file
     public void LoadJournal ()
     {
+        _completeJournal.Clear();
         // Get the file name the user wishes to load and store in fileName
         Console.Write ("Enter the file name you wish to load: ");
         string fileName = Console.ReadLine ();
@@ -71,7 +72,6 @@ public class Journal
         string[] lines = System.IO.File.ReadAllLines(fileName);
         foreach (string line in lines)
         {
-            _completeJournal.Clear();
             // Use JournalEntry class to teach computer what to do with each part of journal
             JournalEntry loadEntry = new JournalEntry();
             // split journal entry into previously designed parts

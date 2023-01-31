@@ -32,6 +32,6 @@ public class Fraction
 // TODO #14 BUG GetDecimalValue not properly converting to lower than 1
     public double GetDecimalValue()
     {
-        return _numerator/_denominator;
+        return (double) _numerator/(double)_denominator;
     }
 }

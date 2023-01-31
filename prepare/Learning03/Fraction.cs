@@ -23,5 +23,14 @@ public class Fraction
         _denominator = denominator;
     }
 
-    
+    public string GetFractionString()
+    {
+        string stringFraction = $"{_numerator}/{_denominator}";
+        return stringFraction;
+    }
+
+    public double GetDecimalValue()
+    {
+        return _numerator/_denominator;
+    }
 }

@@ -29,7 +29,6 @@ public class Fraction
         return stringFraction;
     }
 
-// TODO #14 BUG GetDecimalValue not properly converting to lower than 1
     public double GetDecimalValue()
     {
         return (double) _numerator/(double)_denominator;

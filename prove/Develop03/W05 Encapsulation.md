@@ -43,10 +43,21 @@ Define class behaviors
 1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
 
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
+Hide Words -- uses the hide function in the word class to hide each word as needed. 
+Get Rendered Text -- assembles the modified verse for display to user
+Set Rendered Text -- Displays rendered text to user
+Is Completely Hidden -- checks if the verse is completely hidden and exits the program after another input from user
+
+
+Word - Keeps track of a single word and whether it is shown or hidden.
+Hide -- hides a single word
+Show -- shows a single word
+Is Hidden -- attaches a status of hidden to each word
+Get Rendered Text -- converts a single word into underscores to then be hidden by program
 
 Reference - Keeps track of the book, chapter, and verse information.
 
-Word - Keeps track of a single word and whether it is shown or hidden.
+
 
 
 Define class attributes

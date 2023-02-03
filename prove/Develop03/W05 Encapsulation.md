@@ -9,7 +9,7 @@ The program displays a scripture and its reference for the user, and then will s
 
 2. What user inputs does it have?
 
-The enter key and typing quit
+The enter key and typing "quit"
 
 3. What output does it produce?
 
@@ -17,7 +17,7 @@ It will display the scripture and its text and will slowly remove words each tim
 
 4. How does the program end?
 
-User types quit or gets to the end of the scripture and hits enter one more time
+User types quit or gets to where all words of a scripture are replaced with underscores and hits enter one more time
 
 Step 5: Determine the classes
 1. What are good candidates for classes in this program?
@@ -25,14 +25,13 @@ Step 5: Determine the classes
 Scripture Class, Word Class, Reference Class
 
 2. What are the primary responsibilities of each class?
+
 Scripture Class
 Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
 
 
-
 Word Class
 Keeps track of a single word and whether it is shown or hidden.
-
 
 Reference Class
 Keeps track of the book, chapter, and verse information.
@@ -42,17 +41,18 @@ Step 6: Define class behaviors
 1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
 
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
-Hide Words -- uses the hide function in the word class to hide each word as needed. 
-Get Rendered Text -- assembles the modified verse for display to user
-Set Rendered Text -- Displays rendered text to user
-Is Completely Hidden -- checks if the verse is completely hidden and exits the program after another input from user
+
+    Hide Words -- uses the hide function in the word class to hide each word as needed. 
+    Get Rendered Text -- assembles the modified verse for display to user
+    Set Rendered Text -- Displays rendered text to user
+    Is Completely Hidden -- checks if the verse is completely hidden and exits the program after another input from user
 
 
 Word - Keeps track of a single word and whether it is shown or hidden.
-Hide -- hides a single word
-Show -- shows a single word
-Is Hidden -- attaches a status of hidden to each word
-Get Rendered Text -- converts a single word into underscores to then be hidden by program
+    Hide -- hides a single word
+    Show -- shows a single word
+    Is Hidden -- attaches a status of hidden to each word
+    Get Rendered Text -- converts a single word into underscores to then be hidden by program
 
 Reference - Keeps track of the book, chapter, and verse information.
 Convert scripture reference into a list for easy reference later

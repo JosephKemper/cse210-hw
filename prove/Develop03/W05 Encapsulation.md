@@ -1,7 +1,8 @@
+Step 3: Discuss the Preparation Learning Activity
 1. What part of the learning activity was the hardest for you?
 Trying to figure out how to properly create a class outline. 
 
-Program Specifications
+Step 4: Program Specifications
 1. What does the program do?
 
 The program displays a scripture and its reference for the user, and then will slowly remove words from the reference to help the user memorize the text
@@ -18,7 +19,7 @@ It will display the scripture and its text and will slowly remove words each tim
 
 User types quit or gets to the end of the scripture and hits enter one more time
 
-Determine the classes
+Step 5: Determine the classes
 1. What are good candidates for classes in this program?
 
 Scripture Class, Word Class, Reference Class
@@ -37,7 +38,7 @@ Reference Class
 Keeps track of the book, chapter, and verse information.
 
 
-Define class behaviors
+Step 6: Define class behaviors
 1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
 
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
@@ -58,7 +59,7 @@ Convert scripture reference into a list for easy reference later
 
 
 
-Define class attributes
+Step 7: Define class attributes
 1. What attributes does this class need to fulfill its behaviors? (In other words, what variables should this class store?)
 
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
@@ -97,7 +98,7 @@ Word - Keeps track of a single word and whether it is shown or hidden.
 
 Reference - Keeps track of the book, chapter, and verse information.
 
-Define Constructors
+Step 8: Define Constructors
 1. What constructors should each class have?
     In other words, what parameters should you pass in when creating an object of that type.
 

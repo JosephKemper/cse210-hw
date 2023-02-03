@@ -16,7 +16,7 @@ It will display the scripture and its text and will slowly remove words each tim
 
 4. How does the program end?
 
-User types quit
+User types quit or gets to the end of the scripture and hits enter one more time
 
 Determine the classes
 1. What are good candidates for classes in this program?
@@ -27,17 +27,15 @@ Scripture Class, Word Class, Reference Class
 Scripture Class
 Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
 
-A class is present that encapsulates the responsibilities of a Scripture. Behavior that is specific to Scriptures is all done by this class, not in other places in the program. And, this class does not include items or behaviors that do not pertain to it.
+
 
 Word Class
 Keeps track of a single word and whether it is shown or hidden.
 
-A class is present that encapsulates the responsibilities of a Word (including that the Word class is responsible for storing it's own shown/hidden state). Behavior that is specific to Words is all done by this class, not in other places in the program. And, this class does not include items or behaviors that do not pertain to it.
 
 Reference Class
 Keeps track of the book, chapter, and verse information.
 
-A class is present that encapsulates the responsibilities of a Reference (including handling multiple verses). Behavior that is specific to References is all done by this class, not in other places in the program. And, this class does not include items or behaviors that do not pertain to it.
 
 Define class behaviors
 1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
@@ -56,20 +54,60 @@ Is Hidden -- attaches a status of hidden to each word
 Get Rendered Text -- converts a single word into underscores to then be hidden by program
 
 Reference - Keeps track of the book, chapter, and verse information.
-
+Convert scripture reference into a list for easy reference later
 
 
 
 Define class attributes
 1. What attributes does this class need to fulfill its behaviors? (In other words, what variables should this class store?)
 
+Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
+Reference : String
+Verse : String
+VisibleWord:String
+HiddenWord:String
+VisibleVerseList:List <String> 
+
+Word - Keeps track of a single word and whether it is shown or hidden.
+
+
+Reference - Keeps track of the book, chapter, and verse information.
+Book:String 
+Chapter:String
+FirstVerse:String
+LastVerse:String
+
 2. What are the data types of these member variables?
+Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
+
+
+
+Word - Keeps track of a single word and whether it is shown or hidden.
+
+
+Reference - Keeps track of the book, chapter, and verse information.
 
 3. What constructors should each class have?
+
+Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
+
+
+Word - Keeps track of a single word and whether it is shown or hidden.
+
+
+Reference - Keeps track of the book, chapter, and verse information.
 
 Define Constructors
 1. What constructors should each class have?
     In other words, what parameters should you pass in when creating an object of that type.
+
+Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
+
+
+Word - Keeps track of a single word and whether it is shown or hidden.
+
+
+Reference - Keeps track of the book, chapter, and verse information.
 
 2. What other work needs to be done to set up these objects?
     For example, does the constructor need to run code to perform set up tasks, like creating lists, iterating through variables, etc.

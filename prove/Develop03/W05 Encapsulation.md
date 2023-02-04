@@ -55,38 +55,43 @@ Word - Keeps track of a single word and whether it is shown or hidden.
     Get Rendered Text -- converts a single word into underscores to then be hidden by program
 
 Reference - Keeps track of the book, chapter, and verse information.
-Convert scripture reference into a list for easy reference later
-
+    Look up -- Used by Scripture class to pull verse to memorize
 
 
 Step 7: Define class attributes
 1. What attributes does this class need to fulfill its behaviors? (In other words, what variables should this class store?)
 
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
-Reference : String
-Verse : String
-VisibleWord:String
-HiddenWord:String
-VisibleVerseList:List <String> 
+    Reference : String
+    Verse : String
+    VisibleVerseList:List <String> 
 
 Word - Keeps track of a single word and whether it is shown or hidden.
-
+    VisibleWord:String
+    HiddenWord:String
 
 Reference - Keeps track of the book, chapter, and verse information.
-Book:String 
-Chapter:String
-FirstVerse:String
-LastVerse:String
+    Book:String 
+    Chapter:String
+    FirstVerse:String
+    LastVerse:String
 
 2. What are the data types of these member variables?
+
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
-
-
+    Reference : String
+    Verse : String
+    VisibleVerseList:List <String> 
 
 Word - Keeps track of a single word and whether it is shown or hidden.
-
+    VisibleWord:String
+    HiddenWord:String
 
 Reference - Keeps track of the book, chapter, and verse information.
+    Book:String 
+    Chapter:String
+    FirstVerse:String
+    LastVerse:String
 
 3. What constructors should each class have?
 

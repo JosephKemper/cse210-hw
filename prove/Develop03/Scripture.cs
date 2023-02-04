@@ -1,3 +1,7 @@
+using System;
+
+public class Scripture
+{
 /*
 Keeps track of the reference and the text of the scripture. 
 Can hide words and get the rendered display of the text.
@@ -23,3 +27,4 @@ as each word slowly gets replaced by underscores,
 and then recombined back into a string and 
 then combined back with the reference to be shown to the user.
 */
+}

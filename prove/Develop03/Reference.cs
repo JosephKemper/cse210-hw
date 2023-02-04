@@ -1,3 +1,7 @@
+using System;
+
+public class Reference
+{
 // Keeps track of the book, chapter, and verse information.
 
 // Verse count, if 1 then it tells the class to use the single verse constructor, if multiple, then it tells the class to use the multiple verse constructor.
@@ -14,3 +18,4 @@
 
 // multiple verse constructor
 // Combines book name, chapter and verse into the following format Book c:v-v1
+}

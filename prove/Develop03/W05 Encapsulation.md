@@ -97,11 +97,25 @@ Reference - Keeps track of the book, chapter, and verse information.
 
 Scripture - Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
 
+    hide words -- decides which words in the verse will be hid and replaces them in the word list
+    combine scripture -- combines the reference, and text of the scripture to one string
+    display text -- display's the scripture text to the user. 
+
 
 Word - Keeps track of a single word and whether it is shown or hidden.
 
+    Convert word 
+    converts word to list
+    constructs a series of underscores equal to the length of the word list
+
 
 Reference - Keeps track of the book, chapter, and verse information.
+
+    1 verse constructor
+    Combines book name, chapter and verse into the following format Book c:v
+
+    multiple verse constructor
+    Combines book name, chapter and verse into the following format Book c:v-v1
 
 Step 8: Define Constructors
 1. What constructors should each class have?
@@ -111,10 +125,13 @@ Scripture - Keeps track of the reference and the text of the scripture. Can hide
 
 
 Word - Keeps track of a single word and whether it is shown or hidden.
-
+    Optional parameter of shown/hidden default shown
 
 Reference - Keeps track of the book, chapter, and verse information.
+
+    Verse count, if 1 then it tells the class to use the single verse constructor, if multiple, then it tells the class to use the multiple verse constructor. 
 
 2. What other work needs to be done to set up these objects?
     For example, does the constructor need to run code to perform set up tasks, like creating lists, iterating through variables, etc.
 
+    The word list that will store the verse text, will need to be regularly updated with underscores as each word slowly gets replaced by underscores, and then recombined back into a string and then combined back with the reference to be shown to the user. 

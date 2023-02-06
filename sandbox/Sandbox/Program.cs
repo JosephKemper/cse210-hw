@@ -1,10 +1,17 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
-public class Demo {
-   public static void Main() {
-      DayOfWeek wk = DateTime.Today.DayOfWeek;
-      Console.WriteLine(wk);
-      string _currentDate = DateTime.UtcNow.ToString("dddd, dd MMMM, yyyy");
-      Console.WriteLine ($"Today is, {_currentDate}");
-   }
+namespace split_string_to_list
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string split = "this, needs, to, split";
+            List<string> list = new List<string>();
+            list = split.Split(',').ToList();
+            Console.WriteLine(list);
+        }
+    }
 }

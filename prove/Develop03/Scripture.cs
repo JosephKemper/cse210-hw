@@ -9,18 +9,19 @@ public class Scripture
     Keeps track of the reference and the text of the scripture. 
     Can hide words and get the rendered display of the text.
     */
-
-    // Reference : String
     private string _combinedReference;
-    
-    // Verse : String
-    
-    static string _verseText = "Therefore, fear not, little flock; do good; let earth and hell combine against you, for if ye are built upon my rock, they cannot prevail. Behold, I do not condemn you; go your ways and sin no more; perform with soberness the work which I have commanded you. Look unto me in every thought; doubt not, fear not.";
-    string [] wordList = _verseText.Split(" ");
-    public void test1()
+    string _verseText = "Therefore, fear not, little flock; do good; let earth and hell combine against you, for if ye are built upon my rock, they cannot prevail. Behold, I do not condemn you; go your ways and sin no more; perform with soberness the work which I have commanded you. Look unto me in every thought; doubt not, fear not.";
+    // method for converting array to list found https://www.c-sharpcorner.com/article/convert-an-array-to-a-list-in-c-sharp/
+    public void constructWordList ()
     {
-        Console.WriteLine (wordList[1]);
+        string [] _wordArray = _verseText.Split(" ");
+        List <string> _wordList = new();
+        _wordList.AddRange(_wordArray);
+        
     }
+        
+         
+    
     
     // VisibleVerseList:List <String>
 

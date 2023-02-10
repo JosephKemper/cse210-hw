@@ -15,7 +15,6 @@ class Program
         Console.Clear();
         Console.WriteLine ($"{reference} {verse}");
         Console.WriteLine();
-        currentScripture.constructWordList();
 
         Console.WriteLine("Press enter to continue or type 'quit' to finish:");
         

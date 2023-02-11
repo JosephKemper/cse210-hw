@@ -1,6 +1,6 @@
 using System;
 // learned about namespace from https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/classes
-namespace ScriptureProject;
+namespace Develop03;
 public class ScriptureLibrary
 {
     // Stretch Goal loads scriptures from file for use in program

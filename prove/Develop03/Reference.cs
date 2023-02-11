@@ -3,7 +3,7 @@ using System;
 public class Reference
 {
     // Selects and returns scripture reference for user to memorize
-    private string _scriptureReference = "Doctrine and Covenants 6:34-36";
+    private string _scriptureReference;
     private string _scriptureText;
     private List<string> _scriptureList = new List<string> ();
     private int _listLength;

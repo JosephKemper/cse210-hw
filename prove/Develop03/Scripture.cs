@@ -10,7 +10,7 @@ public class Scripture
     Can hide words and get the rendered display of the text.
     */
     private string _combinedReference;
-    string _verseText = "Therefore, fear not, little flock; do good; let earth and hell combine against you, for if ye are built upon my rock, they cannot prevail. Behold, I do not condemn you; go your ways and sin no more; perform with soberness the work which I have commanded you. Look unto me in every thought; doubt not, fear not.";
+    string _verseText;
     // method for converting array to list found https://www.c-sharpcorner.com/article/convert-an-array-to-a-list-in-c-sharp/
     public void constructWordList ()
     {

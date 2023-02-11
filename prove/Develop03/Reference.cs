@@ -24,6 +24,8 @@ public class Reference
         _listLength = _referenceList.Count;
     }
 
+    
+
     public void SelectScripture (int userSelection = 0)
     {
         // Stretch Goal allows user to select scripture or selects a random scripture
@@ -40,7 +42,6 @@ public class Reference
         _scriptureReference = _referenceList [_userIndex];
         _scriptureText = _textList [_userIndex];
     }
-
 
     public string ReturnReference ()
     {

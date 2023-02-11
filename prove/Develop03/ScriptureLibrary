@@ -1,0 +1,13 @@
+using System;
+
+public class ScriptureLibrary
+{
+    // Stretch Goal loads scriptures from file for use in program
+
+    public void LoadScriptures ()
+    {
+        // Stretch Goal loads scriptures from file into list
+    }
+
+    
+}

@@ -9,10 +9,7 @@ public class Reference
     private int _listLength;
     private int _userSelection;
 
-    public void LoadScriptures ()
-    {
-        // Stretch Goal loads scriptures from file into list
-    }
+    
 
     public void SelectScripture (int userSelection = 0)
     {

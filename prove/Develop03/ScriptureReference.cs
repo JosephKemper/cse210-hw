@@ -1,6 +1,6 @@
 using System;
 
-public class scriptureReference
+public class ScriptureReference
 {
     // Stretch Goal
     // Class is used to teach computer how to read line in file

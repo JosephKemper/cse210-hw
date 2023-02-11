@@ -23,6 +23,7 @@ private string _lastVerse;
 // 1 verse constructor
 // Combines book name, chapter and verse into the following format Book c:v
 
+
 // multiple verse constructor
 // Combines book name, chapter and verse into the following format Book c:v-v1
 

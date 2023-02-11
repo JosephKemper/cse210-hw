@@ -4,10 +4,12 @@ public class Word
 {
 // Keeps track of a single word and whether it is shown or hidden.
 
-// Optional parameter of shown/hidden default shown
+
 
 // VisibleWord:String
 // HiddenWord:String
+
+// Optional parameter of shown/hidden default shown
 
 // Hide -- hides a single word
 // Show -- shows a single word

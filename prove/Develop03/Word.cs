@@ -2,21 +2,24 @@ using System;
 
 public class Word
 {
-// Keeps track of a single word and whether it is shown or hidden.
+// Used to render the text of a hidden word
+    private string _hiddenWord;
+    private string _visibleWord;
+    private int _wordLen;
+    private int _letterCount;
+    
 
+    public string RenderHiddenWord (string visibleWord)
+    {
+        _hiddenWord = "";
+        _visibleWord = visibleWord;
+        _wordLen = _visibleWord.Length;
+        // for loop syntax taken from https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements
+        for (_letterCount = 0; _letterCount < _wordLen; _letterCount++){
+            _hiddenWord += "_";
+            }
+        return _hiddenWord;
 
+    }
 
-// VisibleWord:String
-// HiddenWord:String
-
-// Optional parameter of shown/hidden default shown
-
-// Hide -- hides a single word
-// Show -- shows a single word
-// Is Hidden -- attaches a status of hidden to each word
-// Get Rendered Text -- converts a single word into underscores to then be hidden by program
-
-// Convert word 
-// converts word to list
-// constructs a series of underscores equal to the length of the word list
 }

@@ -10,6 +10,8 @@ public class Reference
     private string _scriptureText;
     private int _listLength;
     private int _userSelection;
+    private int _userIndex;
+    private Random _randomIndex = new Random();
 
     public void GetLibrary ()
     {
@@ -28,12 +30,15 @@ public class Reference
         _userSelection = userSelection;
         
         // If userSelection = 0 generate random int to select scripture
-
-
+        if (_userSelection == 0){
+            _userIndex = _randomIndex.Next(0,_listLength);
+        }
         // Else subtract one from user selection to select scripture
-
-        // Assign scripture to verse and reference variables
-
+        else {
+            _userIndex = _userSelection -1;
+        }
+        _scriptureReference = _referenceList [_userIndex];
+        _scriptureText = _textList [_userIndex];
     }
 
 

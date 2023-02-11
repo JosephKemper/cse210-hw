@@ -7,9 +7,6 @@ public class Scripture
     private List<string> _wordList = new List<string> ();
     private string _currentReference;
     private string _currentText;
-
-
-    
     
     // method for converting array to list found https://www.c-sharpcorner.com/article/convert-an-array-to-a-list-in-c-sharp/
     public void ConstructWordList ()

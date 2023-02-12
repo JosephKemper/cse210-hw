@@ -5,7 +5,7 @@ public class Reference
 {
     // Selects and returns scripture reference for user to memorize
     private List<string> _referenceList = new List<string>();
-    private List<string> _textList = new List<string> ();
+    private List <string> _scriptureList = new List<string> ();
     private string _scriptureReference;
     private string _scriptureText;
     private int _listLength;
@@ -13,18 +13,24 @@ public class Reference
     private int _userIndex;
     private Random _randomIndex = new Random();
 
-    public void GetLibrary ()
-    {
-         // Stretch Goal
-        // Load Scriptures from file
-        ScriptureLibrary scriptures = new ScriptureLibrary();
-        scriptures.LoadScriptures();
-        _referenceList = scriptures.ReturnReference();
-        _textList = scriptures.ReturnText();
-        _listLength = _referenceList.Count;
-    }
-
     
+    private string scriptureFile = "Scripture Library.txt";
+    
+    public void LoadScriptures()
+    {
+        
+        // Stretch Goal loads scriptures from file into list
+        string[] lines = System.IO.File.ReadAllLines(scriptureFile);
+        foreach (string line in lines)
+        {
+            string[] scriptureParts = line.Split("|~|");
+            string reference = scriptureParts [0];
+            string text = scriptureParts [1];
+
+            _scriptureList.Add(text);
+            _referenceList.Add(reference);
+        }
+    }    
 
     public void SelectScripture (int userSelection = 0)
     {
@@ -40,7 +46,7 @@ public class Reference
             _userIndex = _userSelection -1;
         }
         _scriptureReference = _referenceList [_userIndex];
-        _scriptureText = _textList [_userIndex];
+        _scriptureText = _scriptureList [_userIndex];
     }
 
     public string ReturnReference ()

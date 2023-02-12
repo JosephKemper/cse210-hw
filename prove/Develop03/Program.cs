@@ -5,7 +5,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        Reference currentReference = new Reference();
         Scripture currentScripture = new Scripture();
+        Menu mainMenu = new Menu();
+        currentScripture.LoadScriptures();
+        currentReference.LoadScriptures();
+        mainMenu.LoadScriptures();
+        
         string reference = currentScripture.DisplayReference();
         string verse = currentScripture.DisplayVerse();
 
@@ -13,7 +19,6 @@ class Program
 
         string userInput = "";
         while (userInput != "3"){
-            Menu mainMenu = new Menu();
             mainMenu.MainMenu();
             
             userInput = Console.ReadLine ();

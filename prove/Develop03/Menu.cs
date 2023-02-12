@@ -5,9 +5,27 @@ namespace Develop03;
 // Enabling user choice of options
 public class Menu
 {
-    private List <string> _referenceList = new List<string>();
+    private List <string> _referenceList = new List <string> ();
     private int _listLength;
     private int _optionNumber;
+
+    
+    private string scriptureFile = "Scripture Library.txt";
+    
+    public void LoadScriptures()
+    {
+        
+        // Stretch Goal loads scriptures from file into list
+        string[] lines = System.IO.File.ReadAllLines(scriptureFile);
+        foreach (string line in lines)
+        {
+            string[] scriptureParts = line.Split("|~|");
+            string reference = scriptureParts [0];
+            string text = scriptureParts [1];
+
+            _referenceList.Add(reference);
+        }
+    }
     public void MainMenu ()
     {
         Console.WriteLine ();
@@ -20,8 +38,7 @@ public class Menu
 
     public void ScriptureSelection()
     {
-        ScriptureLibrary referenceMenu = new ScriptureLibrary();
-        _referenceList = referenceMenu.ReturnReference();
+        
         _listLength = _referenceList.Count;
         for (int i = 0; i < _listLength; i++){
             _optionNumber = i+1;

@@ -38,6 +38,7 @@ public class Reference
         for (int i = 0; i < _listLength; i++){
             _optionNumber = i+1;
             Console.WriteLine ($"{_optionNumber}. {_referenceList[i]}");
+    }
 
     public void SelectScripture (int userSelection = 0)
     {

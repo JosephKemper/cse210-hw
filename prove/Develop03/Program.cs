@@ -26,7 +26,7 @@ class Program
             
 
             if (userInput == "1"){
-                mainMenu.ScriptureSelection();
+                
             }else if (userInput == "2"){
             Console.WriteLine("Press enter to continue or type 'quit' to finish:");
             }else if (userInput == "3"){

@@ -11,6 +11,7 @@ public class Reference
     private int _listLength;
     private int _userSelection;
     private int _userIndex;
+    private int _optionNumber;
     private Random _randomIndex = new Random();
 
     
@@ -30,7 +31,13 @@ public class Reference
             _scriptureList.Add(text);
             _referenceList.Add(reference);
         }
+        _listLength = _referenceList.Count;
     }    
+    public void ScriptureSelection()
+    {
+        for (int i = 0; i < _listLength; i++){
+            _optionNumber = i+1;
+            Console.WriteLine ($"{_optionNumber}. {_referenceList[i]}");
 
     public void SelectScripture (int userSelection = 0)
     {

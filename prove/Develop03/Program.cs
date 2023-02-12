@@ -5,13 +5,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Reference currentReference = new Reference();
-        Scripture currentScripture = new Scripture();
-        Menu mainMenu = new Menu();
-        currentScripture.LoadScriptures();
-        currentReference.LoadScriptures();
-        mainMenu.LoadScriptures();
         
+        Scripture currentScripture = new Scripture();
+
+
         string reference = currentScripture.DisplayReference();
         string verse = currentScripture.DisplayVerse();
 
@@ -19,7 +16,11 @@ class Program
 
         string userInput = "";
         while (userInput != "3"){
-            mainMenu.MainMenu();
+            Console.WriteLine ();
+            Console.WriteLine ("1. Choose a scripture to memorize");
+            Console.WriteLine ("2. Memorize a random scripture");
+            Console.WriteLine ();
+            Console.Write ("Please enter your selection or type 'quit' to exit: ");
             
             userInput = Console.ReadLine ();
             

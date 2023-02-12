@@ -20,19 +20,19 @@ One of the major benefits of encapsulation is that you protect your program from
 <p>Provide an application of Encapsulation</p>
 <p></p>
 <p>
-In C# when declaring member variables for classes, you can just declare them like you would in any other part of your code like this
+In C# when declaring member variables for classes, you can just declare them like you would in any other part of your code like this:
 </p>
 <code>
 string _currentReference;
 </code>
 <p>
-You can also add a public tag, to make the variable useable outside of the individual class. 
+You can also add a public tag, to make the variable useable outside of the individual class like this: 
 </p>
 <code>
 public string _currentReference;
 </code>
 <p>
-However, if you use the private tag when declaring the variable you restrict access to that member variable to just inside the specific class. 
+However, if you use the private tag when declaring the variable, you restrict access to that member variable to just inside the specific class like this: 
 <p>
 <code>
 private string _currentReference;

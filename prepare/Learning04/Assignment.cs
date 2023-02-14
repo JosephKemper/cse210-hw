@@ -7,9 +7,12 @@ namespace Learning04
     private string _studentName;
     private string _topic;
 
-    public string GetSummary ()
+    public void GetSummary (string studentName, string topic)
     {
-        return $"{_studentName} - {_topic}";
+        _studentName = studentName;
+        _topic = topic;
+
+        Console.WriteLine ($"{_studentName} - {_topic}");
     }
 
     public string GetName ()

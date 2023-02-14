@@ -17,6 +17,9 @@ class Program
         newMath.GetHomeworkList ("Roberto Rodriguez", "Fractions", "Section 7.3", "Problems 8-19");
 
         Console.WriteLine ();
+
+        WritingAssignment newWriting = new WritingAssignment();
+        newWriting.GetWritingInfo ("Mary Waters", "European History", "The Causes of World War II");
     }
 }
 }

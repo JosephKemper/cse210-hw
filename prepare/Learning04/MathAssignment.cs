@@ -11,7 +11,7 @@ namespace Learning04
         {
             _textbookSection = textbookSection;
             _problems = problems;
-            Console.WriteLine ($"{GetName(name)} - {GetTopic(topic)}");
+            GetSummary (name, topic);
             Console.WriteLine ($"{_textbookSection} {_problems}");
 
         }

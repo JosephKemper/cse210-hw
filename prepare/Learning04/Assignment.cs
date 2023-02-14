@@ -15,13 +15,17 @@ namespace Learning04
         Console.WriteLine ($"{_studentName} - {_topic}");
     }
 
-    public string GetName ()
+    public string GetName (string name)
     {
+        _studentName = name;
+
         return _studentName;
     }
 
-    public string GetTopic ()
+    public string GetTopic (string topic)
     {
+        _topic = topic;
+        
         return _topic;
     }
 

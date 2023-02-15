@@ -14,5 +14,5 @@ Activity Class
 Will need three member variables for time. _stringTime, _intTime, and _milliseconds.
 </p>
 <p>
-Method DisplayDescription void type, with one argument that stores the rest of the activity description for the activity. The body of the method will simply take the argument to complete the string that will display the description of the activity to the user.
+Method DisplayDescription void type, with two arguments. One stores the rest of the activity description for the activity. The other stores the name of the activity The body of the method will simply display the name of the activity and take the argument to complete the string that will display the description of the activity to the user.
 </p>

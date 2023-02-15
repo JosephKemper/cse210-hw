@@ -1,5 +1,5 @@
 <h1>
-    Tuesday, 14 February, 2023
+    W07 Team Activity: Designer
 </h1>
 <p>
 For core requirements, 4 classes. One class that has all of the shared mindfulness activity traits and one sub class for each activity. My first thought for a stretch goal was to keep it simple and add an extra activity. I'm not sure what that will be right now, but I want to get the core program running first. 
@@ -12,11 +12,13 @@ Functional requirements
 Have a menu system to allow the user to choose an activity.
 </code>
 <p>
+Simple and self explanatory. Likely will be included nested under a while loop unless it becomes overly complex that will exit when the user selects the option to quit.
 </p>
 <code>
 Each activity should start with a common starting message that provides the name of the activity, a description, and asks for and sets the duration of the activity in seconds. Then, it should tell the user to prepare to begin and pause for several seconds.
 </code>
 <p>
+
 </p>
 <code>
 Each activity should end with a common ending message that tells the user they have done a good job, and pause and then tell them the activity they have completed and the length of time and pauses for several seconds before finishing.

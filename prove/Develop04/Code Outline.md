@@ -1,6 +1,6 @@
-<h3>
+<h1>
 Class Program
-</h3>
+</h1>
 <p>
 While not 4
 </p>
@@ -28,12 +28,12 @@ If/else if statements checking for user selection
 <p>
 Load appropriate activity or end program if 4 is selected
 </p>
-<h3>
-Class Activity
-</h3>
 <h1>
-Member Variables
+Class Activity
 </h1>
+<h3>
+Member Variables
+</h3>
 <p>
 _getSeconds
 </p>

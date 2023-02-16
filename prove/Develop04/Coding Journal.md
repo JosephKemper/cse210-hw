@@ -18,12 +18,13 @@ Simple and self explanatory. Likely will be included nested under a while loop u
 Each activity should start with a common starting message that provides the name of the activity, a description, and asks for and sets the duration of the activity in seconds. Then, it should tell the user to prepare to begin and pause for several seconds.
 </code>
 <p>
-Users should not be asked for time in milliseconds. The sleep function, uses milliseconds. So, that means I will need to take a number of seconds from the user, convert it into milliseconds and feed that variable into the sleep timer. So, I will need one variable to get the number from the user, another to convert it into an int, and a third to convert it into milliseconds. There are 1000 milliseconds in a second. 
+Users should not be asked for time in milliseconds. The sleep function, uses milliseconds. So, that means I will need to take a number of seconds from the user, convert it into milliseconds and feed that variable into the sleep timer. So, I will need one variable to get the number from the user, another to convert it into an int, and a third to convert it into milliseconds. There are 1000 milliseconds in a second. The time will be collected and returned via a method in the main activity class. 
 </p>
 <p>
 The Activity class should have a method that will take in two arguments. One will be the name of the activity, and the other will complete the sentence that will describe what the activity will do. It should be a void type, and will print the completed activity to the console.
 </p>
 <p>
+
 </p>
 <p>
 </p>

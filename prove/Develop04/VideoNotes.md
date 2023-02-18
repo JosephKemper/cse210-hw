@@ -19,4 +19,23 @@ User enters 1
             How long, in seconds, would you like for your session? 
         
         Program takes an integer from the user
-        
+        Tells user to get ready
+        Pauses the program for a short time
+        Displays animation while the program is paused
+
+        prints and empty line
+        Displays Breathe in to user with count down timer
+        Displays Now breathe out to the user with a count down timer
+        Continues the breathe in/breathe out cycle based on the length of time the user input.
+
+    Upon activity completion
+        Displays completion text to user
+            Well done!!
+
+            You have completed another 30 seconds of the Breathing Activity.
+        Pauses application to give user time to read
+        Displays animation while program is paused. 
+    Returns to main menu
+
+User enters 2
+    

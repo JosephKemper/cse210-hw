@@ -81,5 +81,41 @@ User enters 2
     Returns to main menu
 
 User Enters 3
-    
+    Reflecting Activity Starts
+        Intro Text Displayed
+        Welcome to the Listing Activity.
+        Blank line
+        This activity will help you reflect on the good things in your life by having your list as many things as you can in a certain area.
+        Blank line
+        How long, in seconds, would you like for your session? 
 
+        Program takes an integer from the user
+        Tells user to get ready
+        Pauses the program for a short time
+        Displays animation while the program is paused
+
+        prints and empty line
+
+        List as many responses as you can to the following prompt:
+
+        Displays a random prompt: Example below.
+
+        --- When have you felt the Holy Ghost this month? ---
+        You may begin in: [Displays a count down timer]
+        
+        Allows the user to continue entering new responses until the time runs out. 
+
+        after time ends program displays
+            You listed x items! 
+            x = number of items the user entered
+
+            Well done!!
+            Pauses application with animation to give user time to read
+
+            You have completed another 30 seconds of the Listing Activity.
+        Pauses application with animation to give user time to read
+        Displays animation while program is paused. 
+    Returns to main menu
+
+User enters 4
+    Application closes

@@ -31,11 +31,55 @@ User enters 1
     Upon activity completion
         Displays completion text to user
             Well done!!
+            Pauses application with animation to give user time to read
 
             You have completed another 30 seconds of the Breathing Activity.
-        Pauses application to give user time to read
+        Pauses application with animation to give user time to read
         Displays animation while program is paused. 
     Returns to main menu
 
 User enters 2
+    Reflecting Activity Starts
+        Intro Text Displayed
+            Welcome to the Reflecting Activity
+            This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power your have and how you can use it in other aspects of your life.
+
+            How long, in seconds, would you like for your session? 
+
+        Program takes an integer from the user
+        Tells user to get ready
+        Pauses the program for a short time
+        Displays animation while the program is paused
+
+        prints and empty line
+
+        Display's the following text
+            Consider the following prompt:
+            Prints an empty line
+            --- Think of a time when you did something really difficult ---
+            Prints an empty line
+            When you have something in mind, press enter to continue.
+        Waits for the user to hit enter before continuing
+        Prints an empty line
+        Now ponder on each of the following questions as they relate to the experience
+        You may begin in: [Count down timer displayed]
+
+        Displays a series of random questions pulled from list. Examples shows below.
+        How did you feel when it was complete? [Animation displayed while program pauses]
+            [After undisclosed amount of time, the activity proceeds to the next question]
+        What is your favorite thing about this experience? [Animation displayed while program pauses]
+            [After undisclosed amount of time, the activity proceeds to the next question]
+
+    Upon activity completion
+        Displays completion text to user
+            Well done!!
+            Pauses application with animation to give user time to read
+
+            You have completed another 30 seconds of the Reflecting Activity.
+        Pauses application with animation to give user time to read
+        Displays animation while program is paused. 
+    Returns to main menu
+
+User Enters 3
     
+

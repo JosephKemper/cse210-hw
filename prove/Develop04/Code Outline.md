@@ -3,6 +3,8 @@ Activity, BreathingActivity, ReflectionActivity, and ListingActivity
 
 Class Program
 <Code>
+_userSelection
+
 While not 4
     Menu options
     1. Start breathing activity
@@ -28,6 +30,8 @@ Class Activity
         PauseWithTimer (milliseconds :int, seconds) :Void
         ConvertSeconds (_getSeconds)
         ReturnSeconds()Int
+        ReturnName (activityName) :String
+        ReturnDescription (activityDescription) : String
 </Code>
 
 Class BreathingActivity
@@ -36,9 +40,9 @@ Class BreathingActivity
     Member Variables
         _activityName
         _activityDescription
-        _breatheInTime
-        _breatheOutTime
-        _holdBreathTime
+        _breatheInTime = 3
+        _breatheOutTime = 2
+        _holdBreathTime = 6
         _activityRounds
         _totalTime
 
@@ -56,6 +60,11 @@ ReflectionActivity
 
 
     Methods
+    GetPrompt () :String
+    GetQuestion () :String
+    DisplayPrompt () :Void
+    DisplayQuestion () Void
+    
 </Code>
 
 ListingActivity

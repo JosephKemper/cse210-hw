@@ -24,8 +24,10 @@ Class Activity
     Methods
         DisplayIntroMessage (activityName:string, activityDescription:String) :Void
         DisplayEndingMessage (Seconds: int, activityName:String) :Void
-        PauseWithSpinner 
-        PauseWithTimer
+        PauseWithSpinner (milliseconds int) :Void
+        PauseWithTimer (milliseconds :int, seconds) :Void
+        ConvertSeconds (_getSeconds)
+        ReturnSeconds()Int
 </Code>
 
 Class BreathingActivity
@@ -38,10 +40,12 @@ Class BreathingActivity
         _breatheOutTime
         _holdBreathTime
         _activityRounds
+        _totalTime
 
     Methods
         CalculateRounds (seconds : Int) : Int
-        BreathingActivity(activityRounds)
+        CalculateTotalTime (rounds) : Int
+        BreathingActivity(seconds)
 </Code>
 
 ReflectionActivity

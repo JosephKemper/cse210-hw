@@ -1,91 +1,64 @@
-<h1>
+There should be 4 classes in addition to the main program class
+Activity, BreathingActivity, ReflectionActivity, and ListingActivity
+
 Class Program
-</h1>
-<p>
+<Code>
 While not 4
-</p>
-<p>
-Menu options
-</p>
-<p>
-1. Start breathing activity
-</p>
-<p>
-2. Start reflecting Activity
-</p>
-<p>
-3. Start listening Activity
-</p>
-<p>
-4. Quit
-</p>
-<p>
-Select a choice from the menu: 
-</p>
-<p>
-If/else if statements checking for user selection
-</p>
-<p>
-Load appropriate activity or end program if 4 is selected
-</p>
-<h1>
+    Menu options
+    1. Start breathing activity
+    2. Start reflecting Activity
+    3. Start listening Activity
+    4. Quit
+    Select a choice from the menu: 
+        If/else if statements checking for user selection
+        Load appropriate activity or end program if 4 is selected
+</Code>
+
 Class Activity
-</h1>
-<h3>
-Member Variables
-</h3>
-<p>
-_getSeconds
-</p>
-<p>
-_intSeconds
-</p>
-<p>
-_milliseconds
-</p>
-<h3>
-Method DisplayStartingMessage
-</h3>
-<h3>
-Method DisplayEndingMessage
-</h3>
-<h3>
-Method PauseWithSpinner
-</h3>
-<h3>
-Method PauseWithTimer
-</h3>
-<h1>
+<Code>
+    Member Variables
+        _getSeconds :String
+        _intSeconds : Int
+        _milliseconds : Int
+
+    Methods
+        DisplayIntroMessage (activityName:string, activityDescription:String) :Void
+        DisplayEndingMessage (Seconds: int, activityName:String) :Void
+        PauseWithSpinner 
+        PauseWithTimer
+</Code>
+
 Class BreathingActivity
-</h1>
-<h3>
-Method RunBreathingActivity
-</h3>
-<p>
-</p>
-<p>
-</p>
-<h1>
-Class ReflectingActivity
-</h1>
-<h3>
-Method RunReflectingActivity
-</h3>
-<p>
-</p>
-<p>
-</p>
-<h1>
-Class ListingActivity
-</h1>
-<h3>
-Method RunListingActivity
-</h3>
-<p>
-</p>
-<p>
-</p>
-<h1>
-</h1>
-<h3>
-</h3>
+
+<Code>
+    Member Variables
+        _activityName
+        _activityDescription
+        _breatheInTime
+        _breatheOutTime
+        _holdBreathTime
+        _activityRounds
+
+    Methods
+        CalculateRounds (seconds : Int) : Int
+        BreathingActivity(activityRounds)
+</Code>
+
+ReflectionActivity
+<Code>
+    Member Variables
+        _activityName
+        _activityDescription
+
+
+    Methods
+</Code>
+
+ListingActivity
+<Code>
+    Member Variables
+        _activityName
+        _activityDescription
+
+    Methods
+</Code>

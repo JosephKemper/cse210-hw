@@ -1,0 +1,102 @@
+diff --git a/prove/Develop03/Program.cs b/prove/Develop03/Program.cs
+index 866104b..afd7028 100644
+--- a/prove/Develop03/Program.cs
++++ b/prove/Develop03/Program.cs
+@@ -1,5 +1,4 @@
+ using System;
+-namespace Develop03;
+ 
+ class Program
+ {
+@@ -40,4 +39,4 @@ class Program
+             
+         }
+     }
+-}
+\ No newline at end of file
++}
+diff --git a/prove/Develop03/Reference.cs b/prove/Develop03/Reference.cs
+index 5a2abca..ea60f93 100644
+--- a/prove/Develop03/Reference.cs
++++ b/prove/Develop03/Reference.cs
+@@ -1,5 +1,5 @@
+ using System;
+-namespace Develop03;
++using System.Collections.Generic;
+ 
+ public class Reference
+ {
+@@ -38,6 +38,7 @@ public class Reference
+         for (int i = 0; i < _listLength; i++){
+             _optionNumber = i+1;
+             Console.WriteLine ($"{_optionNumber}. {_referenceList[i]}");
++        }
+     }
+ 
+     public void SelectScripture (int userSelection = 0)
+@@ -66,4 +67,4 @@ public class Reference
+     {
+         return _scriptureText;
+     }
+-}
+\ No newline at end of file
++}
+diff --git a/prove/Develop03/Scripture.cs b/prove/Develop03/Scripture.cs
+index f8f933e..86ee605 100644
+--- a/prove/Develop03/Scripture.cs
++++ b/prove/Develop03/Scripture.cs
+@@ -1,16 +1,14 @@
+ using System;
+-namespace Develop03;
++using System.Collections.Generic;
+ 
+ public class Scripture
+ {
+     
+-    private List<string> _wordList = new List<string> ();
++    private List<string> _wordList = new List<string>();
+     private string _currentReference;
+     private string _currentText;
+ 
+ 
+-    }
+-    
+     // method for converting array to list found https://www.c-sharpcorner.com/article/convert-an-array-to-a-list-in-c-sharp/
+     public void ConstructWordList ()
+     {
+@@ -18,11 +16,7 @@ public class Scripture
+         _wordList.AddRange(_wordArray);
+     }
+         
+-         
+-    
+     
+-    
+-
+     public string DisplayReference ()
+     {
+         Reference scriptureReference = new Reference();
+@@ -43,4 +37,4 @@ public class Scripture
+     and then recombined back into a string and 
+     then combined back with the reference to be shown to the user.
+     */
+-}
+\ No newline at end of file
++}
+diff --git a/prove/Develop03/Word.cs b/prove/Develop03/Word.cs
+index 030625d..20d7a9e 100644
+--- a/prove/Develop03/Word.cs
++++ b/prove/Develop03/Word.cs
+@@ -1,5 +1,4 @@
+ using System;
+-namespace Develop03;
+ 
+ public class Word
+ {
+@@ -23,4 +22,4 @@ public class Word
+ 
+     }
+ 
+-}
+\ No newline at end of file
++}

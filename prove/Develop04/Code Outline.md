@@ -60,11 +60,11 @@ ReflectionActivity
 
 
     Methods
-    GetPrompt () :String
-    GetQuestion () :String
-    DisplayPrompt () :Void
-    DisplayQuestion () Void
-    
+        GetPrompt () :String
+        GetQuestion () :String
+        DisplayPrompt () :Void
+        DisplayQuestion () Void
+
 </Code>
 
 ListingActivity

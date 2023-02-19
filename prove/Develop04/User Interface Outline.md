@@ -7,9 +7,10 @@ upon start
           3. Start Listing Activity
           4. Quit
         Select a choice from the menu: 
-
 Program takes a number between 1 to 4 from the user
+</code>
 
+<code>
 User enters 1
     Breathing Activity starts
         Intro Text Displayed
@@ -38,7 +39,9 @@ User enters 1
         Pauses application with animation to give user time to read
         Displays animation while program is paused. 
     Returns to main menu
+</code>
 
+<code>
 User enters 2
     Reflecting Activity Starts
         Intro Text Displayed
@@ -80,7 +83,9 @@ User enters 2
         Pauses application with animation to give user time to read
         Displays animation while program is paused. 
     Returns to main menu
+</code>
 
+<code>
 User Enters 3
     Reflecting Activity Starts
         Intro Text Displayed
@@ -117,7 +122,9 @@ User Enters 3
         Pauses application with animation to give user time to read
         Displays animation while program is paused. 
     Returns to main menu
+</code>
 
+<code>
 User enters 4
     Application closes
 </code>

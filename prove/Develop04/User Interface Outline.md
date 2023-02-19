@@ -1,3 +1,4 @@
+<code>
 upon start
     Menu loads 
         Menu Options:
@@ -119,3 +120,4 @@ User Enters 3
 
 User enters 4
     Application closes
+</code>

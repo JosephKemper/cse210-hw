@@ -22,7 +22,11 @@ namespace Develop04
 
                 if (_userSelection == "1")
                 {
+                    string testTitle = "Test 1";
+                    string testDescription = "Test 2";
                     Console.WriteLine ("Run Breathing Activity");
+                    Activity testActivity = new Activity();
+                    testActivity.DisplayIntroMessage (testTitle, testDescription);
                 }
                 else if (_userSelection == "2")
                 {

@@ -24,9 +24,11 @@ namespace Develop04
                 {
                     string testTitle = "Test 1";
                     string testDescription = "Test 2";
+                    int testEnding = 30;
                     Console.WriteLine ("Run Breathing Activity");
                     Activity testActivity = new Activity();
                     testActivity.DisplayIntroMessage (testTitle, testDescription);
+                    testActivity.DisplayEndingMessage (testEnding, testTitle);
                 }
                 else if (_userSelection == "2")
                 {

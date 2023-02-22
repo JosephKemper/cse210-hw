@@ -20,4 +20,29 @@ public class Activity
         Console.WriteLine ($"You have completed another {seconds} of the {activity}.");
         // Pause with animation goes here
     }
+
+    public void PauseWithSpinner ()
+    {
+        Console.Write ("-");
+
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+
+        Console.Write ("""\""");
+
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        
+        Console.Write ("|");
+
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        
+        Console.Write ("/");
+
+        Thread.Sleep(500);
+        Console.Write("\b \b");
+        
+        Console.WriteLine();
+    }
 }

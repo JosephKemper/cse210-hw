@@ -27,8 +27,11 @@ namespace Develop04
                     int testEnding = 30;
                     Console.WriteLine ("Run Breathing Activity");
                     Activity testActivity = new Activity();
+                    testActivity.PauseWithSpinner();
                     testActivity.DisplayIntroMessage (testTitle, testDescription);
+                    testActivity.PauseWithSpinner();
                     testActivity.DisplayEndingMessage (testEnding, testTitle);
+                    testActivity.PauseWithSpinner();
                 }
                 else if (_userSelection == "2")
                 {

@@ -4,6 +4,7 @@ public class Activity
 {
     private string _getSeconds;
     private string _intSeconds;
+    private int _pausedCounter;
 
     public void DisplayIntroMessage (string activityName, string activityDescription)
     {
@@ -21,28 +22,33 @@ public class Activity
         // Pause with animation goes here
     }
 
-    public void PauseWithSpinner ()
+    public void PauseWithSpinner (int seconds)
     {
+        _pausedCounter = 0;
+
+        while (_pausedCounter < seconds)
+        {
+        _pausedCounter += 1;
         Console.Write ("-");
 
-        Thread.Sleep(500);
-        Console.Write("\b \b");
+        Thread.Sleep(250);
+        Console.Write ("\b \b");
 
         Console.Write ("""\""");
 
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
         
         Console.Write ("|");
 
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
         
         Console.Write ("/");
 
-        Thread.Sleep(500);
+        Thread.Sleep(250);
         Console.Write("\b \b");
-        
+        }
         Console.WriteLine();
     }
 }

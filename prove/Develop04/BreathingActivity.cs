@@ -38,5 +38,9 @@ public class BreathingActivity : Activity
         _totalTime = rounds *11;
         return _totalTime;
     }
-    
+    public BreathingActivity (int seconds)
+    {
+        _activityRounds = CalculateRounds (seconds);
+        
+    }
 }

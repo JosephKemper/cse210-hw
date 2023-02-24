@@ -15,11 +15,11 @@ public class Activity
     public void DisplayEndingMessage (int seconds, string activity)
     {
         Console.WriteLine ("Well done!!");
-        // Pause with animation goes here
+        PauseWithSpinner(5);
         Console.WriteLine ();
 
         Console.WriteLine ($"You have completed another {seconds} of the {activity}.");
-        // Pause with animation goes here
+        PauseWithSpinner(5);
     }
 
     public void PauseWithSpinner (int seconds)

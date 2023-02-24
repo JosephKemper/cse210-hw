@@ -3,7 +3,7 @@ using System;
 public class Activity
 {
     private string _getSeconds;
-    private string _intSeconds;
+    private int _intSeconds;
     private int _pausedCounter;
 
     public void DisplayIntroMessage (string activityName, string activityDescription)
@@ -50,5 +50,20 @@ public class Activity
         Console.Write("\b \b");
         }
         Console.WriteLine();
+    }
+    
+    public int ReturnSeconds ()
+    {
+        return _intSeconds;
+    }
+
+    public string ReturnName (string activityName)
+    {
+        return activityName;
+    }
+
+    public string ReturnDescription (string activityDescription)
+    {
+        return activityDescription;
     }
 }

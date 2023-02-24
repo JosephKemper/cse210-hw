@@ -1,6 +1,6 @@
 using System;
 
-public class BreathingActivity
+public class BreathingActivity : Activity
 {
     private string _activityName = "Breathing Activity";
     private string _activityDescription = "relax by walking you through a deep breathing exercise, where you will breathe in slowly through your nose and exhale slowly through your mouth. Clear your mind and focus on your breathing.";

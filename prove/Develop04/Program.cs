@@ -27,6 +27,8 @@ namespace Develop04
                     int testEnding = 30;
                     Console.WriteLine ("Run Breathing Activity");
                     Activity testActivity = new Activity();
+                    BreathingActivity testMethodUsage = new BreathingActivity();
+                    testMethodUsage.CalculateRounds(55);
                     testActivity.PauseWithSpinner(10);
                     testActivity.DisplayIntroMessage (testTitle, testDescription);
                     testActivity.PauseWithSpinner(10);

@@ -15,18 +15,28 @@ public class BreathingActivity : Activity
         if (seconds < 11)
         {
             _activityRounds = 1;
+            CalculateTotalTime (_activityRounds);
         }
         else
         {
             if (seconds % 11 == 0)
             {
                 _activityRounds = seconds / 11;
+                CalculateTotalTime (_activityRounds);
             }
             else
             {
                 _activityRounds = ((seconds - (seconds % 11))/11)+1;
+                CalculateTotalTime (_activityRounds);
             }
         }
         return _activityRounds;
     }
+
+    public int CalculateTotalTime(int rounds)
+    {
+        _totalTime = rounds *11;
+        return _totalTime;
+    }
+    
 }

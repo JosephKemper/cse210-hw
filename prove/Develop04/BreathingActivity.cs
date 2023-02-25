@@ -60,17 +60,13 @@ public class BreathingActivity : Activity
         {
             _currentRound += 1;
             // TODO #15 Bug BreathingActivity freezes up at first statement
-            Console.Write ("Breathe in ");
+            Console.Write ("Breathe in...");
             PauseWithTimer (_breatheInTime);
-
-            Console.WriteLine ();
             
-            Console.Write ("Hold that breath ");
+            Console.Write ("Hold that breath...");
             PauseWithTimer (_holdBreathTime);
             
-            Console.WriteLine ();
-            
-            Console.Write ("Exhale ");
+            Console.Write ("Exhale...");
             PauseWithTimer (_breatheOutTime);
             
             Console.WriteLine ();

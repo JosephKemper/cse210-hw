@@ -6,6 +6,7 @@ public class Activity
     private int _intSeconds;
     private int _pausedCounter;
     private int _readyTime = 5;
+    private int _countDownTimer;
 
     public void DisplayIntroMessage (string activityName, string activityDescription)
     {
@@ -16,11 +17,11 @@ public class Activity
     public void DisplayEndingMessage (int seconds, string activity)
     {
         Console.WriteLine ("Well done!!");
-        PauseWithSpinner(5);
+        PauseWithSpinner(_readyTime);
         Console.WriteLine ();
 
         Console.WriteLine ($"You have completed another {seconds} of the {activity}.");
-        PauseWithSpinner(5);
+        PauseWithSpinner(_readyTime);
     }
 
     public void PauseWithSpinner (int seconds)
@@ -51,6 +52,21 @@ public class Activity
         Console.Write("\b \b");
         }
         Console.WriteLine();
+    }
+
+    public void PauseWithTimer (int seconds)
+    {
+        _pausedCounter = 0;
+        _countDownTimer = seconds;
+        while (_pausedCounter < seconds);
+        {
+            _pausedCounter += 1;
+            Console.Write (_countDownTimer);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            _countDownTimer -= 1;
+        }
+        Console.WriteLine ();
     }
 
     public string GetSeconds ()

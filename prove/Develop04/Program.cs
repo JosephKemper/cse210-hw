@@ -22,18 +22,7 @@ namespace Develop04
 
                 if (_userSelection == "1")
                 {
-                    string testTitle = "Test 1";
-                    string testDescription = "Test 2";
-                    int testEnding = 30;
-                    Console.WriteLine ("Run Breathing Activity");
-                    Activity testActivity = new Activity();
-                    BreathingActivity testMethodUsage = new BreathingActivity();
-                    testMethodUsage.CalculateRounds(55);
-                    testActivity.PauseWithSpinner(10);
-                    testActivity.DisplayIntroMessage (testTitle, testDescription);
-                    testActivity.PauseWithSpinner(10);
-                    testActivity.DisplayEndingMessage (testEnding, testTitle);
-                    testActivity.PauseWithSpinner(10);
+                    BreathingActivity newBreathingActivity = new BreathingActivity();
                 }
                 else if (_userSelection == "2")
                 {

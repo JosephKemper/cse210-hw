@@ -51,18 +51,23 @@ public class BreathingActivity : Activity
         Console.WriteLine ("Get Ready");
         
         PauseWithSpinner (ReturnReadyTime());
-        
+
         Console.WriteLine ();
 
         _currentRound = 0;
         while (_currentRound < _activityRounds)
         {
+            // TODO #15 Bug BreathingActivity freezes up at first statement
             Console.Write ("Breathe in truly feeling the air flow through your nostrils. ");
-            // pause timer with count down mechanics
+            PauseWithTimer (_breatheInTime);
+            
             Console.Write ("Hold that breath feeling the air filling your lungs. ");
-            // pause timer with count down mechanics
+            PauseWithTimer (_holdBreathTime);
+            
             Console.Write ("Exhale through your mouth emptying as much air as you can from your lungs. ");
-            // pause timer with count down mechanics
+            PauseWithTimer (_breatheOutTime);
         }
+        Console.WriteLine ();
+        DisplayEndingMessage (_totalTime, _activityName);
     }
 }

@@ -15,6 +15,9 @@ public class ReflectionActivity : Activity
 
     _seconds = GetSeconds ();
     GetReady ();
+
+    Console.WriteLine ("Consider the following prompt:");
+    Console.WriteLine ();
     
     }
 }

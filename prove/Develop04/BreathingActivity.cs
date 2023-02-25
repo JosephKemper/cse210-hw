@@ -57,6 +57,7 @@ public class BreathingActivity : Activity
         _currentRound = 0;
         while (_currentRound < _activityRounds)
         {
+            _currentRound += 1;
             // TODO #15 Bug BreathingActivity freezes up at first statement
             Console.Write ("Breathe in truly feeling the air flow through your nostrils. ");
             PauseWithTimer (_breatheInTime);

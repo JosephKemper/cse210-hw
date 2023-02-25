@@ -45,6 +45,7 @@ public class BreathingActivity : Activity
         DisplayIntroMessage (_activityName,_activityDescription);
 
         _seconds = GetSeconds ();
+        
 
         _activityRounds = CalculateRounds (ConvertSeconds(_seconds));
         _totalTime = CalculateTotalTime (_activityRounds);
@@ -59,13 +60,13 @@ public class BreathingActivity : Activity
         {
             _currentRound += 1;
             // TODO #15 Bug BreathingActivity freezes up at first statement
-            Console.Write ("Breathe in truly feeling the air flow through your nostrils. ");
+            Console.Write ("Breathe in ");
             PauseWithTimer (_breatheInTime);
             
-            Console.Write ("Hold that breath feeling the air filling your lungs. ");
+            Console.Write ("Hold that breath ");
             PauseWithTimer (_holdBreathTime);
             
-            Console.Write ("Exhale through your mouth emptying as much air as you can from your lungs. ");
+            Console.Write ("Exhale ");
             PauseWithTimer (_breatheOutTime);
         }
         Console.WriteLine ();

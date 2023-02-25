@@ -58,10 +58,10 @@ public class Activity
     {
         _pausedCounter = 0;
         _countDownTimer = seconds;
-        while (_pausedCounter < seconds);
+        while (_pausedCounter < seconds)
         {
             _pausedCounter += 1;
-            Console.Write (_countDownTimer);
+            Console.Write ($"{_countDownTimer}");
             Thread.Sleep(1000);
             Console.Write("\b \b");
             _countDownTimer -= 1;

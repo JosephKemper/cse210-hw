@@ -9,6 +9,8 @@ public class BreathingActivity : Activity
     private int _breatheOutTime = 6;
     private int _activityRounds;
     private int _totalTime;
+    private int _currentRound;
+    private string _seconds;
 
     public int CalculateRounds (int seconds)
     {
@@ -38,9 +40,29 @@ public class BreathingActivity : Activity
         _totalTime = rounds *11;
         return _totalTime;
     }
-    public BreathingActivity (int seconds)
+    public BreathingActivity ()
     {
-        _activityRounds = CalculateRounds (seconds);
+        DisplayIntroMessage (_activityName,_activityDescription);
+
+        _seconds = GetSeconds ();
+
+        _activityRounds = CalculateRounds (ConvertSeconds(_seconds));
+        _totalTime = CalculateTotalTime (_activityRounds);
+        Console.WriteLine ("Get Ready");
         
+        PauseWithSpinner (ReturnReadyTime());
+        
+        Console.WriteLine ();
+
+        _currentRound = 0;
+        while (_currentRound < _activityRounds)
+        {
+            Console.Write ("Breathe in truly feeling the air flow through your nostrils. ");
+            // pause timer with count down mechanics
+            Console.Write ("Hold that breath feeling the air filling your lungs. ");
+            // pause timer with count down mechanics
+            Console.Write ("Exhale through your mouth emptying as much air as you can from your lungs. ");
+            // pause timer with count down mechanics
+        }
     }
 }

@@ -5,6 +5,7 @@ public class Activity
     private string _getSeconds;
     private int _intSeconds;
     private int _pausedCounter;
+    private int _readyTime = 5;
 
     public void DisplayIntroMessage (string activityName, string activityDescription)
     {
@@ -51,10 +52,29 @@ public class Activity
         }
         Console.WriteLine();
     }
+
+    public string GetSeconds ()
+    {
+        Console.Write ("How long, in seconds, would you like for your session? ");
+        _getSeconds = Console.ReadLine ();
+        
+        return _getSeconds;
+    }
+
+    public int ConvertSeconds(string seconds)
+    {
+        _intSeconds = int.Parse(_getSeconds);
+        return _intSeconds;
+    }
     
     public int ReturnSeconds ()
     {
         return _intSeconds;
+    }
+
+    public int ReturnReadyTime()
+    {
+    return _readyTime;
     }
 
     public string ReturnName (string activityName)

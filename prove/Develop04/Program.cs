@@ -22,11 +22,11 @@ namespace Develop04
 
                 if (_userSelection == "1")
                 {
-                    BreathingActivity newBreathingActivity = new BreathingActivity();
+                    BreathingActivity runBreathingActivity = new BreathingActivity();
                 }
                 else if (_userSelection == "2")
                 {
-                    Console.WriteLine ("Run Reflecting Activity");
+                    ReflectionActivity runReflectingActivity = new ReflectionActivity();
                 }
                 else if (_userSelection == "3")
                 {

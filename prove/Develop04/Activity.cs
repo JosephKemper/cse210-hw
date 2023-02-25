@@ -73,9 +73,19 @@ public class Activity
     {
         Console.Write ("How long, in seconds, would you like for your session? ");
         _getSeconds = Console.ReadLine ();
+        Console.WriteLine ();
         
         return _getSeconds;
     }
+    public void GetReady ()
+    {
+        Console.WriteLine ("Get Ready");
+        
+        PauseWithSpinner (ReturnReadyTime());
+
+        Console.WriteLine ();
+    }
+    
 
     public int ConvertSeconds(string seconds)
     {

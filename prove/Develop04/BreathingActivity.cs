@@ -49,11 +49,7 @@ public class BreathingActivity : Activity
 
         _activityRounds = CalculateRounds (ConvertSeconds(_seconds));
         _totalTime = CalculateTotalTime (_activityRounds);
-        Console.WriteLine ("Get Ready");
-        
-        PauseWithSpinner (ReturnReadyTime());
-
-        Console.WriteLine ();
+        GetReady ();
 
         _currentRound = 0;
         while (_currentRound < _activityRounds)

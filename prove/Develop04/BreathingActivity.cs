@@ -62,12 +62,19 @@ public class BreathingActivity : Activity
             // TODO #15 Bug BreathingActivity freezes up at first statement
             Console.Write ("Breathe in ");
             PauseWithTimer (_breatheInTime);
+
+            Console.WriteLine ();
             
             Console.Write ("Hold that breath ");
             PauseWithTimer (_holdBreathTime);
             
+            Console.WriteLine ();
+            
             Console.Write ("Exhale ");
             PauseWithTimer (_breatheOutTime);
+            
+            Console.WriteLine ();
+            
         }
         Console.WriteLine ();
         DisplayEndingMessage (_totalTime, _activityName);

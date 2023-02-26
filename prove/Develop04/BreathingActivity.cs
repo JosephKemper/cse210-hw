@@ -11,7 +11,7 @@ public class BreathingActivity : Activity
     private int _activityRounds;
     private int _totalTime;
     private int _currentRound;
-    private string _seconds;
+    private int _seconds;
 
     public int CalculateRounds (int seconds)
     {
@@ -48,7 +48,7 @@ public class BreathingActivity : Activity
         _seconds = GetSeconds ();
         
 
-        _activityRounds = CalculateRounds (ConvertSeconds(_seconds));
+        _activityRounds = CalculateRounds (_seconds);
         _totalTime = CalculateTotalTime (_activityRounds);
         GetReady ();
 
@@ -56,7 +56,7 @@ public class BreathingActivity : Activity
         while (_currentRound < _activityRounds)
         {
             _currentRound += 1;
-            // TODO #15 Bug BreathingActivity freezes up at first statement
+            
             Console.Write ("Breathe in...");
             PauseWithTimer (_breatheInTime);
             

@@ -5,7 +5,8 @@ public class ReflectionActivity : Activity
 {
     private string _activityName = "Reflection Activity";
     private string _activityDescription = "reflect on times in your life when you have shown strength and resilience. This will help you recognize the power your have and how you can use it in other aspects of your life.";
-    private string _seconds;
+    private int _seconds;
+    private int _ponderLength = 15;
     private int _listLength;
     
     private Random _randomIndex = new Random();
@@ -29,7 +30,10 @@ public class ReflectionActivity : Activity
         return _questionList.ElementAt (_randomIndex.Next(0,_listLength));
     }
 
+    public void NumberOfQuestions ()
+    {
 
+    }
     
     public ReflectionActivity()
     {

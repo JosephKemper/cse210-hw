@@ -70,13 +70,14 @@ public class Activity
         Console.WriteLine ();
     }
 
-    public string GetSeconds ()
+    public int GetSeconds ()
     {
         Console.Write ("How long, in seconds, would you like for your session? ");
         _getSeconds = Console.ReadLine ();
         Console.WriteLine ();
-        
-        return _getSeconds;
+
+        _intSeconds = int.Parse(_getSeconds);
+        return _intSeconds;
     }
     public void GetReady ()
     {
@@ -86,31 +87,9 @@ public class Activity
 
         Console.WriteLine ();
     }
-    
-
-    public int ConvertSeconds(string seconds)
-    {
-        _intSeconds = int.Parse(_getSeconds);
-        return _intSeconds;
-    }
-    
-    public int ReturnSeconds ()
-    {
-        return _intSeconds;
-    }
 
     public int ReturnReadyTime()
     {
     return _readyTime;
-    }
-
-    public string ReturnName (string activityName)
-    {
-        return activityName;
-    }
-
-    public string ReturnDescription (string activityDescription)
-    {
-        return activityDescription;
     }
 }

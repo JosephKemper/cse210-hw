@@ -8,6 +8,9 @@ public class Activity
     private int _pausedCounter;
     private int _readyTime = 5;
     private int _countDownTimer;
+    private int _totalTime;
+    private int _activityRounds;
+
 
     public void DisplayIntroMessage (string activityName, string activityDescription)
     {
@@ -91,5 +94,34 @@ public class Activity
     public int ReturnReadyTime()
     {
     return _readyTime;
+    }
+
+    public int CalculateRounds (int seconds, int roundLength)
+    {
+        if (seconds < roundLength)
+        {
+            _activityRounds = 1;
+            CalculateTotalTime (_activityRounds, roundLength);
+        }
+        else
+        {
+            if (seconds % roundLength == 0)
+            {
+                _activityRounds = seconds / roundLength;
+                CalculateTotalTime (_activityRounds, roundLength);
+            }
+            else
+            {
+                _activityRounds = ((seconds - (seconds % roundLength))/roundLength)+1;
+                CalculateTotalTime (_activityRounds,roundLength);
+            }
+        }
+        return _activityRounds;
+    }
+
+    public int CalculateTotalTime(int rounds, int roundLength)
+    {
+        _totalTime = rounds *roundLength;
+        return _totalTime;
     }
 }

@@ -8,39 +8,13 @@ public class BreathingActivity : Activity
     private int _breatheInTime = 3;
     private int _holdBreathTime = 2;
     private int _breatheOutTime = 6;
+    private int _roundLength = 11;
     private int _activityRounds;
     private int _totalTime;
     private int _currentRound;
     private int _seconds;
 
-    public int CalculateRounds (int seconds)
-    {
-        if (seconds < 11)
-        {
-            _activityRounds = 1;
-            CalculateTotalTime (_activityRounds);
-        }
-        else
-        {
-            if (seconds % 11 == 0)
-            {
-                _activityRounds = seconds / 11;
-                CalculateTotalTime (_activityRounds);
-            }
-            else
-            {
-                _activityRounds = ((seconds - (seconds % 11))/11)+1;
-                CalculateTotalTime (_activityRounds);
-            }
-        }
-        return _activityRounds;
-    }
-
-    public int CalculateTotalTime(int rounds)
-    {
-        _totalTime = rounds *11;
-        return _totalTime;
-    }
+    
     public BreathingActivity ()
     {
         DisplayIntroMessage (_activityName,_activityDescription);
@@ -48,8 +22,8 @@ public class BreathingActivity : Activity
         _seconds = GetSeconds ();
         
 
-        _activityRounds = CalculateRounds (_seconds);
-        _totalTime = CalculateTotalTime (_activityRounds);
+        _activityRounds = CalculateRounds (_seconds, _roundLength);
+        _totalTime = CalculateTotalTime (_activityRounds, _roundLength);
         GetReady ();
 
         _currentRound = 0;

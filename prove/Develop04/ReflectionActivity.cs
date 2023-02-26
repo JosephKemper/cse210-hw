@@ -32,7 +32,7 @@ public class ReflectionActivity : Activity
 
     public void NumberOfQuestions ()
     {
-
+        
     }
     
     public ReflectionActivity()

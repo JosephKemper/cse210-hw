@@ -28,7 +28,7 @@ namespace Develop04
                 else if (_userSelection == "2")
                 {
                     ReflectionActivity runReflectingActivity = new ReflectionActivity();
-                    
+                    Console.WriteLine (runReflectingActivity.choosePrompt());
                 }
                 else if (_userSelection == "3")
                 {

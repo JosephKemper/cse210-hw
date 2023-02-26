@@ -53,8 +53,7 @@ public class ReflectionActivity : Activity
         Console.WriteLine ();
 
         Console.WriteLine ($"Now ponder on each of the following {_numberOfQuestions} questions as they relate to the experience");
-        Console.Write ("You may begin in: ");
-        PauseWithTimer (5);
+        BeginCountdown ();
         while (_currentRound < _numberOfQuestions)
         {
             _currentRound += 1;

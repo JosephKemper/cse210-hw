@@ -28,6 +28,12 @@ public class Activity
         PauseWithSpinner(_readyTime);
     }
 
+    public void BeginCountdown ()
+    {
+        Console.Write ("You may begin in: ");
+        PauseWithTimer (_readyTime);
+    }
+
     public void PauseWithSpinner (int seconds)
     {
         _pausedCounter = 0;

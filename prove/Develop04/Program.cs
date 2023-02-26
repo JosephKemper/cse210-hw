@@ -32,7 +32,7 @@ namespace Develop04
                 }
                 else if (_userSelection == "3")
                 {
-                    Console.WriteLine ("Run Listing Activity");
+                    ListingActivity runListingActivity = new ListingActivity ();
                 }
                 else if (_userSelection == "4")
                 {

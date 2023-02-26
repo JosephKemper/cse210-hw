@@ -10,7 +10,6 @@ public class BreathingActivity : Activity
     private int _breatheOutTime = 6;
     private int _roundLength = 11;
     private int _activityRounds;
-    private int _totalTime;
     private int _currentRound;
     private int _seconds;
 
@@ -23,7 +22,7 @@ public class BreathingActivity : Activity
         
 
         _activityRounds = CalculateRounds (_seconds, _roundLength);
-        _totalTime = CalculateTotalTime (_activityRounds, _roundLength);
+        
         GetReady ();
 
         _currentRound = 0;
@@ -44,6 +43,6 @@ public class BreathingActivity : Activity
             
         }
         Console.WriteLine ();
-        DisplayEndingMessage (_totalTime, _activityName);
+        DisplayEndingMessage (CalculateTotalTime (_activityRounds, _roundLength), _activityName);
     }
 }

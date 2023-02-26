@@ -24,7 +24,7 @@ public class Activity
         PauseWithSpinner(_readyTime);
         Console.WriteLine ();
 
-        Console.WriteLine ($"You have completed another {seconds} of the {activity}.");
+        Console.WriteLine ($"You have completed another {seconds} seconds of the {activity}.");
         PauseWithSpinner(_readyTime);
     }
 

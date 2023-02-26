@@ -13,6 +13,7 @@ public class ListingActivity : Activity
     private List <string> _userList = new List<string>();
     private int _listLength;
 
+    // Generates the prompt used in the activity
     public string GetPrompt ()
     {
         _promptList.Clear();
@@ -20,6 +21,8 @@ public class ListingActivity : Activity
         _listLength = _promptList.Count;
         return  _promptList.ElementAt (_randomIndex.Next(0,_listLength));
     }
+
+    // Tells the program how to launch the ListingActivity
     public ListingActivity ()
     {
         DisplayIntroMessage (_activityName, _activityDescription);

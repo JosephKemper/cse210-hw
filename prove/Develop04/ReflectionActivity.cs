@@ -17,6 +17,7 @@ public class ReflectionActivity : Activity
     private List <string> _promptList = new List<string>();
     private List <string> _questionList = new List<string>();
 
+    // Generates the prompt used for the activity.
     public string choosePrompt ()
     {
         _promptList.Clear();
@@ -25,6 +26,7 @@ public class ReflectionActivity : Activity
         return  _promptList.ElementAt (_randomIndex.Next(0,_listLength));
     }
 
+    // Generates a question to ponder about the prompt
     public string chooseQuestion ()
     {
         _questionList.Clear();
@@ -33,6 +35,7 @@ public class ReflectionActivity : Activity
         return _questionList.ElementAt (_randomIndex.Next(0,_listLength));
     }
 
+    // Teaches the computer how to run the Reflection Activity
     public ReflectionActivity()
     {
         DisplayIntroMessage (_activityName,_activityDescription);
@@ -42,6 +45,9 @@ public class ReflectionActivity : Activity
         GetReady ();
 
         _numberOfQuestions = CalculateRounds (_seconds, _ponderLength);
+
+        // Part of the stretch Activity
+        TimeExplanation (_activityName,_seconds,_ponderLength);
 
 
         Console.WriteLine ("Consider the following prompt:");

@@ -13,7 +13,7 @@ public class BreathingActivity : Activity
     private int _currentRound;
     private int _seconds;
 
-    
+    // Teaches the computer how to run the breathing activity
     public BreathingActivity ()
     {
         DisplayIntroMessage (_activityName,_activityDescription);
@@ -22,6 +22,9 @@ public class BreathingActivity : Activity
         
 
         _activityRounds = CalculateRounds (_seconds, _roundLength);
+
+        // Part of the stretch activity
+        TimeExplanation (_activityName,_seconds,_roundLength);
         
         GetReady ();
 

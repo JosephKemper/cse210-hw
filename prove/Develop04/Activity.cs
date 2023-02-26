@@ -11,13 +11,15 @@ public class Activity
     private int _totalTime;
     private int _activityRounds;
 
-
+    
+    // Displays the introductory info to the user about each activity.
     public void DisplayIntroMessage (string activityName, string activityDescription)
     {
         Console.WriteLine ($"Welcome to the {activityName}");
         Console.WriteLine ($"This activity will help you {activityDescription}");
     }
 
+    // Displays the end of activity info for the user
     public void DisplayEndingMessage (int seconds, string activity)
     {
         Console.WriteLine ("Well done!!");
@@ -28,12 +30,29 @@ public class Activity
         PauseWithSpinner(_readyTime);
     }
 
+    /* Stretch goal 
+    Let the user know about some behind the scenes calculations 
+    that were made if applicable.
+    */
+    public void TimeExplanation (string activityName, int seconds, int roundLength)
+    {
+        if (seconds % roundLength != 0)
+        {
+            _activityRounds = CalculateRounds (seconds, roundLength);
+            _totalTime = CalculateTotalTime (_activityRounds,roundLength);
+            Console.WriteLine ($"Each round of the {activityName} takes a minimum of {roundLength} to complete.");
+            Console.WriteLine ($"We will adjust your total activity time to {_totalTime} to give you a better experience.");
+        }
+    }
+
+    // Used to let the user know when to formally begin
     public void BeginCountdown ()
     {
         Console.Write ("You may begin in: ");
         PauseWithTimer (_readyTime);
     }
 
+    // Used to pause the output while displaying an animation to the user
     public void PauseWithSpinner (int seconds)
     {
         _pausedCounter = 0;
@@ -64,6 +83,7 @@ public class Activity
         Console.WriteLine();
     }
 
+    // Used to pause the output while displaying a countdown timer
     public void PauseWithTimer (int seconds)
     {
         _pausedCounter = 0;
@@ -79,6 +99,7 @@ public class Activity
         Console.WriteLine ();
     }
 
+    // Collect seconds from user convert to int, and return for later use
     public int GetSeconds ()
     {
         Console.Write ("How long, in seconds, would you like for your session? ");
@@ -88,20 +109,22 @@ public class Activity
         _intSeconds = int.Parse(_getSeconds);
         return _intSeconds;
     }
+
+    // Method to let prepare for the start of the activity
     public void GetReady ()
     {
         Console.WriteLine ("Get Ready");
         
-        PauseWithSpinner (ReturnReadyTime());
+        PauseWithSpinner (_readyTime);
 
         Console.WriteLine ();
     }
 
-    public int ReturnReadyTime()
-    {
-    return _readyTime;
-    }
-
+    /* 
+    Stretch Goal: 
+    Instead of just taking the time directly entered by the user
+    converted the time to be equal to predetermined round length.
+    */
     public int CalculateRounds (int seconds, int roundLength)
     {
         if (seconds < roundLength)
@@ -125,6 +148,10 @@ public class Activity
         return _activityRounds;
     }
 
+    /* 
+    Stretch Goal 
+    Calculated the actual time the user would run the activity.
+    */
     public int CalculateTotalTime(int rounds, int roundLength)
     {
         _totalTime = rounds *roundLength;

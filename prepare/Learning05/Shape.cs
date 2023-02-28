@@ -3,10 +3,12 @@ using System;
 public abstract class Shape
 {
     private string _color;
+    private string _shapeName;
 
-    public Shape (string color)
+    public Shape (string color, string shapeName)
     {
         _color = color;
+        _shapeName = shapeName;
     }
     
     public string GetColor()
@@ -18,6 +20,16 @@ public abstract class Shape
     {
         _color = color;
     }
+    
+    public string GetName ()
+    {
+        return _shapeName;
+    }
+    public void SetName (string name)
+    {
+        _shapeName = name;
+    }
+
 
     public abstract double GetArea ();
 }

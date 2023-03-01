@@ -1,9 +1,9 @@
 <code>
     Main Menu
-
+        [Blank line]
         You have x points
             [x = current point total]
-        
+        [Blank line]
         Menu Options:
         1. Create New Goal
         2. List Goals
@@ -20,19 +20,19 @@
         2. Eternal Goal
         3. Checklist Goal
         Which type of goal would you like to create? 
-
+        [Blank line]
             Option 1 Simple Goal (A goal that you do once and it's done)
                 What is the name of your goal? 
                 What is a short description of it? 
                 What are the points associated with this goal?
                     [Return to Main Menu]
-                
+                [Blank line]
             Option 2 Eternal Goal
                 What is the name of your goal? 
                 What is a short description of it? 
                 What are the points associated with this goal?
                     [Return to Main Menu]
-            
+            [Blank line]
             Option 3 Checklist Goal
                 What is the name of your goal? 
                 What is a short description of it? 

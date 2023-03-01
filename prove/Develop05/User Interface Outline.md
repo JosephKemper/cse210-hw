@@ -1,3 +1,4 @@
+<code>
 Main Menu
 
     You have x points
@@ -11,7 +12,8 @@ Main Menu
       5. Record Event
       6. Quit
     Select a choice from the menu:
-
+</code>
+<code>
 Option 1 Create a new Goal
     Types of Goals are:
        1. Simple Goal
@@ -37,21 +39,24 @@ Option 1 Create a new Goal
             What are the points associated with this goal? 
             How many times does this goal need to be accomplished for a bonus? 
             What is the bonus for accomplishing it that many times? 
-
-
+</code>
+<code>
 Option 2 List Goals
     The goals are:
         1 [ ] (Gives a numbered list of the created goals with their name) -- (For Checklist goals it will track and show how many times it has been completed)
             [Return to Main Menu]
-
+</code>
+<code>
 Option 3 Save Goals
     What is the filename for the goal file? 
         [Return to Main Menu]
-
+</code>
+<code>
 Option 4 Load Goals
     What is the filename for the goal file? 
         [Return to Main Menu]
-
+</code>
+<code>
 Option 5 Record an event
     The goals are: 
     1. (generates a dynamic numbered menu, with the name of each goal listed)
@@ -61,3 +66,4 @@ Option 5 Record an event
         [x = number of points previously listed for the goal]
         [Upon completion of a goal it will put an x in the checkbox that displays the goal]
             [Return to Main Menu]
+</code>

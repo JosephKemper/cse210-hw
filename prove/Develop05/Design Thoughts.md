@@ -4,9 +4,9 @@ Program Specifications
         The program will let users set, track, and complete any of 3 different kinds of goals. It will allow the user to earn points for the completion of goals. It will also, allow the user to save and load their goals and progress from a file. The goal types are Simple, Eternal, and Checklist. 
             Simple goals are Goals that are completed once and then they are done, and you earn points after completing it. 
             Eternal goals are never actually done, they are goals you do for the rest of your life. You earn points for each time you complete an Eternal Goal. 
-                Stretch goal for Eternal goals is to track and display how many times you have completed it.
-                Stretch goal #2 for Eternal Goals is to track how many days in a row you have completed it. A possible way to do this would be to add a category for the date you have last completed it, and then check if that is no later than the prior day, and if it is, then add one to a count of how many days in a row. This could also be a 4th goal type. 
+                Stretch goal -- Track the number of times you have completed the Eternal Goal.
             Checklist goals are goals that you want to complete a certain number of times. It will track and display how many times you have completed it. It will give you a set number of points for each time you complete it and bonus points when you complete it the desired number of times. 
+            If I have time A Daily goal is one that you set with the idea of doing every day. It will track the last day you missed, how many days you have missed, the last day you completed it, the number of times you have completed it, and how many days in a row you have completed it. I also want it to track your longest streak for days of completing the goal. 
     2. What user inputs does it have?
         The main and sub menu's both take numbers for input. The main menu can be processed as strings, but the menu for selecting which activity you want to complete would have to be converted to an int, so it would be easier to just convert all menu input items to an int. 
         The save and load menu will take a string that is the file name. The file will need to be in the same folder as the program. 

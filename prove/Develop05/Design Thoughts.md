@@ -8,7 +8,9 @@ Program Specifications
                 Stretch goal #2 for Eternal Goals is to track how many days in a row you have completed it. A possible way to do this would be to add a category for the date you have last completed it, and then check if that is no later than the prior day, and if it is, then add one to a count of how many days in a row. This could also be a 4th goal type. 
             Checklist goals are goals that you want to complete a certain number of times. It will track and display how many times you have completed it. It will give you a set number of points for each time you complete it and bonus points when you complete it the desired number of times. 
     2. What user inputs does it have?
-
+        The main and sub menu's both take numbers for input. The main menu can be processed as strings, but the menu for selecting which activity you want to complete would have to be converted to an int, so it would be easier to just convert all menu input items to an int. 
+        The save and load menu will take a string that is the file name. The file will need to be in the same folder as the program. 
+        The goal setting menu, takes strings as input and will convert them into a compound list. 
     3. What output does it produce?
 
     4. How does the program end?

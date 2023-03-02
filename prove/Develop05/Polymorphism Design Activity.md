@@ -19,32 +19,58 @@ Program Specifications
 <code>
 Determine the classes
     1. What are good candidates for classes in this program?
-        Goal, SimpleGoal, EternalGoal, ChecklistGoal, Menu, and Program. If I have enough time to add a 4th goal type, then DailyGoal. 
+            Goal, SimpleGoal, EternalGoal, ChecklistGoal, Menu, and Program. If I have enough time to add a 4th goal type, then DailyGoal. 
     2. What are the primary responsibilities of each class?
-        Program = Runs the program via a while loop that looks for the number 6 to be entered, and then exits the loop. 
-        Menu = Generates and display's menu to user, gets input from user on menu level, and calls appropriate class when option is selected.  
-        Goal = display's the intro message for each goal, and collects the common elements each goal has, marks a goal as complete, Loads the goals list from file, saves it to a file, marks goals as complete, creates the data type for a goals list, converts goals array to a list based on goal type, and displays the goals for the user to see.
-        SimpleGoal = marks simple goals as complete, adds simple goals to goals list, tells the system how to interpret simple goals compound lists, and adds points for completing simple goals.
-        EternalGoal = Adds points for completing goals, teaches the program how to read Eternal goals, and add's eternal goals to the list of goals.
-        ChecklistGoal = Tracks how many times the goal has been completed, adds points for each time goal has been completed, adds bonus points when goal is complete, teaches the computer how to read a checklist goal.
-        DailyGoal = To be planned later. 
+            Program = Runs the program via a while loop that looks for the number 6 to be entered, and then exits the loop. 
+            Menu = Generates and display's menu to user, gets input from user on menu level, and calls appropriate class when option is selected.  
+            Goal = display's the intro message for each goal, and collects the common elements each goal has, marks a goal as complete, Loads the goals list from file, saves it to a file, marks goals as complete, creates the data type for a goals list, converts goals array to a list based on goal type, and displays the goals for the user to see.
+            SimpleGoal = marks simple goals as complete, adds simple goals to goals list, tells the system how to interpret simple goals compound lists, and adds points for completing simple goals.
+            EternalGoal = Adds points for completing goals, teaches the program how to read Eternal goals, and add's eternal goals to the list of goals.
+            ChecklistGoal = Tracks how many times the goal has been completed, adds points for each time goal has been completed, adds bonus points when goal is complete, teaches the computer how to read a checklist goal.
+            DailyGoal = To be planned later. 
 </code>
 <code>
 Define class behaviors
     1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
+        Goal = 
+        SimpleGoal = 
+        EternalGoal = 
+        ChecklistGoal = 
+        Menu = 
+        Program = 
+        DailyGoal = 
 </code>
 <code>
 Define class attributes
     1. What attributes does this class need to fulfill its behaviors? (In other words, what variables should this class store?)
-
+        Goal = 
+        SimpleGoal = 
+        EternalGoal = 
+        ChecklistGoal = 
+        Menu = 
+        Program = 
+        DailyGoal = 
     2. What are the data types of these member variables?
 
     3. What constructors should each class have?
+        Goal = 
+        SimpleGoal = 
+        EternalGoal = 
+        ChecklistGoal = 
+        Menu = 
+        Program = 
+        DailyGoal = 
 </code>
 <code>
 Define constructors
     1. What constructors should each class have? (In other words, what parameters should you pass in when creating an object of that type.)
-
+        Goal = 
+        SimpleGoal = 
+        EternalGoal = 
+        ChecklistGoal = 
+        Menu = 
+        Program = 
+        DailyGoal = 
     2. What other work needs to be done to set up these objects? (For example, does the constructor need to run code to perform set up tasks, like creating lists, iterating through variables, etc.)
 </code>
 

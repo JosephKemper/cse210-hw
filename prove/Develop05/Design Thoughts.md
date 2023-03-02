@@ -14,6 +14,7 @@ Program Specifications
     3. What output does it produce?
         On the main menu, it prints to the console a 6 item numbered menu including the options Create New Goal, List Goals, Save Goals, Load Goals, Record Event, and Quit. Above the menu it displays a running total of the number of points you have earned. If you select option 1, it prints a sub menu with the following numbered options, Simple Goal, Eternal Goal, Checklist Goal. For each goal, it asks what the name of the goal, a short description of it is, and how many points it awards upon completion. For the checklist goal, it also asks how many times it need to be completed and how many points for a bonus. It will also let you view the goals and their current progress, and save the goals to a file. 
     4. How does the program end?
+        Select option 6 from the main menu. 
 </code>
 <code>
 Determine the classes

@@ -23,13 +23,11 @@ Determine the classes
     2. What are the primary responsibilities of each class?
         Program = Runs the program via a while loop that looks for the number 6 to be entered, and then exits the loop. 
         Menu = Generates and display's menu to user, gets input from user on menu level, and calls appropriate class when option is selected.  
-        Goal = display's the intro message for each goal, and collects the common elements each goal has, Loads the goals list from file, saves it to a file, and displays the goals for the user to see.
-        SimpleGoal = 
-        EternalGoal = 
-        ChecklistGoal = 
-        DailyGoal = 
-
-
+        Goal = display's the intro message for each goal, and collects the common elements each goal has, marks a goal as complete, Loads the goals list from file, saves it to a file, marks goals as complete, creates the data type for a goals list, converts goals array to a list based on goal type, and displays the goals for the user to see.
+        SimpleGoal = marks simple goals as complete, adds simple goals to goals list, tells the system how to interpret simple goals compound lists, and adds points for completing simple goals.
+        EternalGoal = Adds points for completing goals, teaches the program how to read Eternal goals, and add's eternal goals to the list of goals.
+        ChecklistGoal = Tracks how many times the goal has been completed, adds points for each time goal has been completed, adds bonus points when goal is complete, teaches the computer how to read a checklist goal.
+        DailyGoal = To be planned later. 
 </code>
 <code>
 Define class behaviors

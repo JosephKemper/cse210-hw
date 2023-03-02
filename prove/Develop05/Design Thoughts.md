@@ -21,6 +21,15 @@ Determine the classes
     1. What are good candidates for classes in this program?
         Goal, SimpleGoal, EternalGoal, ChecklistGoal, Menu, and Program. If I have enough time to add a 4th goal type, then DailyGoal. 
     2. What are the primary responsibilities of each class?
+        Program = Runs the program via a while loop that looks for the number 6 to be entered, and then exits the loop. 
+        Menu = Generates the different menus and runs the proper option when the option is selected. 
+        Goal = display's the intro message for each goal, and collects the common elements each goal has, Loads the goals list from file, saves it to a file, and displays the goals for the user to see.
+        SimpleGoal = 
+        EternalGoal = 
+        ChecklistGoal = 
+        DailyGoal = 
+
+
 </code>
 <code>
 Define class behaviors

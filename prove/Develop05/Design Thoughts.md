@@ -19,7 +19,7 @@ Program Specifications
 <code>
 Determine the classes
     1. What are good candidates for classes in this program?
-
+        Goal, SimpleGoal, EternalGoal, ChecklistGoal, Menu, and Program. If I have enough time to add a 4th goal type, then DailyGoal. 
     2. What are the primary responsibilities of each class?
 </code>
 <code>

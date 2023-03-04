@@ -19,11 +19,12 @@ Program Specifications
 <code>
 Determine the classes
     1. What are good candidates for classes in this program?
-            Goal, SimpleGoal, EternalGoal, ChecklistGoal, Menu, and Program. If I have enough time to add a 4th goal type, then DailyGoal. 
+            Goal, ConstructGoal, SimpleGoal, EternalGoal, ChecklistGoal, Menu, and Program. If I have enough time to add a 4th goal type, then DailyGoal. 
     2. What are the primary responsibilities of each class?
             Program = Runs the program via a while loop that looks for the number 6 to be entered, and then exits the loop. 
             Menu = Generates and display's menu to user, gets input from user on menu level, and calls appropriate class when option is selected.  
             Goal = display's the intro message for each goal, and collects the common elements each goal has, marks a goal as complete, Loads the goals list from file, saves it to a file, marks goals as complete, creates the data type for a goals list, converts goals array to a list based on goal type, and displays the goals for the user to see.
+            ConstructGoal = Used by the program to create a data type for the program to use in a list. 
             SimpleGoal = marks simple goals as complete, adds simple goals to goals list, tells the system how to interpret simple goals compound lists, and adds points for completing simple goals.
             EternalGoal = Adds points for completing goals, teaches the program how to read Eternal goals, and add's eternal goals to the list of goals.
             ChecklistGoal = Tracks how many times the goal has been completed, adds points for each time goal has been completed, adds bonus points when goal is complete, teaches the computer how to read a checklist goal.
@@ -42,6 +43,7 @@ Define class behaviors
         SimpleGoal = 
         EternalGoal = 
         ChecklistGoal = 
+        ConstructGoal = -- Beyond constructors and member variables, I do not know what else this will do. Could I turn this into a method that is part of the goal class? I will have to experiment with this and see. 
         Menu = 
             GetUserInput : int -- takes in a string, converts it to a number, and returns the int. 
             DisplayMainMenu : Void -- Displays the main menu
@@ -54,6 +56,8 @@ Define class behaviors
 Define class attributes
     1. What attributes does this class need to fulfill its behaviors? (In other words, what variables should this class store?)
         Goal = 
+            _goalList : list
+
         SimpleGoal = 
         EternalGoal = 
         ChecklistGoal = 
@@ -62,8 +66,16 @@ Define class attributes
             _currentMenu : string
         Program = 
         DailyGoal = 
+        ConstructGoal = 
+            _goalName : string
+            _goalDescription : string
+            _goalPoints : Int
+            _goalBonus : Int
+            _completionGoal : int
+            _currentProgress : int
+            _completionStatus : Bool
     2. What are the data types of these member variables?
-
+        See above
     3. What constructors should each class have?
         Goal = 
         SimpleGoal = 
@@ -72,6 +84,7 @@ Define class attributes
         Menu = It should have 1 constructor for each menu option that will tell the program how to handle each menu. 
         Program = 
         DailyGoal = 
+        ConstructGoal = It will need to have one constructor for each goal type, that will allow the program to know how to construct a list including all relevant data for that goal. Each constructor will have requirements that include all data needed by each goal type. 
 </code>
 <code>
 Define constructors

@@ -33,12 +33,22 @@ Determine the classes
 Define class behaviors
     1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
         Goal = 
+            DisplayIntroMessage : Void -- Displays the intro text for each goal. 
+            SetGoal -- Runs the process to set a goal
+            LoadGoals -- Loads goals from a file
+            SaveGoals -- Saves goals to a file
+            ListGoals -- Displays all goals and their current status
+            CompleteGoal -- Runs the process of completing a goal and awarding appropriate points
         SimpleGoal = 
         EternalGoal = 
         ChecklistGoal = 
         Menu = 
-        Program = 
-        DailyGoal = 
+            GetUserInput : int -- takes in a string, converts it to a number, and returns the int. 
+            DisplayMainMenu : Void -- Displays the main menu
+            DisplayGoalsMenu : Void -- Displays the goal selection menu
+            DisplayEventMenu : Void -- Fetches the name of each created goal, converts that to a dynamically numbered menu.
+            DisplayPoints : Void -- Displays the total points the user has earned at the top of the menu. 
+        DailyGoal = To be determined
 </code>
 <code>
 Define class attributes
@@ -48,6 +58,8 @@ Define class attributes
         EternalGoal = 
         ChecklistGoal = 
         Menu = 
+            _userChoice : string
+            _currentMenu : string
         Program = 
         DailyGoal = 
     2. What are the data types of these member variables?
@@ -57,7 +69,7 @@ Define class attributes
         SimpleGoal = 
         EternalGoal = 
         ChecklistGoal = 
-        Menu = 
+        Menu = It should have 1 constructor for each menu option that will tell the program how to handle each menu. 
         Program = 
         DailyGoal = 
 </code>

@@ -40,10 +40,25 @@ Define class behaviors
             SaveGoals -- Saves goals to a file
             ListGoals -- Displays all goals and their current status
             CompleteGoal -- Runs the process of completing a goal and awarding appropriate points
+            GetGoalList
+            SetGoalList
+            GetGoalName
+            SetGoalName
+            GetGoalDescription
+            SetGoalDescription
+            GetGoalPoints
+            SetGoalPoints
+            GetGoalBonus
+            SetGoalBonus
+            GetCompletionTarget
+            SetCompletionTarget
+            GetCurrentProgress
+            SetCurrentProgress
+            GetCompletionStatus
+            SetCompletionStatus
         SimpleGoal = 
         EternalGoal = 
-        ChecklistGoal = 
-        ConstructGoal = -- Beyond constructors and member variables, I do not know what else this will do. Could I turn this into a method that is part of the goal class? I will have to experiment with this and see. 
+        ChecklistGoal =  
         Menu = 
             GetUserInput : int -- takes in a string, converts it to a number, and returns the int. 
             DisplayMainMenu : Void -- Displays the main menu
@@ -57,7 +72,13 @@ Define class attributes
     1. What attributes does this class need to fulfill its behaviors? (In other words, what variables should this class store?)
         Goal = 
             _goalList : list
-
+            _goalName : string
+            _goalDescription : string
+            _goalPoints : Int
+            _goalBonus : Int
+            _completionTarget : int
+            _currentProgress : int
+            _completionStatus : Bool
         SimpleGoal = 
         EternalGoal = 
         ChecklistGoal = 
@@ -66,14 +87,7 @@ Define class attributes
             _currentMenu : string
         Program = 
         DailyGoal = 
-        ConstructGoal = 
-            _goalName : string
-            _goalDescription : string
-            _goalPoints : Int
-            _goalBonus : Int
-            _completionGoal : int
-            _currentProgress : int
-            _completionStatus : Bool
+            _dailyGoalList
     2. What are the data types of these member variables?
         See above
     3. What constructors should each class have?
@@ -84,7 +98,7 @@ Define class attributes
         Menu = It should have 1 constructor for each menu option that will tell the program how to handle each menu. 
         Program = 
         DailyGoal = 
-        ConstructGoal = It will need to have one constructor for each goal type, that will allow the program to know how to construct a list including all relevant data for that goal. Each constructor will have requirements that include all data needed by each goal type. 
+         
 </code>
 <code>
 Define constructors

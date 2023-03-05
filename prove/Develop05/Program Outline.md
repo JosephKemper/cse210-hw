@@ -1,5 +1,0 @@
-<Code>
-    Program
-<Code>
-
-Goal

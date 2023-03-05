@@ -34,12 +34,11 @@ Determine the classes
 Define class behaviors
     1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
         Goal = 
-            DisplayIntroMessage : Void -- Displays the intro text for each goal. 
             SetGoal -- Runs the process to set a goal
             LoadGoals -- Loads goals from a file
             SaveGoals -- Saves goals to a file
             ListGoals -- Displays all goals and their current status
-            CompleteGoal -- Runs the process of completing a goal and awarding appropriate points
+            RecordEvent -- Runs the process of completing a goal and awarding appropriate points
             GetGoalList
             SetGoalList
             GetGoalName
@@ -57,8 +56,12 @@ Define class behaviors
             GetCompletionStatus
             SetCompletionStatus
         SimpleGoal = 
+            RecordEvent = Defines how an event for a SimpleGoal is processed
         EternalGoal = 
+            RecordEvent = Defines how an event for an EternalGoal is processed
         ChecklistGoal =  
+            SetGoal -- Runs the process of setting a ChecklistGoal
+            RecordEvent = Defines how an event for a ChecklistGoal is processed
         Menu = 
             GetUserInput : int -- takes in a string, converts it to a number, and returns the int. 
             DisplayMainMenu : Void -- Displays the main menu

@@ -62,6 +62,7 @@ Define class behaviors
         ChecklistGoal =  
             SetGoal -- Runs the process of setting a ChecklistGoal
             RecordEvent = Defines how an event for a ChecklistGoal is processed
+            ListGoals -- Displays all ChecklistGoals and their current status
         Menu = 
             GetUserInput : int -- takes in a string, converts it to a number, and returns the int. 
             DisplayMainMenu : Void -- Displays the main menu
@@ -83,8 +84,11 @@ Define class attributes
             _currentProgress : int
             _completionStatus : Bool
         SimpleGoal = 
+            _goalType : String
         EternalGoal = 
+            _goalType : String
         ChecklistGoal = 
+            _goalType : String
         Menu = 
             _userChoice : string
             _currentMenu : string
@@ -94,13 +98,12 @@ Define class attributes
     2. What are the data types of these member variables?
         See above
     3. What constructors should each class have?
-        Goal = 
-        SimpleGoal = 
-        EternalGoal = 
-        ChecklistGoal = 
+        Goal = One constructor used for creating goals. No inputs, creates the basic shared elements of each goal, the name and description
+        SimpleGoal = One constructor, builds off Goal Constructor attaches the Simple Goal tag to the goal, and combines the goal elements to a list. 
+        EternalGoal = One Constructor, builds off Goal Constructor, attaches the EternalGoal tag to the goal and combines the goal element to a list. 
+        ChecklistGoal = One constructor, builds off Goal Constructor, attaches the EternalGoal tag to the goal, runs the extra elements connected with the Eternal Goal, and combines the goal elements into a list. 
         Menu = It should have 1 constructor for each menu option that will tell the program how to handle each menu. 
-        Program = 
-        DailyGoal = 
+        DailyGoal = To Be Determined
          
 </code>
 <code>

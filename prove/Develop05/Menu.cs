@@ -2,8 +2,8 @@ using System;
 
 public class Menu
 {
-    private int _userChoice;
-    private string _currentMenu;
+    private int _mainMenuChoice;
+    private int _submenuChoice;
 
     public void DisplayMainMenu()
     {
@@ -25,57 +25,67 @@ public class Menu
         Console.Write ("Which type of goal would you like to create? ");
     }
 
-    public int GetUserInput ()
+    public int SetMainMenuChoice ()
     {
-        _userChoice = int.Parse(Console.ReadLine());
-        return _userChoice;
+        _mainMenuChoice = int.Parse(Console.ReadLine());
+        return _mainMenuChoice;
     }
-    public int GetUserChoice ()
+    public int GetMainMenuChoice ()
     {
-        return _userChoice;
+        return _mainMenuChoice;
+    }
+
+    public int SetSubmenuChoice ()
+    {
+        _submenuChoice = int.Parse(Console.ReadLine());
+        return _submenuChoice;
+    }
+    public int GetSubmenuChoice ()
+    {
+        return _submenuChoice;
     }
 
     public Menu ()
     {
         Console.WriteLine ();
         DisplayMainMenu ();
-        GetUserInput ();
+        SetMainMenuChoice ();
 
-        if (_userChoice == 1)
+        if (_mainMenuChoice == 1)
         {
             Console.WriteLine();
             DisplayGoalsMenu ();
-            GetUserInput ();
-            if (_userChoice == 1)
+            SetSubmenuChoice ();
+            if (_submenuChoice == 1)
             {
                 Console.WriteLine ("Create Simple Goal");
             }
-            else if (_userChoice == 2)
+            else if (_submenuChoice == 2)
             {
                 Console.WriteLine ("Create Eternal Goal");
             }
-            else if (_userChoice == 3)
+            else if (_submenuChoice == 3)
             {
                 Console.WriteLine ("Create Checklist Goal");
             }
         }
-        else if (_userChoice == 2)
+        else if (_mainMenuChoice == 2)
         {
             Console.WriteLine ("List Goals");
         }
-        else if (_userChoice == 3)
+        else if (_mainMenuChoice == 3)
         {
             Console.WriteLine ("Save Goals");
         }
-        else if (_userChoice == 4)
+        else if (_mainMenuChoice == 4)
         {
             Console.WriteLine ("LoadGoals");
         }
-        else if (_userChoice == 5)
+        else if (_mainMenuChoice == 5)
         {
             Console.WriteLine ("Record Event");
         }
-        else if (_userChoice == 6)
+        else if (_mainMenuChoice == 6)
         {
             Console.WriteLine ("Come Back Soon");
         }

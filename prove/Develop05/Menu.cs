@@ -2,7 +2,7 @@ using System;
 
 public class Menu
 {
-    private string _userChoice;
+    private int _userChoice;
     private string _currentMenu;
 
     public void DisplayMainMenu()
@@ -14,7 +14,19 @@ public class Menu
         Console.WriteLine ("4. Load Goals");
         Console.WriteLine ("5. Record Event");
         Console.WriteLine ("6. Quit");
-        Console.WriteLine ("Select a choice from the menu: ");
+        Console.Write ("Select a choice from the menu: ");
     }
-    
+
+    public int GetUserInput ()
+    {
+        _userChoice = int.Parse(Console.ReadLine());
+        return _userChoice;
+    }
+
+    public Menu ()
+    {
+        DisplayMainMenu ();
+        GetUserInput ();
+        Console.WriteLine ($"The choice was {_userChoice}");
+    }
 }

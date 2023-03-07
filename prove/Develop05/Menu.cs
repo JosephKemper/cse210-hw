@@ -22,6 +22,10 @@ public class Menu
         _userChoice = int.Parse(Console.ReadLine());
         return _userChoice;
     }
+    public int GetUserChoice ()
+    {
+        return _userChoice;
+    }
 
     public Menu ()
     {

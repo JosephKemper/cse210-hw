@@ -9,7 +9,7 @@ class Program
         while (_userChoice != 6)
         {
         Menu runMenu = new Menu ();
-        _userChoice = runMenu.GetUserChoice();
+        _userChoice = runMenu.SetMainMenuChoice();
         }
     }
 }

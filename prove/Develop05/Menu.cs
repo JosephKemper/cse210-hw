@@ -58,6 +58,7 @@ public class Menu
             SetSubmenuChoice ();
             if (_submenuChoice == 1)
             {
+                // TODO #16 Bug Submenu no longer returning to main menu after selection.
                 Console.WriteLine ("Create Simple Goal");
             }
             else if (_submenuChoice == 2)

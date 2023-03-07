@@ -65,7 +65,7 @@ public class Activity
         Thread.Sleep(250);
         Console.Write ("\b \b");
 
-        Console.Write ("""\""");
+        Console.Write ("\\");
 
         Thread.Sleep(250);
         Console.Write("\b \b");

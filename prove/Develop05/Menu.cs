@@ -58,7 +58,7 @@ public class Menu
             SetSubmenuChoice ();
             if (_submenuChoice == 1)
             {
-                Console.WriteLine ("Create Simple Goal");
+                SimpleGoal CreateSimpleGoal = new SimpleGoal();
             }
             else if (_submenuChoice == 2)
             {

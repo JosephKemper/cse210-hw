@@ -1,6 +1,6 @@
 using System;
 
-class Goal
+public class Goal
 {
     private List <Goal> _goalList = new List<Goal>();
     private string _goalName;
@@ -10,6 +10,7 @@ class Goal
     private int _completionTarget;
     private int _currentProgress;
     private bool _isCompleted;
+    private string _goalType;
 
     public void LoadGoals()
     {
@@ -94,5 +95,23 @@ class Goal
     public void SetIsCompleted (bool isCompleted)
     {
         _isCompleted = isCompleted;
+    }
+
+    public string GetGoalType ()
+    {
+        return _goalType;
+    }
+    public void SetGoalType (string goalType)
+    {
+        _goalType = goalType;
+    }
+    public Goal ()
+    {
+        Console.Write ("What is the name of your goal? ");
+        _goalName = Console.ReadLine();
+        Console.Write ("What is a short description of it? ");
+        _goalDescription = Console.ReadLine();
+        Console.Write ("What are the points associated with this goal? ");
+        _goalPoints = int.Parse(Console.ReadLine());
     }
 }

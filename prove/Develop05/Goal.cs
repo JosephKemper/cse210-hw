@@ -2,7 +2,7 @@ using System;
 
 public class Goal
 {
-    private List <Goal> _goalList = new List<Goal>();
+    private List <List<Object>> _goalList = new List<List<Object>>();
     private string _goalName;
     private string _goalDescription;
     private int _goalPoints;
@@ -48,7 +48,7 @@ public class Goal
         _goalDescription = goalDescription;
     }
 
-    public int GetGoalPints ()
+    public int GetGoalPoints ()
     {
         return _goalPoints;
     }
@@ -119,8 +119,17 @@ public class Goal
     {
         _totalPoints += newPoints;
     }
-    public void AddGoalToList ()
+    public void AddGoalToList (string goalType, string goalName, string goalDescription, int goalPoints, 
+    int goalBonus =0, int completionTarget =0, int currentProgress= 0, bool isCompleted= false)
     {
+        //New SimpleGoal or new Eternal Goal 
+        if (goalBonus == 0 && completionTarget ==0 && currentProgress == 0 && isCompleted == false)
+        {
+        _goalList.Add(new List<object> {goalType,goalName,goalPoints});
+        }
+        //Completed SimpleGoal
+
+        //ChecklistGoal
         
     }
     public Goal ()

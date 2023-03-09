@@ -11,6 +11,7 @@ public class Goal
     private int _currentProgress;
     private bool _isCompleted;
     private string _goalType;
+    private int _totalPoints;
 
     public void LoadGoals()
     {
@@ -104,6 +105,23 @@ public class Goal
     public void SetGoalType (string goalType)
     {
         _goalType = goalType;
+    }
+
+    public int GetTotalPoints ()
+    {
+        return _totalPoints;
+    }
+    public void SetTotalPoints (int totalPoints)
+    {
+        _totalPoints = totalPoints;
+    }
+    public void AddToTotalPoints (int newPoints)
+    {
+        _totalPoints += newPoints;
+    }
+    public void AddGoalToList ()
+    {
+        
     }
     public Goal ()
     {

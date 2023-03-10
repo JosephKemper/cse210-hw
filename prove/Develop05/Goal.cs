@@ -132,12 +132,20 @@ public class Goal
         //New SimpleGoal or new Eternal Goal 
         if (goalBonus == 0 && completionTarget ==0 && currentProgress == 0 && isCompleted == false)
         {
-        _goalList.Add(new List<object> {goalType,goalName,goalPoints});
+        _goalList.Add(new List<object> {goalType,goalName,goalPoints,});
         }
         //Completed SimpleGoal
 
         //ChecklistGoal
         
+        // Goal formats
+        // SimpleGoal
+        // Type|~|Index|~|Name|~|Description|~|Points|~|CompletionStatus
+        // EternalGoal
+        // Type|~|Index|~|Name|~|Description|~|Points
+        //ChecklistGoal
+        // Type|~|Index|~|Name|~|Description|~|Points|~|BonusPoints|~|Target|~|Count
+
     }
     public Goal ()
     {

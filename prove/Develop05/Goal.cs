@@ -23,6 +23,10 @@ public class Goal
 
     public void ListGoals ()
     {
+        foreach (var i in _goalList)
+        {
+            Console.WriteLine (i);
+        }
     }
 
     public void RecordEvent ()
@@ -119,9 +123,12 @@ public class Goal
     {
         _totalPoints += newPoints;
     }
-    public void AddGoalToList (string goalType, string goalName, string goalDescription, int goalPoints, 
-    int goalBonus =0, int completionTarget =0, int currentProgress= 0, bool isCompleted= false)
+    public void AddGoalToList (string goalType, 
+    string goalName, string goalDescription, int goalPoints, 
+    int goalIndex =0,bool isCompleted= false, int goalBonus =0, 
+    int completionTarget =0, int currentProgress= 0)
     {
+        // goalIndex will be to organize the goals and keep track of updating them. 
         //New SimpleGoal or new Eternal Goal 
         if (goalBonus == 0 && completionTarget ==0 && currentProgress == 0 && isCompleted == false)
         {
@@ -140,5 +147,8 @@ public class Goal
         _goalDescription = Console.ReadLine();
         Console.Write ("What are the points associated with this goal? ");
         _goalPoints = int.Parse(Console.ReadLine());
+    }
+    public Goal (int number)
+    {
     }
 }

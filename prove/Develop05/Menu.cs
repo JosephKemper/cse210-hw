@@ -71,7 +71,8 @@ public class Menu
         }
         else if (_mainMenuChoice == 2)
         {
-            Console.WriteLine ("List Goals");
+            Goal RunGoal = new Goal(1);
+            RunGoal.ListGoals();
         }
         else if (_mainMenuChoice == 3)
         {

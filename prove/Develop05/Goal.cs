@@ -123,24 +123,12 @@ public class Goal
     {
         _totalPoints += newPoints;
     }
-    public void AddGoalToList (string goalType, 
-    string goalName, string goalDescription, int goalPoints, 
-    int goalIndex =0,bool isCompleted= false, int goalBonus =0, 
-    int completionTarget =0, int currentProgress= 0)
+    public virtual void AddGoalToList (string type, int index,
+    string name, string description, int points)
     {
-        // goalIndex will be to organize the goals and keep track of updating them. 
-        //New SimpleGoal or new Eternal Goal 
-        if (goalBonus == 0 && completionTarget ==0 && currentProgress == 0 && isCompleted == false)
-        {
-        _goalList.Add(new List<object> {goalType,goalName,goalPoints,});
-        }
-        //Completed SimpleGoal
-
-        //ChecklistGoal
         
         // Goal formats
-        // SimpleGoal
-        // Type|~|Index|~|Name|~|Description|~|Points|~|CompletionStatus
+        
         // EternalGoal
         // Type|~|Index|~|Name|~|Description|~|Points
         //ChecklistGoal

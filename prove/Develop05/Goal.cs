@@ -2,7 +2,7 @@ using System;
 
 public class Goal
 {
-    private List <List<Object>> _goalList = new List<List<Object>>();
+    private List <string> _goalList = new List<string>();
     private string _goalName;
     private string _goalDescription;
     private int _goalPoints;
@@ -11,8 +11,31 @@ public class Goal
     private int _currentProgress;
     private bool _isCompleted;
     private string _goalType;
-    private int _totalPoints;
+    private int _totalPoints = 0;
+    private int _goalIndex;
 
+    public void AddStringToList (int index, string goalString)
+    {
+        _goalList [index] = goalString;
+    }
+    
+    public virtual void CreateGoal()
+    {
+        Console.Write ("What is the name of your goal? ");
+        _goalName = Console.ReadLine();
+        Console.Write ("What is a short description of it? ");
+        _goalDescription = Console.ReadLine();
+        Console.Write ("What are the points associated with this goal? ");
+        _goalPoints = int.Parse(Console.ReadLine());
+    }
+    public void CalculateTotalPoints (int points)
+    {
+        _totalPoints += points;
+    }
+    public void StoreTotalPoints ()
+    {
+        _goalList [0]= $"{_totalPoints}";
+    }
     public void LoadGoals()
     {
     }
@@ -33,6 +56,14 @@ public class Goal
     {
     }
 
+    public int GetGoalIndex()
+    {
+        return _goalIndex;
+    }
+    public void SetGoalIndex()
+    {
+        _goalIndex = _goalList.Count;
+    }
     public string GetGoalName ()
     {
         return _goalName;
@@ -137,12 +168,7 @@ public class Goal
     }
     public Goal ()
     {
-        Console.Write ("What is the name of your goal? ");
-        _goalName = Console.ReadLine();
-        Console.Write ("What is a short description of it? ");
-        _goalDescription = Console.ReadLine();
-        Console.Write ("What are the points associated with this goal? ");
-        _goalPoints = int.Parse(Console.ReadLine());
+        
     }
     public Goal (int number)
     {

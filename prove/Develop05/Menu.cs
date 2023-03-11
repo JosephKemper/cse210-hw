@@ -58,7 +58,8 @@ public class Menu
             SetSubmenuChoice ();
             if (_submenuChoice == 1)
             {
-                SimpleGoal CreateSimpleGoal = new SimpleGoal();
+                SimpleGoal simpleGoal = new SimpleGoal();
+                simpleGoal.CreateGoal();
             }
             else if (_submenuChoice == 2)
             {

@@ -16,9 +16,9 @@ public class Goal
 
     public void AddNewGoalToList (string goalString)
     {
-        Console.WriteLine($"The {_goalList} has {_goalList.Count} items in it.");
+        Console.WriteLine($"The _goalList has {_goalList.Count} items in it.");
         _goalList.Add(goalString);
-        Console.WriteLine($"The {_goalList} has {_goalList.Count} items in it.");
+        Console.WriteLine($"The _goalList has {_goalList.Count} items in it.");
     }
     
     public virtual void CreateGoal()

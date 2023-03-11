@@ -14,9 +14,11 @@ public class Goal
     private int _totalPoints = 0;
     private int _goalIndex;
 
-    public void AddStringToList (int index, string goalString)
+    public void AddNewGoalToList (string goalString)
     {
-        _goalList [index] = goalString;
+        Console.WriteLine($"The {_goalList} has {_goalList.Count} items in it.");
+        _goalList.Add(goalString);
+        Console.WriteLine($"The {_goalList} has {_goalList.Count} items in it.");
     }
     
     public virtual void CreateGoal()
@@ -34,21 +36,25 @@ public class Goal
     }
     public void StoreTotalPoints ()
     {
-        _goalList [0]= $"{_totalPoints}";
+        _goalList.Add($"_totalPoints");
     }
     public void LoadGoals()
     {
+
     }
 
     public void SaveGoals ()
     {
     }
-
+    // TODO #17 Bug Goals are adding to list, but not being displayed to consol.
     public void ListGoals ()
     {
-        foreach (var i in _goalList)
+        Console.WriteLine ();
+        Console.WriteLine ("The goals are:");
+        for (int i = 1; i < _goalList.Count; i++)
         {
-            Console.WriteLine (i);
+            string goal = _goalList[i];
+            Console.WriteLine (goal);
         }
     }
 
@@ -58,6 +64,7 @@ public class Goal
 
     public int GetGoalIndex()
     {
+        SetGoalIndex();
         return _goalIndex;
     }
     public void SetGoalIndex()
@@ -168,7 +175,7 @@ public class Goal
     }
     public Goal ()
     {
-        
+        StoreTotalPoints();
     }
     public Goal (int number)
     {

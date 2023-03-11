@@ -8,14 +8,14 @@ public class SimpleGoal : Goal
     public void AddGoalToList (string type, int index,
     string name, string description, int points, bool isComplete)
     {
-        AddStringToList (index, $"{type}|~|{index}|~|{name}|~|{description}|~|{points}|~|{isComplete}");
+        AddNewGoalToList ($"{type}|~|{index}|~|{name}|~|{description}|~|{points}|~|{isComplete}");
     }
     
     public override void CreateGoal()
     {
         base.CreateGoal();
         SetGoalType ("Simple Goal");
-
+        AddGoalToList(GetGoalType(),GetGoalIndex(),GetGoalName(),GetGoalDescription(),GetGoalPoints(),GetIsCompleted());
     }
 
     

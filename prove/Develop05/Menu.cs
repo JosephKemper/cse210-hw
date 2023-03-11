@@ -47,6 +47,8 @@ public class Menu
 
     public Menu ()
     {
+        SimpleGoal simpleGoal = new SimpleGoal();
+        Goal goal = new Goal ();
         Console.WriteLine ();
         DisplayMainMenu ();
         SetMainMenuChoice ();
@@ -58,7 +60,6 @@ public class Menu
             SetSubmenuChoice ();
             if (_submenuChoice == 1)
             {
-                SimpleGoal simpleGoal = new SimpleGoal();
                 simpleGoal.CreateGoal();
             }
             else if (_submenuChoice == 2)
@@ -72,8 +73,7 @@ public class Menu
         }
         else if (_mainMenuChoice == 2)
         {
-            Goal RunGoal = new Goal(1);
-            RunGoal.ListGoals();
+            goal.ListGoals();
         }
         else if (_mainMenuChoice == 3)
         {

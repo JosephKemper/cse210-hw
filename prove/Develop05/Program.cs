@@ -12,8 +12,7 @@ class Program
 
         Console.WriteLine ("Welcome to the Goal Tracker");
 
-        while (_MenuChoice != 6)
-        {
+        while (_MenuChoice != 6){
             Console.WriteLine ("Menu Options:");
             Console.WriteLine ("1. Create New Goal");
             Console.WriteLine ("2. List Goals");
@@ -25,8 +24,7 @@ class Program
 
             _MenuChoice = int.Parse (Console.ReadLine ());
             
-            if (_MenuChoice == 1)
-            {
+            if (_MenuChoice == 1){
                 Console.WriteLine();
                 Console.WriteLine ("Types of Goals are:");
                 Console.WriteLine ("1. Simple Goal");
@@ -36,44 +34,34 @@ class Program
 
                 _submenuChoice = int.Parse (Console.ReadLine ());
 
-                if (_submenuChoice == 1)
-                {
+                if (_submenuChoice == 1){
                     simpleGoal.CreateGoal();
-                }
-                else if (_submenuChoice == 2)
-                {
+                    }
+                else if (_submenuChoice == 2){
                     Console.WriteLine ("Create Eternal Goal");
-                }
-                else if (_submenuChoice == 3)
-                {
+                    }
+                else if (_submenuChoice == 3){
                     Console.WriteLine ("Create Checklist Goal");
+                    }
                 }
-            else if (_MenuChoice == 2)
-            {
-                goalManager.ListGoals();
-            }
-            else if (_MenuChoice == 3)
-            {
+                else if (_MenuChoice == 2){
+                    goalManager.ListGoals();
+                    }
+            else if (_MenuChoice == 3){
                 Console.WriteLine ("Save Goals");
-            }
-            else if (_MenuChoice == 4)
-            {
+                }
+            else if (_MenuChoice == 4){
                 Console.WriteLine ("LoadGoals");
-            }
-            else if (_MenuChoice == 5)
-            {
+                }
+            else if (_MenuChoice == 5){
                 Console.WriteLine ("Record Event");
-            }
-            else if (_MenuChoice == 6)
-            {
+                }
+            else if (_MenuChoice == 6){
                 Console.WriteLine ("Come Back Soon");
-            }
-            else
-            {
+                }
+            else{
                 Console.WriteLine ("Please enter the number of the menu option you wish to select.");
-            }
-        }
-
+                }
         }
     }
 }

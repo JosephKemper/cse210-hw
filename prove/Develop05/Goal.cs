@@ -50,7 +50,7 @@ public class Goal
     // TODO #17 Bug Goals are adding to list, but not being displayed to consol.
     // I have spent 10 hours trying to figure out what is wrong with this loop. 
     // No matter how I adjust it, I can only get it to run through the list once. 
-    // I can add 10 goals to the list, change it to a foreach loop, and it will still only run once. 
+    // I can add 5 goals to the list, change it to a foreach loop, and it will still only run once. 
     // for a more detailed list of what I have found trying to fix this please see the issue tracker for it. 
     // https://github.com/JosephKemper/cse210-hw/issues/17
     public void ListGoals ()

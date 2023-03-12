@@ -16,6 +16,7 @@ public class Goal
 
     public void AddNewGoalToList (string goalString)
     {
+
         Console.WriteLine($"The _goalList has {_goalList.Count} items in it.");
         _goalList.Add(goalString);
         Console.WriteLine($"The _goalList has {_goalList.Count} items in it.");
@@ -36,7 +37,7 @@ public class Goal
     }
     public void StoreTotalPoints ()
     {
-        _goalList.Add($"_totalPoints");
+        _goalList.Add($"{_totalPoints}");
     }
     public void LoadGoals()
     {

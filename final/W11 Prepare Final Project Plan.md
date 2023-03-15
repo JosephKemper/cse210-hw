@@ -9,7 +9,9 @@
 <p></p>
 <p>Program 1: Abstraction with YouTube Videos</p>
 <p></p>
-<p></p>
+<p>
+The goal of this program is to organize and store data about thousands of YouTube Videos. While I only need to work with 3 or 4, it should be built with the idea of endless expansion of its data in mind, and store all the needed data about the videos in a maintainable format. 
+</p>
 <p></p>
 <p>Program 2: Encapsulation with Online Ordering</p>
 <p></p>

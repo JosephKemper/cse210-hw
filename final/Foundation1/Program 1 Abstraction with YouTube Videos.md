@@ -11,6 +11,6 @@ The first thing I see is something that was repeated a lot by the professor thro
 <p>
 More importantly, truly following this idea of treating a class as an object, that is being created to fulfill a responsibility, it will let me start to master the principle of Abstraction, for once I have figured out the responsibility of the class, I can then ask a critical question that is needed to master the art of abstraction. "What is actually needed in this class to perform its responsibility?" Or to put it another way, "What is the least I need to put into this class, to let me use it to accomplish my goals?" Knowing my tendency to complicate things, I will likely need to stop to ask some version of either of those two questions a few times before I can get the class to just its truly needed bits.
 </p>
-
 <p>
-The lesson I refer to in this writeup can be found <a href= "https://byui-cse.github.io/cse210-course-2023/unit02/prepare.html"> here.</a>
+The lesson I refer to in this writeup can be found <a href= "https://byui-cse.github.io/cse210-course-2023/unit02/prepare.html"> here</a>.
+</p>

@@ -21,7 +21,9 @@ This program will effectively act as a simplified order tracking system for a co
 <p></p>
 <p>Program 3: Inheritance with Event Planning</p>
 <p></p>
-<p></p>
+<p>
+This program will generate the announcements for three different kinds of events, and will customize each announcement based on the event type using the principles of inheritance. 
+</p>
 <p></p>
 <p>Program 4: Polymorphism with Exercise Tracking</p>
 <p></p>

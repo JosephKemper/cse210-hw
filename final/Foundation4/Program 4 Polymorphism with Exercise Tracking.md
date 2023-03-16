@@ -8,17 +8,6 @@ The summary of the lesson on Polymorphism starts off with the following statemen
 I read that a few weeks ago, when we first started our unit on polymorphism, but I did not fully appreciate it then. I don't yet have a lot to say on polymorphism, but I can say that I appreciate these ideas a lot more. More importantly, I find my mind racing thinking about its applications, which means that now, as I proceed forward to my final, if I properly dive in, then I will be able expand out my thoughts to a much more usable and beneficial place relating to the principles of object oriented programming. 
 </p>
 <p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
 <p>
 The lesson I refer to in this writeup can be found <a href= "https://byui-cse.github.io/cse210-course-2023/unit05/prepare.html"> here</a>.
 </p>

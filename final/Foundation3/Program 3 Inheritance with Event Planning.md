@@ -7,3 +7,7 @@ Now that I review inheritance, I think the thing I struggled with most on my las
 <p>
 Thinking about my last program, I think I needed one of two things, to have made the list protected and then access it directly from each of the sub-classes, or somehow use constructors and polymorphism to access the list properly. Either way, I am happy I am going back through these lessons. I am learning a lot. 
 </p>
+<p></p>
+<p>
+The lesson I refer to in this writeup can be found <a href= "https://byui-cse.github.io/cse210-course-2023/unit04/prepare.html"> here</a>.
+</p>

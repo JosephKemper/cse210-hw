@@ -27,3 +27,6 @@ This program will generate the announcements for three different kinds of events
 <p></p>
 <p>Program 4: Polymorphism with Exercise Tracking</p>
 <p></p>
+<p>
+    This program, will allow users to track data about their exercises and calculate stats from that data to help them see their progress in their chosen exercises. 
+</p>

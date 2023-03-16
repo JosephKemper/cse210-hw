@@ -15,7 +15,9 @@ The goal of this program is to organize and store data about thousands of YouTub
 <p></p>
 <p>Program 2: Encapsulation with Online Ordering</p>
 <p></p>
-<p></p>
+<p>
+This program will effectively act as a simplified order tracking system for a company. It will help track if the order is being shipped within the United States or not, format addresses for labels, track and store information about customers, track information about products, and put all of that together in the form of an order properly totaled including the cost of shipping costs. 
+</p>
 <p></p>
 <p>Program 3: Inheritance with Event Planning</p>
 <p></p>

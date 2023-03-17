@@ -1,7 +1,7 @@
 <p>Joseph D. Kemper</p>
 <p>CSE 210-09: Programming with Classes</p>
 <p>W08 Prove: Articulate</p>
-<p>25 February</p>
+<p>15 March 2023</p>
 <p></p>
 <p>Final Project Plan</p>
 <p></p>

@@ -45,5 +45,17 @@ Address
     Outputs
         Properly formatted address info including country of origin.
     Outline
-        ProcessAddressInfo(string unformattedAddress) // Attaches parts of address to variables
+        Methods
+            ProcessAddressInfo(string unformattedAddress) // Attaches parts of address to variables
+            CheckCountry () : Bool _isUSA
+            ReturnFormattedAddress () : String _formattedAddress 
+            Address ()
+            Address (unformattedAddress)
+
+        Member Variables
+            _streetAddress : String
+            _city : String
+            _state : String
+            _zip : String
+            _country : String
 </Code>

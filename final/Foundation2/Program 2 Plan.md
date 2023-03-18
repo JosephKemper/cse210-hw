@@ -15,13 +15,17 @@ Order
     Inputs
         Raw list of customer and order info. 
     Outputs
-        Packing List with quantity, name, and product id for each product ordered
+        Packing List with quantity, product name, and product id for each product ordered
         Shipping Label with name and address of customer with proper newline marks included
     Outline
         Methods
-
+            LoadOrders (filename)
+            PrepOrders (_unfilteredOrders)
+            DisplayOrders (_ordersList)
+            Order(filename)
         Member variables
-        
+            _rawOrders : string
+            _ordersList : List < string>
 </Code>
 <Code>
 Product
@@ -83,3 +87,5 @@ Address
             _zip : String
             _country : String
 </Code>
+
+UML URL //www.plantuml.com/plantuml/dpng/XLFHZjCm47ptL_WnuSWFL0ZTaUgaIYUeA3n79jw2XMC7UorKKF-TJModSKjrJztCpCxkZjL7Zy9X63HhWqSxWEDlceO_IUd0U_R9oOHaUWNjdPMXHyPQBRpdaVZB7bwiaFE7vzLHQJ1YW9ezx1sC6Uw28GR1GL8IlrL-rEAqIEnSl2YFHCxeogtfdFYTf1lkqIdpdS1B3w7ppxj4lcVdj6UwZHQTBkYfJCZE76qLrJnGxGQ123AnDQU6zWVqFriR3BeJhseQyi5QpJlblnwUYFyC69nvlcgDoaDqxgwD9z-BSFrnVnVMy8vO04p8uZynlS9J0NWK20NoHurbIxffmSxvMVF3h_BAq1HOVCkytvhPHASvjvZ8SjZjHIjn2Z5RVHG3K7wHNzZKLjMf828tlBhGVE_AlGZYThM2pdqNBbTBOlb_CGNsh8pSEzK3hyQ8xhQBNqtLrePl6gRjXUw35WXVB0fDgIPzx8wojxpx5OJ1-BmxWuL36lk_ITHOs6tk6hBcHYhZWEPQcwNbA8hX4OmCW_u7

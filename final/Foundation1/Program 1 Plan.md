@@ -13,9 +13,14 @@ Classes
 Video
 Methods
 LoadRawFile (filename) : _rawData List <String>
-ProcessComments(_rawData List <String>)
+ProcessComments(_rawData List <String>) :_comments : List<comment>
 DisplayVideoData(_rawData List<String>)
-
+GetTitle()
+SetTitle(title) : String
+GetAuthor()
+SetAuthor(author) : String
+GetLength()
+SetLength(length) : Int
 Video(filename)
 
 
@@ -32,9 +37,14 @@ Methods
 DisplayComment(CommentList List <Comment>)
 Comment() //Default constructor used to create list
 Comment(CommentList List <Comment>) // Used when trying to display comments
+GetName() : String
+SetName(name)
+GetComment () : String
+SetComment ()
 
 
 Member Variables
 _name : String
 _comment : String
 
+URL //www.plantuml.com/plantuml/png/XP5HQy8m4CVVyoaEVAaJyLraE9IDWOmnjxrAQ4yjfCb8heZ8llikoNMbcsCl3NVvty_BpsKWxQbjZ7glAtHmCvt2oZKDMb8heqE0rB-e2MoShbxqwRus2CMUlrOtE8OvxBm-hJLfsDI1OB4bNzl3BKyyUrTY2C8BnVKW8tQbH62UxXPIHyYw3Xz6dzCQSNX8-OPmyW7fjIQ3HIosNK7n6zVCoPoxQ-del0IxIgVZPtI3za37BYgLIKUCFhAeIPRKIr5JsANVxLdSoVn1AtC4C_fRmmYklbfzAlcNnF6b5oQTGiuu9jwbavnrgJ7CPclSwzOGbCu6ycr9paCRi09oK7hKX60O85F_i9a7Rt7uT4GBvC-yRmHLUJledfebFx6rOc1-AytaCuU43R-2_OMAKdba8BxJslTOsn9jrJRc2m00

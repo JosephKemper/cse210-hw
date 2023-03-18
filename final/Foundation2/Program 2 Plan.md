@@ -17,6 +17,11 @@ Order
     Outputs
         Packing List with quantity, name, and product id for each product ordered
         Shipping Label with name and address of customer with proper newline marks included
+    Outline
+        Methods
+
+        Member variables
+        
 </Code>
 <Code>
 Product
@@ -26,6 +31,11 @@ Product
         Product id and quantity
     Outputs
         Total Product Price
+    Outline
+        Methods
+
+        Member variables
+        
 </Code>
 <Code>
 Customer
@@ -35,6 +45,16 @@ Customer
         String containing customer name and address marked with separators
     Outputs
         Customer name, address and shipping costs. 
+    Outline
+        Methods
+            ProcessCustomerInfo (_unformattedCustomerInfo:String) // Splits the unformatted customer string into customer name and address parts and attaches to variables.
+            FormatAddress (unformattedAddress:String) // Uses Address Class to format address
+            ReturnCustomerName() String
+            ReturnAddress()Address
+        Member variables
+            _customerName : String
+            _unformattedAddress : String
+            _customerAddress : Address 
 </Code>
 <Code>
 Address
@@ -50,8 +70,7 @@ Address
             CheckCountry () : Bool _isUSA
             ReturnFormattedAddress () : String _formattedAddress 
             Address ()
-            Address (unformattedAddress)
-
+            Address (string unformattedAddress)
         Member Variables
             _streetAddress : String
             _city : String

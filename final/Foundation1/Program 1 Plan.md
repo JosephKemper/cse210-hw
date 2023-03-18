@@ -12,9 +12,9 @@ Will store Video info in Text file. Will have two different Separators. One (cur
 Classes
 Video
 Methods
-LoadRawFile (filename) : _rawData List <String>
-ProcessComments(_rawData List <String>) :_comments : List<comment>
-DisplayVideoData(_rawData List<String>)
+LoadRawFile (filename) : _rawData List < String >
+ProcessComments(_rawData List < String >) :_comments : List< comment >
+DisplayVideoData(_rawData List< String >)
 GetTitle()
 SetTitle(title) : String
 GetAuthor()
@@ -28,15 +28,15 @@ Member Variables
 _title : String
 _author : String
 _length : Int
-_comments : List<comment>
-_rawData List<String>
+_comments : List < comment >
+_rawData List < String >
 </code>
 <code>
 Comment
 Methods
-DisplayComment(CommentList List <Comment>)
+DisplayComment(CommentList List < Comment >)
 Comment() //Default constructor used to create list
-Comment(CommentList List <Comment>) // Used when trying to display comments
+Comment(CommentList List < Comment >) // Used when trying to display comments
 GetName() : String
 SetName(name)
 GetComment () : String

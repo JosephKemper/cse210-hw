@@ -33,9 +33,13 @@ Product
         Total Product Price
     Outline
         Methods
-
+            FindPrice (productID : String) : Double
+            CalculateTotal (_productPrice Double, _quantity : Int) : Double
+            Product (productID : String, _productPrice : Double, _quantity : Int)
         Member variables
-        
+            _productPrice : double
+            _quantity : Int
+            _productID : String
 </Code>
 <Code>
 Customer
@@ -51,6 +55,7 @@ Customer
             FormatAddress (unformattedAddress:String) // Uses Address Class to format address
             ReturnCustomerName() String
             ReturnAddress()Address
+            Customer(_unformattedCustomerInfo:String)
         Member variables
             _customerName : String
             _unformattedAddress : String

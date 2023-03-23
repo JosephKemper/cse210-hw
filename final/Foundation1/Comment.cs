@@ -6,17 +6,21 @@ class Comment
     private string _comment;
 
     public void DisplayComment (){
-    }
+        }
 
-    public void GetName (){
-    }
+    public string GetName (){
+            return _name;
+        }
     
-    public void SetName (){
-    }
+    public void SetName (string name){
+            _name = name;
+        }
 
-    public void GetComment (){
-    }
+    public string GetComment (){
+            return _comment;
+        }
 
-    public void SetComment (){
-    }
+    public void SetComment (string comment){
+            _comment = comment;
+        }
 }

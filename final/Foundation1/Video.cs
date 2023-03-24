@@ -22,7 +22,7 @@ class Video{
 
     public void ProcessComments (){
         }
-
+// TODO #18 Bug DisplayVideoData printing multiple copies of each video in the list
     public void DisplayVideoData (){
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
         foreach (string video in _unprocessedVideoList){

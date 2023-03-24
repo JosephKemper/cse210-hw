@@ -4,6 +4,7 @@ class Video{
     private string _title;
     private string _author;
     private int _length;
+    private List<string> _unprocessedVideoList = new List<string> ();
     private string _fileName = "RawVideoFile.txt";
     protected List <Comment> _comments = new List<Comment>();
     private string _rawData;
@@ -12,7 +13,13 @@ class Video{
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
         //Comments are repeated an unknown number of times. 
         _rawData = File.ReadAllText(_fileName);
-        Console.WriteLine(_rawData);
+        //Console.WriteLine(_rawData);
+        _unprocessedVideoList = _rawData.Split("|||").ToList();
+        foreach (string video in _unprocessedVideoList)
+        {
+            Console.WriteLine(video);
+            Console.WriteLine ();
+        }
         }
 
 

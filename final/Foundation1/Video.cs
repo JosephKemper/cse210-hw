@@ -5,6 +5,7 @@ class Video{
     private string _author;
     private int _length;
     private List<string> _unprocessedVideoList = new List<string> ();
+    private List<string> _videoProcessingList = new List<string>();
     private string _fileName = "RawVideoFile.txt";
     protected List <Comment> _comments = new List<Comment>();
     private string _rawData;
@@ -15,11 +16,7 @@ class Video{
         _rawData = File.ReadAllText(_fileName);
         //Console.WriteLine(_rawData);
         _unprocessedVideoList = _rawData.Split("|||").ToList();
-        foreach (string video in _unprocessedVideoList)
-        {
-            Console.WriteLine(video);
-            Console.WriteLine ();
-        }
+        
         }
 
 
@@ -27,6 +24,19 @@ class Video{
         }
 
     public void DisplayVideoData (){
+        //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
+        foreach (string video in _unprocessedVideoList){
+            _videoProcessingList.Clear();
+            _videoProcessingList = video.Split("||").ToList();
+            foreach (string item in _videoProcessingList){
+                //Console.WriteLine(item);
+                _title = _videoProcessingList [1];
+                _author = _videoProcessingList [2];
+                Console.WriteLine ($"Title: {_title}");
+                Console.WriteLine ($"Author/Channel Name: {_author}");
+                }
+            Console.WriteLine ();
+            }
         }
 
     public string GetTitle (){

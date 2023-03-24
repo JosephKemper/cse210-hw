@@ -4,8 +4,12 @@ class Video{
     private string _title;
     private string _author;
     private int _length;
+    private int _hours;
+    private int _minutes;
+    private int _seconds;
     private List<string> _unprocessedVideoList = new List<string> ();
     private List<string> _videoProcessingList = new List<string>();
+    private List<string> _lengthProcessingList = new List<string>();
     private string _fileName = "RawVideoFile.txt";
     protected List <Comment> _comments = new List<Comment>();
     private string _rawData;
@@ -16,9 +20,23 @@ class Video{
         _rawData = File.ReadAllText(_fileName);
         //Console.WriteLine(_rawData);
         _unprocessedVideoList = _rawData.Split("|||").ToList();
-        
         }
 
+    public int FindLength (string rawLength){
+        _lengthProcessingList = rawLength.Split(":").ToList();
+        if (_lengthProcessingList.Count == 2){
+                _minutes = int.Parse(_lengthProcessingList[0]);
+                _seconds = int.Parse(_lengthProcessingList[1]);
+                _length = (_minutes *60)+ _seconds;
+            }
+        else{
+            _hours = int.Parse(_lengthProcessingList[0]);
+            _minutes = int.Parse(_lengthProcessingList[1]);
+            _seconds = int.Parse(_lengthProcessingList[2]);
+            _length = (_hours*60*60)+(_minutes *60)+ _seconds;
+            }
+        return _length;
+        }
 
     public void ProcessComments (){
         }
@@ -31,9 +49,10 @@ class Video{
             //Console.WriteLine(item);
             _title = _videoProcessingList [1];
             _author = _videoProcessingList [2];
+            _length = FindLength (_videoProcessingList[3]);
             Console.WriteLine ($"Title: {_title}");
             Console.WriteLine ($"Author/Channel Name: {_author}");
-            
+            Console.WriteLine ($"Length (in seconds): {_length}");
             Console.WriteLine ();
             }
         }

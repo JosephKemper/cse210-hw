@@ -28,13 +28,12 @@ class Video{
         foreach (string video in _unprocessedVideoList){
             _videoProcessingList.Clear();
             _videoProcessingList = video.Split("||").ToList();
-            foreach (string item in _videoProcessingList){
-                //Console.WriteLine(item);
-                _title = _videoProcessingList [1];
-                _author = _videoProcessingList [2];
-                Console.WriteLine ($"Title: {_title}");
-                Console.WriteLine ($"Author/Channel Name: {_author}");
-                }
+            //Console.WriteLine(item);
+            _title = _videoProcessingList [1];
+            _author = _videoProcessingList [2];
+            Console.WriteLine ($"Title: {_title}");
+            Console.WriteLine ($"Author/Channel Name: {_author}");
+            
             Console.WriteLine ();
             }
         }

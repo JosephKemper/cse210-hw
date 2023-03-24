@@ -4,8 +4,16 @@ class Comment
 {
     private string _name;
     private string _comment;
+    private string _formattedComment;
 
-    public void DisplayComment (){
+    public void DisplayComment (List<Comment> _comment){
+            foreach (Comment comment in _comment){
+                Console.WriteLine (comment);
+                }
+        }
+    
+    public void FormatComment(string name, string comment){
+        // Format comments for ready display to console
         }
 
     public string GetName (){

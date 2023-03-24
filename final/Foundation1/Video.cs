@@ -39,8 +39,15 @@ class Video{
         }
 
     public void ProcessComments (){
+        // Name of person leaving the comment is at index 4
+        // Comment is at index 5
+        // The next comment/name is found by adding 2 to each index.
+        Comment extractComments = new Comment();
+        for (int i = 4; i < _unprocessedVideoList.Count; i+=2){
+                
+            }        
         }
-// TODO #18 Bug DisplayVideoData printing multiple copies of each video in the list
+
     public void DisplayVideoData (){
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
         foreach (string video in _unprocessedVideoList){

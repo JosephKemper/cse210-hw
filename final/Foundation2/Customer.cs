@@ -8,9 +8,11 @@ public class Customer{
     public void ProcessCustomerInfo (string customerName, string unformattedAddress){
         _customerName = customerName;
         _unformattedAddress = unformattedAddress;
+        FormatAddress (_unformattedAddress);
         }
     
     public void FormatAddress (string unformattedAddress){
+        Address newAddress = new Address(unformattedAddress);
         }
     
     public string ReturnCustomerName(){

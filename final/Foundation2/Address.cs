@@ -8,6 +8,12 @@ public class Address{
     private string _country;
 
     public void ProcessAddressInfo(string unformattedAddress){
+        string [] parts = unformattedAddress.Split(",");
+        _streetAddress = parts [0];
+        _city = parts [1];
+        _state = parts [2];
+        _zip = parts [3];
+        _country = parts [4];
         }
     
     public void CheckCountry (){
@@ -20,5 +26,6 @@ public class Address{
     }
 
     public Address (string unformattedAddress){
+        ProcessAddressInfo (unformattedAddress);
         }
     }

@@ -7,11 +7,12 @@ class Video{
     private int _hours;
     private int _minutes;
     private int _seconds;
-    private List<string> _unprocessedVideoList = new List<string> ();
-    private List<string> _videoProcessingList = new List<string>();
-    private List<string> _lengthProcessingList = new List<string>();
+    private int _numberOfComments;
+    protected List<string> _unprocessedVideoList = new List<string> ();
+    protected List<string> _videoProcessingList = new List<string>();
+    protected List<string> _lengthProcessingList = new List<string>();
     private string _fileName = "RawVideoFile.txt";
-    private List <Comment> _commentList = new List<Comment>();
+    protected List <Comment> _commentList = new List<Comment>();
     private string _rawData;
 
     public void LoadFile (){
@@ -43,9 +44,9 @@ class Video{
         // Comment is at index 5
         // The next comment/name is found by adding 2 to each index.
         Comment extractComments = new Comment();
-        for (int i = 4; i < _unprocessedVideoList.Count; i+=2){
-                extractComments.SetName(_unprocessedVideoList[i]);
-                extractComments.SetComment(_unprocessedVideoList [i+1]);
+        for (int i = 4; i < _videoProcessingList.Count; i+=2){
+                extractComments.SetName(_videoProcessingList[i]);
+                extractComments.SetComment(_videoProcessingList [i+1]);
                 extractComments.FormatComment (extractComments.GetName(),extractComments.GetComment());
                 extractComments.GetFormattedComment();
                 _commentList.Add(extractComments);
@@ -61,13 +62,14 @@ class Video{
             _videoProcessingList = video.Split("||").ToList();
             //Console.WriteLine(item);
             ProcessComments();
+            _numberOfComments = _commentList.Count -4;
             _title = _videoProcessingList [1];
             _author = _videoProcessingList [2];
             _length = FindLength (_videoProcessingList[3]);
             Console.WriteLine ($"Title: {_title}");
             Console.WriteLine ($"Author/Channel Name: {_author}");
             Console.WriteLine ($"Length (in seconds): {_length}");
-            Console.WriteLine ();
+            Console.WriteLine ($"There are {_numberOfComments} Comments");
             showComments.DisplayComment(_commentList);
             }
         }

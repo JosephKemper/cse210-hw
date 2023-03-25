@@ -18,6 +18,12 @@ public class Product {
             _productDictionary.Add(_productID,_productPrice);
             }
         }
+
+    public void ProcessRawOrder (string rawOrder){
+        string [] parts = rawOrder.Split(",");
+        _productID = parts [0];
+        _quantity = int.Parse(parts [1]);
+        }
     public double FindPrice (string productID){
         _productPrice = _productDictionary [productID];
         return _productPrice;

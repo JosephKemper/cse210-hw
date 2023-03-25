@@ -13,12 +13,21 @@ class Order{
         }
     
     public void PrepOrders(string rawOrders){
+        Customer newCustomer = new Customer ();
+        Product productRequest = new Product ();
+        string [] parts = rawOrders.Split("|||");
+        newCustomer.ProcessCustomerInfo (parts[0],parts[1]);
+        productRequest.ProcessRawOrder(parts[2]);
         }
     
     public void DisplayOrders (List<string>ordersList){
         }
-    public Order (){
-    }
-    public Order(string filename){
+
+    public Order(){
+        LoadOrders();
+        foreach (string order in _ordersList){
+            _rawOrders = order;
+            PrepOrders (_rawOrders);
+            }
         }
     }

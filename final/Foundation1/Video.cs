@@ -52,7 +52,7 @@ class Video{
                 _commentList.Add(extractComments);
             }   
         }
-// TODO #19 Bug Comments not transferring to Comment class
+// TODO #20 Bug Comments error out when it hits the last video. 
     public void DisplayVideoData (){
         Comment showComments = new Comment();
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
@@ -62,6 +62,7 @@ class Video{
             _videoProcessingList = video.Split("||").ToList();
             //Console.WriteLine(item);
             ProcessComments();
+            // TODO #21 Bug Comments are not counting properly
             _numberOfComments = _commentList.Count -4;
             _title = _videoProcessingList [1];
             _author = _videoProcessingList [2];

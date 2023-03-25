@@ -14,6 +14,11 @@ class Comment
     
     public void FormatComment(string name, string comment){
         // Format comments for ready display to console
+        _formattedComment = $"{name} -- {comment}";
+        }
+    
+    public string GetFormattedComment(){
+        return _formattedComment;
         }
 
     public string GetName (){

@@ -11,7 +11,7 @@ class Video{
     private List<string> _videoProcessingList = new List<string>();
     private List<string> _lengthProcessingList = new List<string>();
     private string _fileName = "RawVideoFile.txt";
-    protected List <Comment> _comments = new List<Comment>();
+    private List <Comment> _commentList = new List<Comment>();
     private string _rawData;
 
     public void LoadFile (){
@@ -44,16 +44,23 @@ class Video{
         // The next comment/name is found by adding 2 to each index.
         Comment extractComments = new Comment();
         for (int i = 4; i < _unprocessedVideoList.Count; i+=2){
-                
-            }        
+                extractComments.SetName(_unprocessedVideoList[i]);
+                extractComments.SetComment(_unprocessedVideoList [i+1]);
+                extractComments.FormatComment (extractComments.GetName(),extractComments.GetComment());
+                extractComments.GetFormattedComment();
+                _commentList.Add(extractComments);
+            }   
         }
-
+// TODO #19 Bug Comments not transferring to Comment class
     public void DisplayVideoData (){
+        Comment showComments = new Comment();
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
         foreach (string video in _unprocessedVideoList){
             _videoProcessingList.Clear();
+            _commentList.Clear();
             _videoProcessingList = video.Split("||").ToList();
             //Console.WriteLine(item);
+            ProcessComments();
             _title = _videoProcessingList [1];
             _author = _videoProcessingList [2];
             _length = FindLength (_videoProcessingList[3]);
@@ -61,6 +68,7 @@ class Video{
             Console.WriteLine ($"Author/Channel Name: {_author}");
             Console.WriteLine ($"Length (in seconds): {_length}");
             Console.WriteLine ();
+            showComments.DisplayComment(_commentList);
             }
         }
 

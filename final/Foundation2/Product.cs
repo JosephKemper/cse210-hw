@@ -5,7 +5,9 @@ public class Product {
     private int _quantity;
     private string _productID;
     private double _subtotal;
+    private double _total;
     private string _productFileName = "ProductPriceList.txt";
+    private List<string> _productRequestList = new List<string>();
     private Dictionary<string, double> _productDictionary = new Dictionary<string, double>();
 
     public void LoadProducts (){
@@ -18,11 +20,17 @@ public class Product {
             _productDictionary.Add(_productID,_productPrice);
             }
         }
-
+    // TODO #23 Bug Product not splitting correctly
     public void ProcessRawOrder (string rawOrder){
-        string [] parts = rawOrder.Split(",");
-        _productID = parts [0];
-        _quantity = int.Parse(parts [1]);
+        _productRequestList.Clear();
+        _productRequestList = rawOrder.Split("||").ToList();
+        _total = 0;
+        
+        foreach (string product in _productRequestList){
+            string [] parts = product.Split(",");
+            CalculateSubtotal (FindPrice (parts [0]), int.Parse(parts [1]));
+            _total += _subtotal;
+            }
         }
     public double FindPrice (string productID){
         _productPrice = _productDictionary [productID];

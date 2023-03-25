@@ -16,10 +16,17 @@ public class Address{
         _country = parts [4];
         }
     
-    public void CheckCountry (){
+    public string GetCountry (){
+        return _country;
         }
     
-    public void ReturnFormattedAddress(){
+    public string ReturnFormattedAddress(){
+            if (_country == "USA"){
+                return _streetAddress + "\n" + _city + "," + _state + _zip;
+                }
+            else {
+                return _streetAddress + "\n" + _city + "," + _state + _zip + "\n" + _country;
+                }
         }
     
     public Address (){

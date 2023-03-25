@@ -6,8 +6,10 @@ public class Product {
     private string _productID;
     private double _subtotal;
     private double _total;
+    private string _shippingLabel;
     private string _productFileName = "ProductPriceList.txt";
     private List<string> _productRequestList = new List<string>();
+    private List <string> _shippingLabelList = new List<string>();
     private Dictionary<string, double> _productDictionary = new Dictionary<string, double>();
 
     public void LoadProducts (){
@@ -20,7 +22,6 @@ public class Product {
             _productDictionary.Add(_productID,_productPrice);
             }
         }
-    // TODO #23 Bug Product not splitting correctly
     public void ProcessRawOrder (string rawOrder){
         _productRequestList.Clear();
         _productRequestList = rawOrder.Split("||").ToList();
@@ -32,6 +33,11 @@ public class Product {
             _total += _subtotal;
             }
         }
+    public void CollectShippingLabelParts (string productID, string quantity){
+        _shippingLabelList.Add($"Product ID {productID} -- Quantity {quantity}");
+        }
+    
+
     public double FindPrice (string productID){
         _productPrice = _productDictionary [productID];
         return _productPrice;
@@ -40,17 +46,16 @@ public class Product {
     public void CalculateSubtotal(double productPrice, int quantity){
         _subtotal = productPrice * quantity;
         }
-    public double GetSubtotal(){
-        return _subtotal;
+    public double GetTotal(){
+        return _total;
         }
     
     public Product(){
         LoadProducts();
         }
 
-    public Product (string productID, int quantity){
+    public Product (string rawOrder){
         LoadProducts();
-        _productPrice = FindPrice(productID);
-        CalculateSubtotal (_productPrice, quantity);
+        ProcessRawOrder(rawOrder);
         }
     }

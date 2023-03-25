@@ -1,0 +1,2 @@
+John Smith|||123 Main Street,Buffalo,New York,142011,USA|||PR10014,3||PR10038,2||PR10065,8
+Pierre Dubois|||45 Rue Saint-Laurent,Lacombe,Alberta,T4L 1A1,Canada|||PR10078,2||PR10096,1

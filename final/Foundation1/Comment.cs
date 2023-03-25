@@ -7,7 +7,8 @@ class Comment
     private string _formattedComment;
 
     public void DisplayComment (){
-        Console.WriteLine (_formattedComment);                
+        Console.WriteLine (_formattedComment);
+        Console.WriteLine ("------------");
         }
     
     public void FormatComment(string name, string comment){

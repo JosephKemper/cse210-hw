@@ -49,9 +49,12 @@ class Video{
                 extractComments.FormatComment (extractComments.GetName(),extractComments.GetComment());
                 extractComments.GetFormattedComment();
                 extractComments.DisplayComment();
-            }   
+            }
+            Console.WriteLine();
+            Console.WriteLine ("---End of Video Comments---");
+            Console.WriteLine ();
         }
-// TODO: #22 Bug Comments only displaying as "Comment"
+
     public void DisplayVideoData (){
         Comment showComments = new Comment();
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
@@ -66,6 +69,9 @@ class Video{
             Console.WriteLine ($"Author/Channel Name: {_author}");
             Console.WriteLine ($"Length (in seconds): {_length}");
             Console.WriteLine ($"There are {_numberOfComments} Comments");
+            Console.WriteLine();
+            Console.WriteLine("----Comments----");
+            Console.WriteLine();
             ProcessComments();
             }
         }

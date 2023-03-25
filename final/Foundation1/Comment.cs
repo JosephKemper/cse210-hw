@@ -6,10 +6,8 @@ class Comment
     private string _comment;
     private string _formattedComment;
 
-    public void DisplayComment (List<Comment> _comment){
-            foreach (Comment comment in _comment){
-                Console.WriteLine (comment);
-                }
+    public void DisplayComment (){
+        Console.WriteLine (_formattedComment);                
         }
     
     public void FormatComment(string name, string comment){

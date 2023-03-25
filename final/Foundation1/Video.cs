@@ -12,7 +12,6 @@ class Video{
     protected List<string> _videoProcessingList = new List<string>();
     protected List<string> _lengthProcessingList = new List<string>();
     private string _fileName = "RawVideoFile.txt";
-    protected List <Comment> _commentList = new List<Comment>();
     private string _rawData;
 
     public void LoadFile (){
@@ -49,7 +48,7 @@ class Video{
                 extractComments.SetComment(_videoProcessingList [i+1]);
                 extractComments.FormatComment (extractComments.GetName(),extractComments.GetComment());
                 extractComments.GetFormattedComment();
-                _commentList.Add(extractComments);
+                extractComments.DisplayComment();
             }   
         }
 // TODO: #22 Bug Comments only displaying as "Comment"
@@ -58,11 +57,8 @@ class Video{
         //Format URL||VideoTitle||Author/channelName||VideoLength||Name||Comment|||
         foreach (string video in _unprocessedVideoList){
             _videoProcessingList.Clear();
-            _commentList.Clear();
             _videoProcessingList = video.Split("||").ToList();
-            //Console.WriteLine(item);
-            ProcessComments();
-            _numberOfComments = _commentList.Count;
+            _numberOfComments = (_videoProcessingList.Count-4)/2;
             _title = _videoProcessingList [1];
             _author = _videoProcessingList [2];
             _length = FindLength (_videoProcessingList[3]);
@@ -70,7 +66,7 @@ class Video{
             Console.WriteLine ($"Author/Channel Name: {_author}");
             Console.WriteLine ($"Length (in seconds): {_length}");
             Console.WriteLine ($"There are {_numberOfComments} Comments");
-            showComments.DisplayComment(_commentList);
+            ProcessComments();
             }
         }
 

@@ -18,6 +18,7 @@ public class Product {
             }
         }
     public double FindPrice (string productID){
+        _productPrice = _productDictionary [productID];
         return _productPrice;
         }
     
@@ -26,8 +27,12 @@ public class Product {
         }
     
     public Product(){
+        LoadProducts();
         }
 
-    public Product (string productID, double productPrice, int quantity){
+    public Product (string productID, int quantity){
+        LoadProducts();
+        _productPrice = FindPrice(productID);
+        CalculateSubtotal (_productPrice, quantity);
         }
     }

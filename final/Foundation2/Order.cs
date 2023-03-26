@@ -5,6 +5,7 @@ class Order{
     private string _customerOrders = "CustomerOrders.txt";
     private string _rawOrders;
     private int _shippingCost;
+    private double _grandTotal;
     private List<string> _ordersList = new List<string>();
 
     public void LoadOrders (){
@@ -15,18 +16,31 @@ class Order{
     
     public void PrepOrders(string rawOrders){
         Customer newCustomer = new Customer ();
-        Product productRequest = new Product ();
         string [] parts = rawOrders.Split("|||");
         newCustomer.ProcessCustomerInfo (parts[0],parts[1]);
-        productRequest.ProcessRawOrder(parts[2]);
+        Product productRequest = new Product (parts[2]);
         CalculateShipping (newCustomer.GetIsUSA());
+        newCustomer.AssembleShippingLabel();
+        productRequest.AssemblePackingLabel();
+        DisplayOrders (newCustomer.GetShippingLabel(),productRequest.GetPackingLabel(),productRequest.GetTotal());
         }
     
-    public void DisplayOrders (string customerName, string customerAddress, string requestedParts, int shippingCost, double totalCost){
+    public void DisplayOrders (string shippingLabel, string packingLabel, double total){
+        Console.WriteLine ("---Begin Customer Order---");
+        Console.WriteLine ();
         Console.WriteLine ("Shipping Label");
         Console.WriteLine ();
+        Console.WriteLine (shippingLabel);
         Console.WriteLine ();
+        Console.WriteLine ("Packing Label");
         Console.WriteLine ();
+        Console.WriteLine (packingLabel);
+        Console.WriteLine ();
+        Console.WriteLine ($"Shipping: {_shippingCost}");
+        Console.WriteLine ();
+        Console.WriteLine ($"Grand Total: ${Math.Round(_shippingCost + total,2)}");
+        Console.WriteLine ();
+        Console.WriteLine ("---End Customer Order ---");
         Console.WriteLine ();
         }
     

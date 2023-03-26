@@ -6,10 +6,10 @@ public class Product {
     private string _productID;
     private double _subtotal;
     private double _total;
-    private string _shippingLabel;
+    private string _packingLabel;
     private string _productFileName = "ProductPriceList.txt";
     private List<string> _productRequestList = new List<string>();
-    private List <string> _shippingLabelList = new List<string>();
+    private List <string> _packingLabelList = new List<string>();
     private Dictionary<string, double> _productDictionary = new Dictionary<string, double>();
 
     public void LoadProducts (){
@@ -22,21 +22,29 @@ public class Product {
             _productDictionary.Add(_productID,_productPrice);
             }
         }
+
     public void ProcessRawOrder (string rawOrder){
         _productRequestList.Clear();
-        _productRequestList = rawOrder.Split("||").ToList();
         _total = 0;
+        _productRequestList = rawOrder.Split("||").ToList();
         
         foreach (string product in _productRequestList){
             string [] parts = product.Split(",");
             CalculateSubtotal (FindPrice (parts [0]), int.Parse(parts [1]));
             _total += _subtotal;
+            CollectShippingLabelParts (parts[0],int.Parse(parts [1]),_subtotal);
             }
         }
-    public void CollectShippingLabelParts (string productID, string quantity){
-        _shippingLabelList.Add($"Product ID {productID} -- Quantity {quantity}");
+    public void CollectShippingLabelParts (string productID, int quantity, double subtotal){
+        _packingLabelList.Add($"Product ID {productID} -- Quantity {quantity} @ ${FindPrice(productID)} each, Subtotal ${Math.Round(subtotal,2)}");
         }
-    
+    // Learned method to combine list to array from Bing AI
+    public void AssemblePackingLabel(){
+        _packingLabel = String.Join("\n", _packingLabelList.ToArray());
+        }
+    public string GetPackingLabel(){
+        return _packingLabel;
+        }
 
     public double FindPrice (string productID){
         _productPrice = _productDictionary [productID];

@@ -1,5 +1,12 @@
 using System;
-
+/*
+Purpose
+Format addresses for events
+Inputs
+Strings containing event addresses
+Outputs
+Properly formatted event address
+*/
 public class Address{
     private string _streetAddress;
     private string _city;

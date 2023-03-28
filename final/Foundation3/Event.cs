@@ -1,5 +1,14 @@
 using System;
 
+/*
+Purpose
+Process and store all details shared by each event type
+Inputs
+File containing details for 3 different kinds of events.
+Outputs
+Any shared program details
+*/
+
 public class Event{
     private string _title;
     private string _description;

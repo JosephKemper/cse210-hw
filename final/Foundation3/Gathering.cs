@@ -11,8 +11,6 @@ Outputs
 public class Gathering : Event{
     private string _forecast;
 
-    public void LoadGatheringEvent(){
-        }
     
     public override void DisplayFullDetails (){
         base.DisplayFullDetails();

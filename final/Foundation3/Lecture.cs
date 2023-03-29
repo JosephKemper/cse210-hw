@@ -11,8 +11,6 @@ public class Lecture : Event{
     private string _speaker = "default Speaker";
     private string _capacity = "default seats";
 
-    public void LoadLectureEvent(){
-        }
     
     public override void DisplayFullDetails () {
         base.DisplayFullDetails();

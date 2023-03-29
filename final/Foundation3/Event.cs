@@ -54,18 +54,33 @@ public class Event{
             _title = parts [5];
             ProcessEventDetails (line);
 
+            Console.WriteLine();
+            Console.WriteLine($"---Announcements for {_eventType}---");
+
             Console.WriteLine("Short Description");
+            Console.WriteLine();
             DisplayShortDescription();
-
+            
+            Console.WriteLine();
             Console.WriteLine ("---End Description---");
+            Console.WriteLine();
+
             Console.WriteLine("Standard Description");
+            Console.WriteLine();
             DisplayStandardDescription ();
-
+            
+            Console.WriteLine();
             Console.WriteLine ("---End Description---");
+            Console.WriteLine();
+
             Console.WriteLine("Full Description");
+            Console.WriteLine();
             DisplayFullDetails();
 
+            Console.WriteLine();
             Console.WriteLine ("---End Description---");
+            Console.WriteLine();
+            Console.WriteLine($"---End of Announcements for {_eventType}");
             }
         }
     public virtual void ProcessEventDetails(string unprocessedLine){
@@ -76,7 +91,6 @@ public class Event{
         Console.WriteLine("Time: " + _time);
         Console.WriteLine("Address: " + _address);
         Console.WriteLine("Description: " + _description);
-        Console.WriteLine();
         }
     
     public void DisplayShortDescription (){
@@ -89,21 +103,7 @@ public class Event{
         DisplayStandardDescription();
         }
     
-    // possible need of getters and setters
-    // Combined Getter/Setter format learned from Bing AI.
-    // To use this template it gave the following example
-    /*
-    For example, 
-    if you have an instance of the Event class called myEvent, 
-    you can get the value of the Title property like this: 
-    string title = myEvent.Title;. 
-    You can also set the value of the Title property like this: 
-    myEvent.Title = "New Title";.
-    */
-    public string Title{
-        get { return _title; }
-        set { _title = value; }
-        }
+ 
     public Event (){
         LoadEvents(_eventsFile);
         ProcessEvent();

@@ -14,6 +14,7 @@ public class Reception : Event{
         }
     
     public void DisplayFullDetails (){
+        base.DisplayFullDetails();
         }
     
     public Reception(){

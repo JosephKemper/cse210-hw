@@ -13,5 +13,9 @@ class Program
         Program Outputs
         3 different messages for each event
         */
+        Event newEvent = new Event ();
+        //newEvent.DisplayFullDetails();
+        Lecture newLecture = new Lecture();
+        newLecture.DisplayFullDetails();
     }
 }

@@ -10,12 +10,12 @@ Any shared program details
 */
 
 public class Event{
-    private string _title;
-    private string _eventType;
-    private string _description;
-    private string _date;
-    private string _time;
-    private Address _address;
+    private string _title = "default title";
+    private string _eventType = "default event type";
+    private string _description = "default description";
+    private string _date = "default description";
+    private string _time = "default time";
+    private string _address = "default location";
     private string _eventsFile = "EventsList";
     protected List<string> _eventList = new List<string>();
 
@@ -50,6 +50,10 @@ public class Event{
         Console.WriteLine ($"Announcing our next {_eventType}!");
         Console.WriteLine("Title: " + _title);
         Console.WriteLine("Date: " + _date);
+        }
+    
+    public void DisplayFullDetails(){
+        DisplayStandardDescription();
         }
     
     // possible need of getters and setters

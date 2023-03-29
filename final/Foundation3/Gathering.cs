@@ -15,6 +15,7 @@ public class Gathering : Event{
         }
     
     public void DisplayFullDetails (){
+        base.DisplayFullDetails();
         }
 
     public Gathering(){

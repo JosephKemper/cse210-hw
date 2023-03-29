@@ -20,7 +20,7 @@ public class Event{
     protected List<string> _eventList = new List<string>();
 
     public void LoadEvents(string filename){
-        // All videos have the following format
+        // All Events have the following format
         // Event Type|Date|Time|Address|Description|Title
         // Following that are details customized to each event type
         // Lecture events have
@@ -35,7 +35,25 @@ public class Event{
             }
         }
     
-    public void ProcessEvent(string eventDetailString){
+    public void ProcessEvent(){
+        foreach (string line in _eventList){
+            // All Events have the following format
+        // Event Type|Date|Time|Address|Description|Title
+        // Following that are details customized to each event type
+        // Lecture events have
+        // |Speaker|Capacity
+        // Reception Events have
+        // |RSVP email
+        // Gatherings have 
+        // |Weather forecast
+            string [] parts = line.Split();
+            _eventType = parts [0];
+            _date = parts [1];
+            _time = parts [2];
+            _address = parts [3];
+            _description = parts [4];
+            _title = parts [5];
+            }
         }
 
     public void DisplayStandardDescription(){

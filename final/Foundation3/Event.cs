@@ -34,7 +34,6 @@ public class Event{
             _eventList.Add(line);
             }
         }
-    // TODO #24 Bug events not displaying correctly
     public void ProcessEvent(){
         foreach (string line in _eventList){
             // All Events have the following format
@@ -46,7 +45,7 @@ public class Event{
         // |RSVP email
         // Gatherings have 
         // |Weather forecast
-            string [] parts = line.Split();
+            string [] parts = line.Split("||");
             _eventType = parts [0];
             _date = parts [1];
             _time = parts [2];

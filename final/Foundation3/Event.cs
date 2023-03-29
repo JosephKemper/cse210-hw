@@ -52,7 +52,7 @@ public class Event{
         Console.WriteLine("Date: " + _date);
         }
     
-    public void DisplayFullDetails(){
+    public virtual void DisplayFullDetails(){
         DisplayStandardDescription();
         }
     

@@ -14,7 +14,7 @@ public class Gathering : Event{
     public void LoadGatheringEvent(){
         }
     
-    public void DisplayFullDetails (){
+    public override void DisplayFullDetails (){
         base.DisplayFullDetails();
         Console.WriteLine("Weather Report: " + _forecast);
         }

@@ -14,7 +14,7 @@ public class Lecture : Event{
     public void LoadLectureEvent(){
         }
     
-    public void DisplayFullDetails () {
+    public override void DisplayFullDetails () {
         base.DisplayFullDetails();
         Console.WriteLine("Speaker: " + _speaker);
         Console.WriteLine("Capacity: " + _capacity);

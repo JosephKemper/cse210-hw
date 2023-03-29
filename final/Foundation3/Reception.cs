@@ -13,7 +13,7 @@ public class Reception : Event{
     public void LoadReceptionEvent(){
         }
     
-    public void DisplayFullDetails (){
+    public override void DisplayFullDetails (){
         base.DisplayFullDetails();
         Console.WriteLine("RSVP to: ");
         }

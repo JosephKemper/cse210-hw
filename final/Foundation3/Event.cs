@@ -53,8 +53,11 @@ public class Event{
             _address = parts [3];
             _description = parts [4];
             _title = parts [5];
+            ProcessEventDetails (line);
             }
         }
+    public virtual void ProcessEventDetails(string unprocessedLine){
+    }
 
     public void DisplayStandardDescription(){
         DisplayShortDescription();

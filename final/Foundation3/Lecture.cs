@@ -19,7 +19,13 @@ public class Lecture : Event{
         Console.WriteLine("Speaker: " + _speaker);
         Console.WriteLine("Capacity: " + _capacity);
         }
-    
+    public override void ProcessEventDetails (string unprocessedLine){
+        string [] parts = unprocessedLine.Split();
+        if (parts[0] == "Lecture"){
+            _speaker = parts[6];
+            _capacity = parts[7];
+            }
+        }
     public Lecture(){
         }
     }

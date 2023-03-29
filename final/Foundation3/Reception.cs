@@ -10,8 +10,13 @@ Outputs
 public class Reception : Event{
     private string _email;
 
-    public void LoadReceptionEvent(){
+    public override void ProcessEventDetails (string unprocessedLine){
+        string [] parts = unprocessedLine.Split();
+        if (parts[0] == "Reception"){
+            _email = parts[6];
+            }
         }
+
     
     public override void DisplayFullDetails (){
         base.DisplayFullDetails();

@@ -34,7 +34,7 @@ public class Event{
             _eventList.Add(line);
             }
         }
-    
+    // TODO #24 Bug events not displaying correctly
     public void ProcessEvent(){
         foreach (string line in _eventList){
             // All Events have the following format

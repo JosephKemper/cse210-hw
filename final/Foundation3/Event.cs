@@ -15,7 +15,7 @@ public class Event{
     private string _date;
     private string _time;
     private Address _address;
-    private string _filename = "EventsList";
+    private string _eventsFile = "EventsList";
     protected List<string> _eventList = new List<string>();
 
     public void LoadEvents(string filename){
@@ -28,6 +28,10 @@ public class Event{
         // |RSVP email
         // Gatherings have 
         // |Weather forecast
+        _eventList.Clear();
+        foreach (string line in File.ReadLines(_eventsFile)){
+            _eventList.Add(line);
+            }
         }
     
     public void ProcessEvent(string eventDetailString){
@@ -40,6 +44,20 @@ public class Event{
         }
     
     // possible need of getters and setters
+    // Combined Getter/Setter format learned from Bing AI.
+    // To use this template it gave the following example
+    /*
+    For example, 
+    if you have an instance of the Event class called myEvent, 
+    you can get the value of the Title property like this: 
+    string title = myEvent.Title;. 
+    You can also set the value of the Title property like this: 
+    myEvent.Title = "New Title";.
+    */
+    public string Title{
+        get { return _title; }
+        set { _title = value; }
+        }
     public Event (){
         }
 

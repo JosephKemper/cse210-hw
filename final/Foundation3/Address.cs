@@ -9,6 +9,7 @@ Properly formatted event address
 */
 public class Address{
     private string _streetAddress;
+    private string _secondaryLocation;
     private string _city;
     private string _state;
     private string _zip;
@@ -16,13 +17,15 @@ public class Address{
     public void LoadAddress(string unformattedAddress){
         string [] parts = unformattedAddress.Split(",");
         _streetAddress = parts [0];
-        _city = parts [1];
-        _state = parts [2];
-        _zip = parts [3];
+        _secondaryLocation = parts[1];
+        _city = parts [2];
+        _state = parts [3];
+        _zip = parts [4];
         }
     
     public void DisplayAddress(){
-        Console.WriteLine($"{_streetAddress}");
+        Console.WriteLine(_streetAddress);
+        Console.WriteLine(_secondaryLocation);
         Console.WriteLine($"{_city}, {_state} {_zip}");
         }
 
@@ -32,5 +35,6 @@ public class Address{
 
     public Address (string unformattedAddress){
         LoadAddress (unformattedAddress);
+        DisplayAddress();
         }
     }

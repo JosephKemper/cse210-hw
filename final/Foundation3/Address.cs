@@ -13,13 +13,7 @@ public class Address{
     private string _state;
     private string _zip;
 
-    public void LoadAddress(){
-        }
-    
-    public void DisplayAddress(){
-        }
-
-    public void ProcessAddressInfo(string unformattedAddress){
+    public void LoadAddress(string unformattedAddress){
         string [] parts = unformattedAddress.Split(",");
         _streetAddress = parts [0];
         _city = parts [1];
@@ -27,15 +21,16 @@ public class Address{
         _zip = parts [3];
         }
     
-    
-    public string ReturnFormattedAddress(){
-            return _streetAddress + "\n" + _city + "," + _state + _zip;
+    public void DisplayAddress(){
+        Console.WriteLine($"{_streetAddress}");
+        Console.WriteLine($"{_city}, {_state} {_zip}");
         }
+
     
     public Address (){
     }
 
     public Address (string unformattedAddress){
-        ProcessAddressInfo (unformattedAddress);
+        LoadAddress (unformattedAddress);
         }
     }

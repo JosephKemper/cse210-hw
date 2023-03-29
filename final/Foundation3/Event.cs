@@ -19,6 +19,15 @@ public class Event{
     protected List<string> _eventList = new List<string>();
 
     public void LoadEvents(string filename){
+        // All videos have the following format
+        // Event Type|Date|Time|Address|Description|Title
+        // Following that are details customized to each event type
+        // Lecture events have
+        // |Speaker|Capacity
+        // Reception Events have
+        // |RSVP email
+        // Gatherings have 
+        // |Weather forecast
         }
     
     public void ProcessEvent(string eventDetailString){

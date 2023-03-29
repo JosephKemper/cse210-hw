@@ -16,7 +16,7 @@ public class Event{
     private string _date = "default description";
     private string _time = "default time";
     private string _address = "default location";
-    private string _eventsFile = "EventsList";
+    private string _eventsFile = "Events.txt";
     protected List<string> _eventList = new List<string>();
 
     public void LoadEvents(string filename){
@@ -54,6 +54,19 @@ public class Event{
             _description = parts [4];
             _title = parts [5];
             ProcessEventDetails (line);
+
+            Console.WriteLine("Short Description");
+            DisplayShortDescription();
+
+            Console.WriteLine ("---End Description---");
+            Console.WriteLine("Standard Description");
+            DisplayStandardDescription ();
+
+            Console.WriteLine ("---End Description---");
+            Console.WriteLine("Full Description");
+            DisplayFullDetails();
+
+            Console.WriteLine ("---End Description---");
             }
         }
     public virtual void ProcessEventDetails(string unprocessedLine){
@@ -93,6 +106,8 @@ public class Event{
         set { _title = value; }
         }
     public Event (){
+        LoadEvents(_eventsFile);
+        ProcessEvent();
         }
 
     }

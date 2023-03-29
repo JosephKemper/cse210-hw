@@ -11,6 +11,7 @@ Any shared program details
 
 public class Event{
     private string _title;
+    private string _eventType;
     private string _description;
     private string _date;
     private string _time;
@@ -38,6 +39,13 @@ public class Event{
         }
 
     public void DisplayStandardDescription(){
+        Console.WriteLine ($"Announcing our next {_eventType}!");
+        Console.WriteLine("Title: " + _title);
+        Console.WriteLine("Description: " + _description);
+        Console.WriteLine("Date: " + _date);
+        Console.WriteLine("Time: " + _time);
+        Console.WriteLine("Address: " + _address);
+        Console.WriteLine();
         }
     
     public void DisplayShortDescription (){

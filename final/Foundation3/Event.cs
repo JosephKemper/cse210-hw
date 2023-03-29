@@ -39,16 +39,17 @@ public class Event{
         }
 
     public void DisplayStandardDescription(){
-        Console.WriteLine ($"Announcing our next {_eventType}!");
-        Console.WriteLine("Title: " + _title);
-        Console.WriteLine("Description: " + _description);
-        Console.WriteLine("Date: " + _date);
+        DisplayShortDescription();
         Console.WriteLine("Time: " + _time);
         Console.WriteLine("Address: " + _address);
+        Console.WriteLine("Description: " + _description);
         Console.WriteLine();
         }
     
     public void DisplayShortDescription (){
+        Console.WriteLine ($"Announcing our next {_eventType}!");
+        Console.WriteLine("Title: " + _title);
+        Console.WriteLine("Date: " + _date);
         }
     
     // possible need of getters and setters

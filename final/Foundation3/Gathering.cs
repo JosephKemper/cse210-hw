@@ -16,6 +16,7 @@ public class Gathering : Event{
     
     public void DisplayFullDetails (){
         base.DisplayFullDetails();
+        Console.WriteLine("Weather Report: " + _forecast);
         }
 
     public Gathering(){

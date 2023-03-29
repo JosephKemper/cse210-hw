@@ -15,6 +15,7 @@ public class Reception : Event{
     
     public void DisplayFullDetails (){
         base.DisplayFullDetails();
+        Console.WriteLine("RSVP to: ");
         }
     
     public Reception(){

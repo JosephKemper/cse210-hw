@@ -84,19 +84,18 @@ public class Event{
             }
         }
     public virtual void ProcessEventDetails(string unprocessedLine){
-    }
-
-    public void DisplayStandardDescription(){
-        DisplayShortDescription();
-        Console.WriteLine("Time: " + _time);
-        Console.WriteLine("Address: " + _address);
-        Console.WriteLine("Description: " + _description);
         }
-    
     public void DisplayShortDescription (){
         Console.WriteLine ($"Announcing our next {_eventType}!");
         Console.WriteLine("Title: " + _title);
         Console.WriteLine("Date: " + _date);
+        }
+    public void DisplayStandardDescription(){
+        DisplayShortDescription();
+        Console.WriteLine("Time: " + _time);
+        Console.WriteLine("Address: ");
+        Address newAddress = new Address (_address);
+        Console.WriteLine("Description: " + _description);
         }
     
     public virtual void DisplayFullDetails(){

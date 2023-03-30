@@ -21,6 +21,16 @@ class Program
         for cycling it is speed
         for swimming it is laps
         */
+        string exerciseFile = "Exercises.txt";
+        List <string> exerciseList = new List<string>();
+        
         Console.WriteLine("Program 4: Polymorphism with Exercise Tracking");
+
+        foreach (string line in File.ReadLines(exerciseFile)){
+            exerciseList.Add(line);
+            }
+        foreach (string activity in exerciseList){
+            Console.WriteLine(activity);
+            }
     }
 }

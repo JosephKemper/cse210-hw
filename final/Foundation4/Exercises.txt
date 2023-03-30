@@ -1,0 +1,3 @@
+Running,45,3
+Swimming,30,20
+Cycling,60,15

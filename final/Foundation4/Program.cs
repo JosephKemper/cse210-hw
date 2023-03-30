@@ -14,6 +14,13 @@ class Program
         Classes
         Activity, Running, Cycling, and Swimming
         */
+        /* 
+        File format
+        Activity,Time,activity specific stat
+        for running the stat is distance
+        for cycling it is speed
+        for swimming it is laps
+        */
         Console.WriteLine("Program 4: Polymorphism with Exercise Tracking");
     }
 }

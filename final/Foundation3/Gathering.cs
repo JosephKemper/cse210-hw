@@ -17,10 +17,9 @@ public class Gathering : Event{
         Console.WriteLine("Weather Report: " + _forecast);
         }
     public override void ProcessEventDetails (string unprocessedLine){
-        string [] parts = unprocessedLine.Split();
-        if (parts[0] == "Outdoor Gathering"){
+        string [] parts = unprocessedLine.Split("||");
             _forecast = parts[6];
-            }
+            
         }
         
     public Gathering(string eventDetails): base(eventDetails){

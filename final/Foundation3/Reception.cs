@@ -8,13 +8,13 @@ Outputs
 3 different messages for each reception
 */
 public class Reception : Event{
-    private string _email;
+    private string _email = "default email";
 
     public override void ProcessEventDetails (string unprocessedLine){
-        string [] parts = unprocessedLine.Split();
-        if (parts[0] == "Reception"){
+        string [] parts = unprocessedLine.Split("||");
+        
             _email = parts[6];
-            }
+            
         }
 
     // TODO #25 Bug Email not showing. 

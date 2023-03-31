@@ -18,11 +18,10 @@ public class Lecture : Event{
         Console.WriteLine("Capacity: " + _capacity);
         }
     public override void ProcessEventDetails (string unprocessedLine){
-        string [] parts = unprocessedLine.Split();
-        if (parts[0] == "Lecture"){
+        string [] parts = unprocessedLine.Split("||");
             _speaker = parts[6];
             _capacity = parts[7];
-            }
+            
         }
     public Lecture(string eventDetails): base(eventDetails){
         }

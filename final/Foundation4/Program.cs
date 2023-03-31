@@ -30,7 +30,19 @@ class Program
             exerciseList.Add(line);
             }
         foreach (string activity in exerciseList){
-            Activity newActivity = new Activity(activity);
+            string [] parts = activity.Split(",");
+            if (parts[0] == "Running"){
+                Running newRunning = new Running(activity);
+                }
+            else if (parts [0] == "Swimming"){
+                Swimming newSwimming = new Swimming (activity);
+                }
+            else if (parts [0] == "Cycling"){
+                Cycling newCycling = new Cycling (activity);
+                }
+            else{
+                Console.WriteLine("There seems to be something wrong with the data");
+                }
             }
     }
 }

@@ -30,16 +30,20 @@ public class Activity{
         //Console.WriteLine (_stat);
         }
 
-    public virtual void CalculateDistance(){
+    public virtual double CalculateDistance(double minutes, double stat){
+        return -1;
         }
-    public virtual void CalculateSpeed(){
+    public virtual void CalculateSpeed(double minutes, double stat){
         }
-    public virtual void CalculatePace(){
+    public virtual double CalculatePace(double minutes, double stat){
+        return -1;
         }
     public void GetDate (){
         _date = DateTime.Now.ToString("dddd, dd MMMM, yyyy");
         }
     public virtual void CreateSummary (){
+        //03 Nov 2022 Running (30 min)- Distance 3.0 miles, Speed 6.0 mph, Pace: 10.0 min per mile
+        Console.WriteLine($"{_date}, {_activity} ({_minutes} min) ");
         }
     public Activity(string activityInfo){
         LoadActivity(activityInfo);

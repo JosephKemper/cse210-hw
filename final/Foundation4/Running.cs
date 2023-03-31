@@ -15,9 +15,9 @@ public class Running : Activity{
    pace (minutes per mile)
    */
 
-   public override void CalculateSpeed(){
+   public override void CalculateSpeed(double minutes, double stat){
       }
-   public override void CalculatePace(){
+   public override void CalculatePace(double minutes, double stat){
       }
    public override void CreateSummary (){
       }

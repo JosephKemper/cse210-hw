@@ -14,9 +14,10 @@ public class Swimming : Activity{
     speed, 
     pace (minutes per mile)
     */
-    public override void CalculateDistance(){
+    public override double CalculateDistance(double minutes, double stat){
+        return -1;
         }
-    public override void CalculatePace(){
+    public override void CalculatePace(double minutes, double stat){
         }
     public override void CreateSummary (){
         }

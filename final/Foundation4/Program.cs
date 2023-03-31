@@ -30,7 +30,7 @@ class Program
             exerciseList.Add(line);
             }
         foreach (string activity in exerciseList){
-            Console.WriteLine(activity);
+            Activity newActivity = new Activity(activity);
             }
     }
 }

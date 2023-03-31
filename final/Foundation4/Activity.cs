@@ -9,19 +9,27 @@ public class Activity{
     Outputs
     The needed data for each class to run
     */
-    private List<string> _activities = new List<string>();
+    private string _activity;
+    private double _minutes;
+    private double _stat;
     private double _distance;
     private double _speed;
     private double _laps;
     private double _pace;
     private string _date;
-    private double _minutes;
+    
     private List<string> _summaryList = new List<string>();
 
-    public virtual void LoadActivities (string fileName){
+    public virtual void LoadActivity (string activityInfo){
+        string [] parts = activityInfo.Split(",");
+        _activity = parts [0];
+        //Console.WriteLine (_activity);
+        _minutes = double.Parse(parts [1]);
+        //Console.WriteLine (_minutes);
+        _stat = double.Parse(parts [2]);
+        //Console.WriteLine (_stat);
         }
-    public virtual void GetActivity(string activityList){
-        }
+
     public virtual void CalculateDistance(){
         }
     public virtual void CalculateSpeed(){
@@ -29,7 +37,12 @@ public class Activity{
     public virtual void CalculatePace(){
         }
     public void GetDate (){
+        _date = DateTime.Now.ToString("dddd, dd MMMM, yyyy");
         }
     public virtual void CreateSummary (){
+        }
+    public Activity(string activityInfo){
+        LoadActivity(activityInfo);
+        GetDate();
         }
     }

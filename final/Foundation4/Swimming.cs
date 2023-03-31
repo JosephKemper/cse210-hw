@@ -14,14 +14,12 @@ public class Swimming : Activity{
     speed, 
     pace (minutes per mile)
     */
-    public override void GetActivity(string activityList){
-        }
     public override void CalculateDistance(){
         }
     public override void CalculatePace(){
         }
     public override void CreateSummary (){
         }
-    public Swimming(){
+    public Swimming(string activityInfo) : base(activityInfo){
         }
     }

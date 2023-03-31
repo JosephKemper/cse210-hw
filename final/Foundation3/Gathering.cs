@@ -23,6 +23,6 @@ public class Gathering : Event{
             }
         }
         
-    public Gathering(){
+    public Gathering(string eventDetails): base(eventDetails){
         }
     }

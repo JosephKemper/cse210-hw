@@ -23,6 +23,6 @@ public class Reception : Event{
         Console.WriteLine("RSVP to: " + _email);
         }
     
-    public Reception(){
+    public Reception(string eventDetails): base(eventDetails) {
         }
     }

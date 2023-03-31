@@ -24,6 +24,6 @@ public class Lecture : Event{
             _capacity = parts[7];
             }
         }
-    public Lecture(){
+    public Lecture(string eventDetails): base(eventDetails){
         }
     }

@@ -103,8 +103,8 @@ public class Event{
         }
     
  
-    public Event (){
-        LoadEvents(_eventsFile);
+    public Event (string eventDetails){
+        LoadEvents(eventDetails);
         ProcessEvent();
         }
 

@@ -16,7 +16,6 @@ public class Event{
     private string _date = "default description";
     private string _time = "default time";
     private string _address = "default location";
-    private string _eventsFile = "Events.txt";
     protected List<string> _eventList = new List<string>();
 
     public void ProcessEvent(string eventDetails){

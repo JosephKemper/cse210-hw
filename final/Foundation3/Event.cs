@@ -19,23 +19,8 @@ public class Event{
     private string _eventsFile = "Events.txt";
     protected List<string> _eventList = new List<string>();
 
-    public void LoadEvents(string filename){
-        // All Events have the following format
-        // Event Type|Date|Time|Address|Description|Title
-        // Following that are details customized to each event type
-        // Lecture events have
-        // |Speaker|Capacity
-        // Reception Events have
-        // |RSVP email
-        // Gatherings have 
-        // |Weather forecast
-        _eventList.Clear();
-        foreach (string line in File.ReadLines(_eventsFile)){
-            _eventList.Add(line);
-            }
-        }
-    public void ProcessEvent(){
-        foreach (string line in _eventList){
+    public void ProcessEvent(string eventDetails){
+        
             // All Events have the following format
         // Event Type|Date|Time|Address|Description|Title
         // Following that are details customized to each event type
@@ -45,14 +30,14 @@ public class Event{
         // |RSVP email
         // Gatherings have 
         // |Weather forecast
-            string [] parts = line.Split("||");
+            string [] parts = eventDetails.Split("||");
             _eventType = parts [0];
             _date = parts [1];
             _time = parts [2];
             _address = parts [3];
             _description = parts [4];
             _title = parts [5];
-            ProcessEventDetails (line);
+            ProcessEventDetails (eventDetails);
 
             Console.WriteLine();
             Console.WriteLine($"---Announcements for {_eventType}---");
@@ -81,7 +66,7 @@ public class Event{
             Console.WriteLine ("---End Description---");
             Console.WriteLine();
             Console.WriteLine($"---End of Announcements for {_eventType}");
-            }
+            
         }
     public virtual void ProcessEventDetails(string unprocessedLine){
         }
@@ -104,8 +89,7 @@ public class Event{
     
  
     public Event (string eventDetails){
-        LoadEvents(eventDetails);
-        ProcessEvent();
+        ProcessEvent(eventDetails);
         }
 
     }

@@ -17,7 +17,7 @@ public class Reception : Event{
             }
         }
 
-    // TODO Bug Email not showing. 
+    // TODO #25 Bug Email not showing. 
     public override void DisplayFullDetails (){
         base.DisplayFullDetails();
         Console.WriteLine("RSVP to: " + _email);

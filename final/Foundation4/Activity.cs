@@ -1,6 +1,6 @@
 using System;
 
-public class Activity{
+public abstract class Activity{
     /*
     Purpose
     Build the core of each exercise that will be shared by all three activity types
@@ -20,7 +20,7 @@ public class Activity{
     
     private List<string> _summaryList = new List<string>();
 
-    public virtual void LoadActivity (string activityInfo){
+    public void LoadActivity (string activityInfo){
         string [] parts = activityInfo.Split(",");
         _activity = parts [0];
         //Console.WriteLine (_activity);
@@ -30,23 +30,19 @@ public class Activity{
         //Console.WriteLine (_stat);
         }
 
-    public virtual double CalculateDistance(double minutes, double stat){
-        return -1;
-        }
-    public virtual void CalculateSpeed(double minutes, double stat){
-        }
-    public virtual double CalculatePace(double minutes, double stat){
-        return -1;
-        }
+    public abstract double CalculateDistance(double minutes, double stat);
+    public abstract double CalculateSpeed(double minutes, double stat);
+    public abstract double CalculatePace(double minutes, double stat);
     public void GetDate (){
         _date = DateTime.Now.ToString("dddd, dd MMMM, yyyy");
         }
-    public virtual void CreateSummary (){
+    public void CreateSummary (double minutes, double stat){
         //03 Nov 2022 Running (30 min)- Distance 3.0 miles, Speed 6.0 mph, Pace: 10.0 min per mile
-        Console.WriteLine($"{_date}, {_activity} ({_minutes} min) ");
+        Console.WriteLine($"{_date}, {_activity} ({_minutes} min)- Distance {CalculateDistance(minutes, stat)}, Speed {CalculateSpeed(minutes, stat)} mph, Pace: {CalculatePace(minutes, stat)}");
         }
     public Activity(string activityInfo){
         LoadActivity(activityInfo);
         GetDate();
+        CreateSummary(_minutes,_stat);
         }
     }

@@ -17,9 +17,11 @@ public class Swimming : Activity{
     public override double CalculateDistance(double minutes, double stat){
         return -1;
         }
-    public override void CalculatePace(double minutes, double stat){
+    public override double CalculatePace(double minutes, double stat){
+        return -1;
         }
-    public override void CreateSummary (){
+    public override double CalculateSpeed(double minutes, double stat){
+        return -1;
         }
     public Swimming(string activityInfo) : base(activityInfo){
         }

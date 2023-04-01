@@ -16,12 +16,14 @@ class Program
         */
         string _userInput ="";
         Console.WriteLine ("Welcome to the Scripture Memorizer App");
+        Console.WriteLine ();
         Scripture newScripture = new Scripture();
         newScripture.LoadScriptures();
         newScripture.SelectScripture();
+
         while (_userInput != "quit")
         {
-            newScripture.DisplayScripture();
+            newScripture.PrepScripture();
             Console.WriteLine ();
             Console.WriteLine ("Press Enter to continue or type 'quit' to exit.");
             _userInput = Console.ReadLine ();

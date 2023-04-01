@@ -52,9 +52,11 @@ public Activity(string activityInfo){
 <p>Polymorphism</p>
 <p></p>
 <p>
-
+When used properly, polymorphism is like using a magic spell on your code. Thanks to the three abstract methods I worked into my code, I was able to create one CreateSummary method that then used those three abstract methods which each took the shape they needed to best allow that section of code to run. For the running class, the calculate distance method simply needed to return the stat variable which in that case was the distance ran, but for the swimming class, I had to take that same variable and run it through a few calculations before I could return the distance traveled, and similar things can be said about the other methods and for each class. Then finally, thanks to using all of the principles of Object oriented programming, I built all of that, into one single CreateSummary method that could be used to display the data for an entire day of hundreds of different people competing in the three different activities.
 </p>
 <p></p>
 <code>
-
+    public abstract double CalculateDistance(double minutes, double stat);
+    public abstract double CalculateSpeed(double minutes, double stat);
+    public abstract double CalculatePace(double minutes, double stat);
 </code>

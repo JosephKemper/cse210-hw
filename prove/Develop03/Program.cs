@@ -1,10 +1,8 @@
 using System;
 namespace Develop03;
 
-class Program
-{
-    static void Main(string[] args)
-    {
+class Program{
+    static void Main(string[] args){
         
         Scripture currentScripture = new Scripture();
 
@@ -19,7 +17,6 @@ class Program
             Console.WriteLine ();
             Console.WriteLine ("1. Choose a scripture to memorize");
             Console.WriteLine ("2. Memorize a random scripture");
-            Console.WriteLine ("3. Quit");
             Console.WriteLine ();
             Console.Write ("Please enter your selection or type 'quit' to exit: ");
             
@@ -28,14 +25,11 @@ class Program
 
             if (userInput == "1"){
                 
-            }else if (userInput == "2"){
+                }
+            else if (userInput == "2"){
             Console.WriteLine("Press enter to continue or type 'quit' to finish:");
-            }
+                }
             }
 
-            
-            
-            
         }
     }
-}

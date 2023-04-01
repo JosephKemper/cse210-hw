@@ -9,7 +9,7 @@ public class Scripture
     private string _currentText;
 
 
-    }
+    
     
     // method for converting array to list found https://www.c-sharpcorner.com/article/convert-an-array-to-a-list-in-c-sharp/
     public void ConstructWordList ()

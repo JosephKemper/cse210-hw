@@ -17,53 +17,49 @@ public class Reference
     
     private string scriptureFile = "Scripture Library.txt";
     
-    public void LoadScriptures()
-    {
+    public void LoadScriptures(){
         
         // Stretch Goal loads scriptures from file into list
         string[] lines = System.IO.File.ReadAllLines(scriptureFile);
-        foreach (string line in lines)
-        {
+        foreach (string line in lines){
             string[] scriptureParts = line.Split("|~|");
             string reference = scriptureParts [0];
             string text = scriptureParts [1];
 
             _scriptureList.Add(text);
             _referenceList.Add(reference);
-        }
+            }
         _listLength = _referenceList.Count;
-    }    
-    public void ScriptureSelection()
-    {
+        }
+
+    public void ScriptureSelection(){
         for (int i = 0; i < _listLength; i++){
             _optionNumber = i+1;
             Console.WriteLine ($"{_optionNumber}. {_referenceList[i]}");
-    }
+            }
+        }
 
-    public void SelectScripture (int userSelection = 0)
-    {
+    public void SelectScripture (int userSelection = 0){
         // Stretch Goal allows user to select scripture or selects a random scripture
         _userSelection = userSelection;
         
         // If userSelection = 0 generate random int to select scripture
         if (_userSelection == 0){
             _userIndex = _randomIndex.Next(0,_listLength);
-        }
+            }
         // Else subtract one from user selection to select scripture
         else {
             _userIndex = _userSelection -1;
-        }
+            }
         _scriptureReference = _referenceList [_userIndex];
         _scriptureText = _scriptureList [_userIndex];
-    }
+        }
 
-    public string ReturnReference ()
-    {
+    public string ReturnReference (){
         return _scriptureReference;
-    }
+        }
 
-    public string ReturnText ()
-    {
+    public string ReturnText (){
         return _scriptureText;
-    }
+        }
 }

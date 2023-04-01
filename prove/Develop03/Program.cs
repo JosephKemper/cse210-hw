@@ -15,10 +15,11 @@ class Program
         Console.WriteLine ("Welcome to the Scripture Memorizer App");
 
         string userInput = "";
-        while (userInput != "3"){
+        while (userInput != "quit"){
             Console.WriteLine ();
             Console.WriteLine ("1. Choose a scripture to memorize");
             Console.WriteLine ("2. Memorize a random scripture");
+            Console.WriteLine ("3. Quit");
             Console.WriteLine ();
             Console.Write ("Please enter your selection or type 'quit' to exit: ");
             
@@ -29,10 +30,7 @@ class Program
                 
             }else if (userInput == "2"){
             Console.WriteLine("Press enter to continue or type 'quit' to finish:");
-            }else if (userInput == "3"){
-            Environment.Exit(3);
-            }else {
-            Console.WriteLine ("Please enter the number of the option you wish to select.");
+            }
             }
 
             

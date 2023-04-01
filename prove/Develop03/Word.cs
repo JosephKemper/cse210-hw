@@ -14,5 +14,17 @@ and either shown or hidden as the return variable
 
 public class Word
 {
+    private List <int> _unhiddenWords = new List<int>();
+    private List <string> _wordList = new List<string>();
 
+
+    public void PrepWords(string scripture)
+    {
+        _wordList = scripture.Split().ToList();
+    }
+
+    public string ReturnWords ()
+    {
+        return string.Join(" ",_wordList);
+    }
 }

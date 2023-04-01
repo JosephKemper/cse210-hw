@@ -38,10 +38,10 @@ public class Scripture
     public void PrepScripture()
     {
         Reference newReference = new Reference();
+        Word newWord = new Word ();
         string [] parts = _unformattedScripture.Split("|~|");
-        newReference.PrepReference(parts[0]);
-
-        DisplayScripture(parts[0], parts[1]);
+        newWord.PrepWords(parts[1]);
+        DisplayScripture(newReference.PrepReference(parts[0]), newWord.ReturnWords());
     }
 
     public void DisplayScripture(string reference, string verse)

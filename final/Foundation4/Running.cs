@@ -19,10 +19,10 @@ public class Running : Activity{
       }
 
    public override double CalculateSpeed(double minutes, double stat){
-      return -1;
+      return (stat/minutes)*60;
       }
    public override double CalculatePace(double minutes, double stat){
-      return -1;
+      return minutes/stat;
       }
 
    public Running(string activityInfo) : base(activityInfo){

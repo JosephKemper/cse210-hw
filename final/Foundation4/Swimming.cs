@@ -15,13 +15,13 @@ public class Swimming : Activity{
     pace (minutes per mile)
     */
     public override double CalculateDistance(double minutes, double stat){
-        return -1;
+        return stat*50/1000*0.62;
         }
     public override double CalculatePace(double minutes, double stat){
-        return -1;
+        return minutes/CalculateDistance(minutes, stat);
         }
     public override double CalculateSpeed(double minutes, double stat){
-        return -1;
+        return (CalculateDistance(minutes, stat)/minutes)*60;
         }
     public Swimming(string activityInfo) : base(activityInfo){
         }

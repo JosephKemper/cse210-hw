@@ -5,15 +5,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        var x = 0;
-        while(x<=10)
-        {
-            x++;
-            if(x == 2)continue;
-            Console.WriteLine(x);
-            if(x == 5) break;
-            Console.WriteLine("End of loop body");
-        }
-        Console.WriteLine($"End of loop, X : {x}");
+        int num, sum = 0, r;
+          Console.WriteLine("Enter a Number : ");
+          num = int.Parse(Console.ReadLine());
+          while (num != 0)
+          {
+              r = num % 10;
+              num = num / 10;
+              sum = sum + r;
+          }
+          Console.WriteLine("Sum of Digits of the Number : " + sum);
+          Console.ReadLine();
     }
 }

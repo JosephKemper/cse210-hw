@@ -5,14 +5,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
-        List<object> mixedList = new List<object>();
-        mixedList.Add(1);
-        mixedList.Add("hello");
-        
-        foreach (object item in mixedList)
+        var x = 0;
+        while(x<=10)
         {
-            Console.WriteLine(item);
+            x++;
+            if(x == 2)continue;
+            Console.WriteLine(x);
+            if(x == 5) break;
+            Console.WriteLine("End of loop body");
         }
+        Console.WriteLine($"End of loop, X : {x}");
     }
 }

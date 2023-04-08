@@ -1,26 +1,30 @@
 using System;
-namespace Develop03;
+/*
+Word Class
+Purpose: 
+Tracks and decides whether a word in a given scripture is shown or hidden. 
+Inputs: 
+A word and its index
+Outputs: 
+Either the word or a series of underscores back. 
+Implementation idea
+Use dictionary that has the index of each word as the look up variable 
+and either shown or hidden as the return variable
+*/
 
 public class Word
 {
-// Used to render the text of a hidden word
-    private string _hiddenWord;
-    private string _visibleWord;
-    private int _wordLen;
-    private int _letterCount;
-    
+    private List <int> _unhiddenWords = new List<int>();
+    private List <string> _wordList = new List<string>();
 
-    public string RenderHiddenWord (string visibleWord)
+
+    public void PrepWords(string scripture)
     {
-        _hiddenWord = "";
-        _visibleWord = visibleWord;
-        _wordLen = _visibleWord.Length;
-        // for loop syntax taken from https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements
-        for (_letterCount = 0; _letterCount < _wordLen; _letterCount++){
-            _hiddenWord += "_";
-            }
-        return _hiddenWord;
-
+        _wordList = scripture.Split().ToList();
     }
 
+    public string ReturnWords ()
+    {
+        return string.Join(" ",_wordList);
+    }
 }

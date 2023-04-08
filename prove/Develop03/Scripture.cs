@@ -1,46 +1,51 @@
 using System;
-namespace Develop03;
+/*
+Scripture Class
+Purpose: 
+Handles the selection and display of a scripture. 
+Uses the reference class for displaying the reference, 
+and the word class for hiding a scripture. 
+Inputs: 
+A file containing a list of scriptures. 
+Outputs: 
+A scripture, and its reference to displayed to the screen. 
+*/
 
 public class Scripture
 {
-    
-    private List<string> _wordList = new List<string> ();
-    private string _currentReference;
-    private string _currentText;
+    private string _scriptureFile = "Scripture Library.txt";
+    private int _selectedScripture;
+    private string _unformattedScripture;
+    private int _listLength;
+    private List <string> _scriptureList = new List<string>();
 
-
-    }
-    
-    // method for converting array to list found https://www.c-sharpcorner.com/article/convert-an-array-to-a-list-in-c-sharp/
-    public void ConstructWordList ()
+    public void LoadScriptures ()
     {
-        string [] _wordArray = _currentText.Split(" ");
-        _wordList.AddRange(_wordArray);
+        foreach (string line in File.ReadLines(_scriptureFile))
+        {
+            _scriptureList.Add(line);
+        }
     }
-        
-         
-    
-    
-    
-
-    public string DisplayReference ()
+    //Stretch Exceeding Requirements select a random scripture from a list.
+    public void SelectScripture()
     {
-        Reference scriptureReference = new Reference();
-            
-        _currentReference = scriptureReference.ReturnReference();
-        return _currentReference;
-     }
+        Random randomIndex = new Random();
+        _listLength = _scriptureList.Count;
+        _selectedScripture = randomIndex.Next(1,_listLength+1);
+        _unformattedScripture = _scriptureList[_selectedScripture];
+    }
 
-     public string DisplayVerse ()
-     {
-        return _currentText;
-     }
+    public void PrepScripture()
+    {
+        Reference newReference = new Reference();
+        Word newWord = new Word ();
+        string [] parts = _unformattedScripture.Split("|~|");
+        newWord.PrepWords(parts[1]);
+        DisplayScripture(newReference.PrepReference(parts[0]), newWord.ReturnWords());
+    }
 
-    /*
-    The word list that will store the verse text, 
-    will need to be regularly updated with underscores 
-    as each word slowly gets replaced by underscores, 
-    and then recombined back into a string and 
-    then combined back with the reference to be shown to the user.
-    */
+    public void DisplayScripture(string reference, string verse)
+    {
+        Console.WriteLine ($"{reference} {verse}");
+    }
 }
